@@ -4,9 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Forty-Four — A Banned Pagan</title>
+<title>FORTY-FOUR — A BANNED PAGAN</title>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+    --black: #080808;
+    --white: #e8e6df;
+    --grey: #858580;
+    --dark-grey: #242422;
+    --line: #30302d;
+}
 
 * {
     margin: 0;
@@ -19,10 +29,11 @@ html {
 }
 
 body {
-    background: #090909;
-    color: #e7e5df;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+    background: var(--black);
+    color: var(--white);
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
 }
 
 a {
@@ -30,194 +41,286 @@ a {
     text-decoration: none;
 }
 
-/* =========================
+::selection {
+    background: var(--white);
+    color: var(--black);
+}
+
+/* =========================================
    HEADER
-========================= */
+========================================= */
 
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 74px;
+    height: 72px;
+
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+
     padding: 0 5vw;
-    border-bottom: 1px solid #292929;
-    background: rgba(9,9,9,0.96);
-    z-index: 1000;
+
+    border-bottom: 1px solid var(--line);
+
+    background: rgba(8,8,8,0.96);
+
+    z-index: 100;
 }
 
 .logo {
-    font-size: 15px;
+    font-size: 12px;
     letter-spacing: 4px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 nav {
     display: flex;
-    gap: 30px;
+    gap: 32px;
 }
 
 nav a {
-    font-size: 11px;
+    font-size: 9px;
     letter-spacing: 3px;
-    color: #a9a9a4;
-    transition: color 0.25s ease;
+    color: var(--grey);
+    transition: color .2s ease;
 }
 
 nav a:hover {
-    color: #ffffff;
+    color: var(--white);
 }
 
-/* =========================
-   HERO
-========================= */
+/* =========================================
+   HOME
+========================================= */
 
-.hero {
+.home {
     min-height: 100vh;
-    padding: 74px 7vw 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     position: relative;
     overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    padding: 110px 7vw 70px;
 }
 
-.hero::before {
+/* vertical axis */
+
+.home::before {
     content: "";
     position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 8vw;
+
     width: 1px;
-    height: 70%;
-    background: #292929;
-    left: 7vw;
-    top: 15%;
+
+    background: var(--line);
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    padding-left: 8vw;
-}
+/* horizontal axis */
 
-.hero-number {
-    font-size: clamp(130px, 25vw, 330px);
-    line-height: 0.72;
-    font-weight: 300;
-    letter-spacing: -18px;
-    color: #dcdad4;
-    margin-left: -18px;
-}
+.home::after {
+    content: "";
 
-.hero-line {
-    width: min(520px, 70vw);
-    height: 1px;
-    background: #666;
-    margin: 55px 0 28px;
-}
-
-.hero-title {
-    font-size: clamp(42px, 8vw, 110px);
-    line-height: 0.9;
-    letter-spacing: 8px;
-    font-weight: 500;
-}
-
-.hero-subtitle {
-    margin-top: 18px;
-    font-size: 14px;
-    letter-spacing: 8px;
-    color: #a8a8a2;
-}
-
-.hero-style {
-    margin-top: 45px;
-    font-size: 10px;
-    letter-spacing: 4px;
-    color: #777772;
-}
-
-.hero-scroll {
     position: absolute;
+
+    left: 8vw;
     right: 7vw;
-    bottom: 50px;
-    writing-mode: vertical-rl;
+    top: 62%;
+
+    height: 1px;
+
+    background: var(--line);
+}
+
+/* =========================================
+   44
+========================================= */
+
+.home-symbol {
+    position: absolute;
+
+    top: 17vh;
+    left: 13vw;
+
+    font-size: clamp(190px, 34vw, 520px);
+
+    font-weight: 300;
+
+    line-height: .68;
+
+    letter-spacing: -35px;
+
+    color: #d9d7d0;
+
+    z-index: 1;
+}
+
+/* =========================================
+   HOME TITLE
+========================================= */
+
+.home-content {
+    position: relative;
+
+    margin-left: 24vw;
+
+    z-index: 2;
+}
+
+.home-index {
     font-size: 9px;
     letter-spacing: 4px;
-    color: #666;
-}
+    color: var(--grey);
 
-/* =========================
-   SECTIONS
-========================= */
-
-section:not(.hero) {
-    padding: 130px 10vw;
-    border-top: 1px solid #222;
-}
-
-.section-number {
-    font-size: 10px;
-    letter-spacing: 4px;
-    color: #666;
-    margin-bottom: 25px;
-}
-
-h2 {
-    font-size: clamp(38px, 7vw, 82px);
-    line-height: 0.95;
-    letter-spacing: 3px;
-    font-weight: 400;
-    margin-bottom: 70px;
-}
-
-h3 {
-    font-size: 25px;
-    font-weight: 400;
-    letter-spacing: 3px;
-    margin-bottom: 8px;
-}
-
-.year {
-    font-size: 10px;
-    letter-spacing: 4px;
-    color: #777;
-    margin-bottom: 25px;
-}
-
-.description {
-    max-width: 650px;
-    color: #9d9d98;
-    font-size: 15px;
-    margin-bottom: 45px;
-}
-
-/* =========================
-   RELEASES
-========================= */
-
-.release {
-    border-top: 1px solid #292929;
-    padding: 45px 0 55px;
-    max-width: 900px;
-}
-
-.release:last-child {
-    border-bottom: 1px solid #292929;
-}
-
-.release-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
     margin-bottom: 35px;
 }
 
-.chapter {
+.home-title {
+    font-size: clamp(48px, 8vw, 125px);
+
+    font-weight: 400;
+
+    letter-spacing: -2px;
+
+    line-height: .85;
+
+    max-width: 900px;
+}
+
+.home-title span {
+    display: block;
+}
+
+.home-title .second {
+    margin-left: 7vw;
+}
+
+.home-subtitle {
+    margin-top: 38px;
+
     font-size: 10px;
+
+    letter-spacing: 6px;
+
+    color: var(--grey);
+}
+
+.home-bottom {
+    position: absolute;
+
+    left: 9vw;
+    right: 7vw;
+    bottom: 42px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    z-index: 3;
+}
+
+.home-location {
+    font-size: 8px;
     letter-spacing: 3px;
-    color: #666;
+    color: #555550;
+}
+
+.home-scroll {
+    font-size: 8px;
+    letter-spacing: 4px;
+    color: var(--grey);
+}
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+section:not(.home) {
+    padding: 140px 10vw;
+
+    border-top: 1px solid var(--line);
+}
+
+.section-meta {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 70px;
+
+    font-size: 9px;
+    letter-spacing: 4px;
+
+    color: var(--grey);
+}
+
+.section-title {
+    font-size: clamp(55px, 10vw, 150px);
+
+    font-weight: 300;
+
+    letter-spacing: -5px;
+
+    line-height: .8;
+
+    margin-bottom: 90px;
+}
+
+/* =========================================
+   MUSIC
+========================================= */
+
+.release {
+    max-width: 1050px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 2fr;
+
+    border-top: 1px solid var(--line);
+
+    padding: 55px 0;
+}
+
+.release:last-child {
+    border-bottom: 1px solid var(--line);
+}
+
+.release-name {
+    font-size: clamp(28px, 4vw, 55px);
+
+    font-weight: 400;
+
+    letter-spacing: -1px;
+}
+
+.release-year {
+    margin-top: 12px;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: var(--grey);
+}
+
+.release-info {
+    padding-left: 40px;
+}
+
+.release-description {
+    max-width: 600px;
+
+    color: #9c9c96;
+
+    font-size: 14px;
+
+    margin-bottom: 35px;
 }
 
 .tracklist {
@@ -226,131 +329,221 @@ h3 {
 
 .tracklist li {
     display: flex;
+
     gap: 25px;
-    padding: 13px 0;
-    border-top: 1px solid #191919;
-    color: #b8b8b3;
-    font-size: 13px;
+
+    padding: 11px 0;
+
+    border-top: 1px solid #191918;
+
+    font-size: 12px;
+
     letter-spacing: 1px;
+
+    color: #b8b7b1;
 }
 
-.tracklist li span {
+.track-number {
     width: 25px;
-    color: #555;
-    font-size: 10px;
+
+    color: #555550;
+
+    font-size: 9px;
 }
 
-/* =========================
+/* =========================================
    ARCHIVES
-========================= */
+========================================= */
 
-.archive-intro {
-    max-width: 800px;
+.archive {
+    max-width: 1000px;
 }
 
-.archive-quote {
-    font-size: clamp(28px, 5vw, 60px);
-    line-height: 1.05;
-    letter-spacing: 1px;
-    margin-bottom: 45px;
-    max-width: 850px;
+.archive-statement {
+    font-size: clamp(35px, 6vw, 90px);
+
+    line-height: .95;
+
+    font-weight: 300;
+
+    max-width: 950px;
+
+    margin-bottom: 70px;
 }
 
 .archive-text {
     max-width: 650px;
-    color: #999;
+
+    color: #9c9c96;
+
     font-size: 15px;
-    margin-bottom: 35px;
+
+    margin-bottom: 25px;
 }
 
 .archive-link {
     display: inline-block;
+
+    margin-top: 30px;
+
     padding-bottom: 8px;
+
     border-bottom: 1px solid #777;
-    font-size: 10px;
-    letter-spacing: 3px;
-    color: #ccc;
-}
 
-/* =========================
-   STORY
-========================= */
+    font-size: 9px;
 
-.story {
-    max-width: 900px;
-}
-
-.story p {
-    max-width: 700px;
-    color: #a2a29d;
-    font-size: 16px;
-    margin-bottom: 30px;
-}
-
-.story-quote {
-    border-left: 1px solid #777;
-    padding-left: 25px;
-    margin: 55px 0;
-    font-size: 22px;
-    letter-spacing: 2px;
-    color: #d0cec8;
-}
-
-/* =========================
-   VISUALS
-========================= */
-
-.visual-placeholder {
-    height: 420px;
-    border: 1px solid #252525;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #555;
-    font-size: 10px;
     letter-spacing: 4px;
 }
 
-/* =========================
+/* =========================================
+   STORY
+========================================= */
+
+.story {
+    max-width: 850px;
+}
+
+.story-lead {
+    font-size: clamp(28px, 5vw, 65px);
+
+    line-height: 1;
+
+    margin-bottom: 60px;
+}
+
+.story p {
+    max-width: 650px;
+
+    color: #9c9c96;
+
+    font-size: 15px;
+
+    margin-bottom: 28px;
+}
+
+.story-quote {
+    margin: 65px 0;
+
+    padding-left: 30px;
+
+    border-left: 1px solid #777;
+
+    font-size: 25px;
+
+    letter-spacing: 2px;
+
+    line-height: 1.4;
+}
+
+/* =========================================
+   VISUALS
+========================================= */
+
+.visual-frame {
+    height: 500px;
+
+    border: 1px solid var(--line);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+}
+
+.visual-frame::before,
+.visual-frame::after {
+    content: "";
+
+    position: absolute;
+
+    background: var(--line);
+}
+
+.visual-frame::before {
+    width: 80px;
+    height: 1px;
+}
+
+.visual-frame::after {
+    width: 1px;
+    height: 80px;
+}
+
+.visual-label {
+    position: absolute;
+
+    bottom: 20px;
+    left: 20px;
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+    color: #555550;
+}
+
+/* =========================================
    CONTACT
-========================= */
+========================================= */
 
 .contact {
-    min-height: 45vh;
+    min-height: 60vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
 }
 
-.contact-email {
-    display: inline-block;
-    margin-top: 25px;
-    font-size: clamp(22px, 4vw, 42px);
-    letter-spacing: 2px;
+.contact-address {
+    font-size: clamp(25px, 5vw, 70px);
+
+    font-weight: 300;
+
+    letter-spacing: -1px;
+
     border-bottom: 1px solid #555;
-    padding-bottom: 8px;
+
+    display: inline-block;
+
+    width: fit-content;
+
+    padding-bottom: 10px;
 }
 
-/* =========================
+/* =========================================
    FOOTER
-========================= */
+========================================= */
 
 footer {
-    border-top: 1px solid #222;
-    padding: 40px 7vw;
+    border-top: 1px solid var(--line);
+
+    padding: 35px 7vw;
+
     display: flex;
+
     justify-content: space-between;
-    color: #555;
-    font-size: 9px;
-    letter-spacing: 3px;
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+    color: #555550;
 }
 
-/* =========================
+/* =========================================
    MOBILE
-========================= */
+========================================= */
 
 @media (max-width: 700px) {
 
     header {
-        height: 65px;
-        padding: 0 25px;
+        height: 62px;
+        padding: 0 20px;
     }
 
     nav {
@@ -358,74 +551,89 @@ footer {
     }
 
     nav a {
-        font-size: 8px;
+        font-size: 7px;
         letter-spacing: 2px;
     }
 
-    .hero {
-        padding: 65px 25px 40px;
+    .home {
+        padding: 100px 25px 50px;
     }
 
-    .hero::before {
+    .home::before {
         left: 25px;
     }
 
-    .hero-content {
-        padding-left: 45px;
+    .home::after {
+        left: 25px;
+        right: 25px;
+        top: 64%;
     }
 
-    .hero-number {
-        font-size: 38vw;
-        letter-spacing: -10px;
+    .home-symbol {
+        top: 20vh;
+        left: 22vw;
+
+        font-size: 65vw;
+
+        letter-spacing: -15px;
     }
 
-    .hero-line {
-        margin: 40px 0 25px;
+    .home-content {
+        margin-left: 15vw;
     }
 
-    .hero-title {
-        font-size: 13vw;
-        letter-spacing: 4px;
+    .home-title {
+        font-size: 14vw;
     }
 
-    .hero-subtitle {
-        font-size: 9px;
-        letter-spacing: 4px;
+    .home-title .second {
+        margin-left: 8vw;
     }
 
-    .hero-style {
+    .home-subtitle {
         font-size: 8px;
-        letter-spacing: 3px;
+        letter-spacing: 4px;
     }
 
-    section:not(.hero) {
+    .home-bottom {
+        left: 35px;
+        right: 25px;
+        bottom: 25px;
+    }
+
+    section:not(.home) {
         padding: 90px 25px;
     }
 
-    h2 {
-        margin-bottom: 50px;
+    .section-meta {
+        margin-bottom: 45px;
     }
 
-    .release-header {
+    .section-title {
+        margin-bottom: 60px;
+    }
+
+    .release {
         display: block;
     }
 
-    .chapter {
-        display: block;
-        margin-top: 10px;
+    .release-info {
+        padding-left: 0;
+        margin-top: 35px;
     }
 
-    .visual-placeholder {
-        height: 280px;
+    .visual-frame {
+        height: 300px;
     }
 
     footer {
         padding: 30px 25px;
+
         display: block;
     }
 
     footer div:last-child {
-        margin-top: 12px;
+        margin-top: 15px;
     }
 }
 
@@ -434,7 +642,9 @@ footer {
 
 <body>
 
-<!-- HEADER -->
+<!-- =========================================
+     HEADER
+========================================= -->
 
 <header>
 
@@ -453,173 +663,204 @@ footer {
 </header>
 
 
-<!-- HERO -->
+<!-- =========================================
+     HOME
+========================================= -->
 
-<section class="hero" id="top">
+<section class="home" id="top">
 
-    <div class="hero-content">
+    <div class="home-symbol">
+        44
+    </div>
 
-        <div class="hero-number">
-            44
+    <div class="home-content">
+
+        <div class="home-index">
+            00 / FORTY-FOUR
         </div>
 
-        <div class="hero-line"></div>
+        <div class="home-title">
 
-        <div class="hero-title">
-            FORTY-FOUR
+            <span>FORTY-</span>
+
+            <span class="second">FOUR</span>
+
         </div>
 
-        <div class="hero-subtitle">
+        <div class="home-subtitle">
             A BANNED PAGAN
-        </div>
-
-        <div class="hero-style">
-            DEATHROCK · GOTH ROCK · COLDWAVE
         </div>
 
     </div>
 
-    <div class="hero-scroll">
-        01 / MUSIC
+    <div class="home-bottom">
+
+        <div class="home-location">
+            DEATHROCK · GOTH ROCK · COLDWAVE
+        </div>
+
+        <div class="home-scroll">
+            SCROLL ↓
+        </div>
+
     </div>
 
 </section>
 
 
-<!-- MUSIC -->
+<!-- =========================================
+     MUSIC
+========================================= -->
 
 <section id="music">
 
-    <div class="section-number">
-        01 — MUSIC
+    <div class="section-meta">
+
+        <span>01</span>
+
+        <span>MUSIC</span>
+
     </div>
 
-    <h2>
+    <div class="section-title">
         RELEASES
-    </h2>
+    </div>
 
 
     <div class="release">
 
-        <div class="release-header">
+        <div>
 
-            <div>
-                <h3>1ST CHAPTER</h3>
-                <div class="year">2023</div>
+            <div class="release-name">
+                1ST<br>CHAPTER
             </div>
 
-            <div class="chapter">
-                CHAPTER I
+            <div class="release-year">
+                2023
             </div>
 
         </div>
 
-        <p class="description">
-            The first chapter. Five songs tracing isolation,
-            collapse, exile and the point where everything ends.
-        </p>
+        <div class="release-info">
 
-        <ol class="tracklist">
+            <p class="release-description">
+                The first chapter. Five songs tracing isolation,
+                collapse, exile and the point where everything ends.
+            </p>
 
-            <li>
-                <span>01</span>
-                Insanity
-            </li>
+            <ol class="tracklist">
 
-            <li>
-                <span>02</span>
-                Exile
-            </li>
+                <li>
+                    <span class="track-number">01</span>
+                    Insanity
+                </li>
 
-            <li>
-                <span>03</span>
-                All Is Dread Silence Here
-            </li>
+                <li>
+                    <span class="track-number">02</span>
+                    Exile
+                </li>
 
-            <li>
-                <span>04</span>
-                Let Me
-            </li>
+                <li>
+                    <span class="track-number">03</span>
+                    All Is Dread Silence Here
+                </li>
 
-            <li>
-                <span>05</span>
-                Here Is My End
-            </li>
+                <li>
+                    <span class="track-number">04</span>
+                    Let Me
+                </li>
 
-        </ol>
+                <li>
+                    <span class="track-number">05</span>
+                    Here Is My End
+                </li>
+
+            </ol>
+
+        </div>
 
     </div>
 
 
     <div class="release">
 
-        <div class="release-header">
+        <div>
 
-            <div>
-                <h3>2ND COMMUNION</h3>
+            <div class="release-name">
+                2ND<br>COMMUNION
             </div>
 
-            <div class="chapter">
+            <div class="release-year">
                 CHAPTER II
             </div>
 
         </div>
 
-        <p class="description">
-            A second passage into the Forty-Four universe.
-            Five new states of mind, moving between rupture,
-            rage, ritual, guilt and silence.
-        </p>
+        <div class="release-info">
 
-        <ol class="tracklist">
+            <p class="release-description">
+                A second passage into the Forty-Four universe.
+                Five new states of mind, moving between rupture,
+                rage, ritual, guilt and silence.
+            </p>
 
-            <li>
-                <span>01</span>
-                Itchy Soul
-            </li>
+            <ol class="tracklist">
 
-            <li>
-                <span>02</span>
-                I'm Fed Up
-            </li>
+                <li>
+                    <span class="track-number">01</span>
+                    Itchy Soul
+                </li>
 
-            <li>
-                <span>03</span>
-                Ashes Of The Pact
-            </li>
+                <li>
+                    <span class="track-number">02</span>
+                    I'm Fed Up
+                </li>
 
-            <li>
-                <span>04</span>
-                Blood On My Hands
-            </li>
+                <li>
+                    <span class="track-number">03</span>
+                    Ashes Of The Pact
+                </li>
 
-            <li>
-                <span>05</span>
-                In The Silent Chair
-            </li>
+                <li>
+                    <span class="track-number">04</span>
+                    Blood On My Hands
+                </li>
 
-        </ol>
+                <li>
+                    <span class="track-number">05</span>
+                    In The Silent Chair
+                </li>
+
+            </ol>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- ARCHIVES -->
+<!-- =========================================
+     ARCHIVES
+========================================= -->
 
 <section id="archives">
 
-    <div class="section-number">
-        02 — ARCHIVES 44
+    <div class="section-meta">
+
+        <span>02</span>
+
+        <span>ARCHIVES 44</span>
+
     </div>
 
-    <h2>
-        THE JOURNAL
-    </h2>
+    <div class="section-title">
+        THE<br>JOURNAL
+    </div>
 
-    <div class="archive-intro">
+    <div class="archive">
 
-        <div class="archive-quote">
+        <div class="archive-statement">
             Before there was a name,
             there was silence.
         </div>
@@ -644,23 +885,30 @@ footer {
 </section>
 
 
-<!-- STORY -->
+<!-- =========================================
+     STORY
+========================================= -->
 
 <section id="story">
 
-    <div class="section-number">
-        03 — STORY
+    <div class="section-meta">
+
+        <span>03</span>
+
+        <span>STORY</span>
+
     </div>
 
-    <h2>
+    <div class="section-title">
         FORTY-FOUR
-    </h2>
+    </div>
 
     <div class="story">
 
-        <p>
-            Forty-Four was born from a period of rupture and silence.
-        </p>
+        <div class="story-lead">
+            A project born from rupture
+            and silence.
+        </div>
 
         <p>
             Alone with guitars, machines, rhythms and words,
@@ -690,45 +938,64 @@ footer {
 </section>
 
 
-<!-- VISUALS -->
+<!-- =========================================
+     VISUALS
+========================================= -->
 
 <section id="visuals">
 
-    <div class="section-number">
-        04 — VISUALS
+    <div class="section-meta">
+
+        <span>04</span>
+
+        <span>VISUALS</span>
+
     </div>
 
-    <h2>
+    <div class="section-title">
         IMAGES
-    </h2>
+    </div>
 
-    <div class="visual-placeholder">
-        VISUAL ARCHIVE — COMING SOON
+    <div class="visual-frame">
+
+        <div class="visual-label">
+            VISUAL ARCHIVE — COMING SOON
+        </div>
+
     </div>
 
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================================
+     CONTACT
+========================================= -->
 
 <section id="contact" class="contact">
 
-    <div class="section-number">
-        05 — CONTACT
+    <div class="section-meta">
+
+        <span>05</span>
+
+        <span>CONTACT</span>
+
     </div>
 
-    <h2>
+    <div class="section-title">
         CONTACT
-    </h2>
+    </div>
 
-    <a class="contact-email" href="mailto:contact@forty-four.fr">
+    <a class="contact-address"
+       href="mailto:contact@forty-four.fr">
         contact@forty-four.fr
     </a>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================================
+     FOOTER
+========================================= -->
 
 <footer>
 
