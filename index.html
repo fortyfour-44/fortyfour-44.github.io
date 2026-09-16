@@ -9,6 +9,7 @@
   <meta name="description" content="Forty-Four — A Banned Pagan. Deathrock, goth rock, coldwave.">
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -36,6 +37,7 @@
       width: min(1100px, 90%);
       margin: auto;
     }
+
 
     /* HEADER */
 
@@ -82,6 +84,7 @@
       color: #ffffff;
     }
 
+
     /* HERO */
 
     .hero {
@@ -90,54 +93,86 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 120px 20px 80px;
+      padding: 110px 20px 70px;
+      position: relative;
+      overflow: hidden;
     }
 
     .hero-content {
-      max-width: 900px;
+      width: min(1000px, 90%);
+      position: relative;
     }
 
     .symbol {
-      font-size: clamp(110px, 22vw, 260px);
-      line-height: 0.8;
+      font-size: clamp(150px, 25vw, 310px);
+      line-height: 0.7;
       font-weight: 300;
-      letter-spacing: -0.08em;
+      letter-spacing: -0.1em;
       color: #dedbd3;
-      margin-bottom: 40px;
-    }
-
-    .hero h1 {
-      font-size: clamp(32px, 6vw, 72px);
-      letter-spacing: 0.22em;
-      font-weight: 400;
-      margin-left: 0.22em;
-    }
-
-    .hero h2 {
-      margin-top: 15px;
-      font-size: 13px;
-      letter-spacing: 0.45em;
-      font-weight: 400;
-      color: #77736c;
+      margin-bottom: 65px;
+      margin-left: -0.08em;
     }
 
     .hero-line {
-      width: 80px;
+      width: 120px;
       height: 1px;
-      background: #55514b;
-      margin: 40px auto;
+      background: #5d5952;
+      margin: 0 auto 35px;
     }
 
-    .hero p {
-      max-width: 600px;
-      margin: auto;
-      color: #918d86;
-      font-size: 14px;
+    .hero h1 {
+      font-size: clamp(38px, 7vw, 82px);
+      letter-spacing: 0.30em;
+      font-weight: 400;
+      margin-left: 0.30em;
+      line-height: 1;
     }
+
+    .hero h2 {
+      margin-top: 20px;
+      font-size: 12px;
+      letter-spacing: 0.55em;
+      font-weight: 400;
+      color: #77736c;
+      margin-left: 0.55em;
+    }
+
+    .hero-intro {
+      margin-top: 35px;
+      color: #65615b;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .hero-bottom {
+      position: absolute;
+      left: 50%;
+      bottom: -130px;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: #4f4b45;
+      font-size: 9px;
+      letter-spacing: 0.25em;
+    }
+
+    .hero-bottom span:first-child {
+      font-size: 10px;
+      color: #77736c;
+    }
+
+    .hero-bottom span:last-child {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+    }
+
 
     /* SECTIONS */
 
-    section {
+    section:not(.hero) {
       padding: 110px 0;
       border-top: 1px solid #202020;
     }
@@ -155,6 +190,7 @@
       letter-spacing: 0.12em;
       margin-bottom: 45px;
     }
+
 
     /* MUSIC */
 
@@ -211,6 +247,7 @@
       color: #55514b;
     }
 
+
     /* ARCHIVES */
 
     .archive-text {
@@ -231,6 +268,7 @@
       font-size: 12px;
       letter-spacing: 0.2em;
     }
+
 
     /* STORY */
 
@@ -253,6 +291,7 @@
       letter-spacing: 0.04em;
     }
 
+
     /* VISUALS */
 
     .visual-placeholder {
@@ -266,6 +305,7 @@
       letter-spacing: 0.2em;
       font-size: 11px;
     }
+
 
     /* CONTACT */
 
@@ -287,6 +327,7 @@
       font-size: 12px;
     }
 
+
     /* FOOTER */
 
     footer {
@@ -297,6 +338,7 @@
       font-size: 10px;
       letter-spacing: 0.2em;
     }
+
 
     /* MOBILE */
 
@@ -319,7 +361,7 @@
         font-size: 15px;
       }
 
-      section {
+      section:not(.hero) {
         padding: 80px 0;
       }
 
@@ -334,18 +376,31 @@
 
       .hero h1 {
         letter-spacing: 0.12em;
+        margin-left: 0.12em;
       }
 
       .hero h2 {
         letter-spacing: 0.25em;
+        margin-left: 0.25em;
       }
+
+      .symbol {
+        font-size: clamp(120px, 35vw, 200px);
+      }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
+
+  <!-- HEADER -->
+
   <header>
+
     <div class="container nav">
 
       <a href="#top" class="logo">
@@ -361,10 +416,12 @@
       </nav>
 
     </div>
+
   </header>
 
 
   <main id="top">
+
 
     <!-- HERO -->
 
@@ -374,16 +431,20 @@
 
         <div class="symbol">44</div>
 
+        <div class="hero-line"></div>
+
         <h1>FORTY-FOUR</h1>
 
         <h2>A BANNED PAGAN</h2>
 
-        <div class="hero-line"></div>
-
-        <p>
-          Deathrock. Goth rock. Coldwave.<br>
-          A solitary project built from rupture, silence and reconstruction.
+        <p class="hero-intro">
+          Deathrock · Goth Rock · Coldwave
         </p>
+
+        <div class="hero-bottom">
+          <span>01</span>
+          <span>SCROLL</span>
+        </div>
 
       </div>
 
@@ -557,9 +618,7 @@
         <h2 class="section-title">IMAGES</h2>
 
         <div class="visual-placeholder">
-
           VISUAL ARCHIVE — COMING SOON
-
         </div>
 
       </div>
@@ -592,11 +651,12 @@
   </main>
 
 
+  <!-- FOOTER -->
+
   <footer>
-
     FORTY-FOUR / A BANNED PAGAN / 44
-
   </footer>
+
 
 </body>
 </html>
