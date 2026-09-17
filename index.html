@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -241,8 +242,6 @@
             overflow: hidden;
 
             margin-bottom: 30px;
-
-            background: #111;
         }
 
         .release-cover img {
@@ -250,6 +249,12 @@
             height: 100%;
             object-fit: contain;
             display: block;
+        }
+
+        .release-cover-placeholder {
+            color: #666;
+            font-size: 10px;
+            letter-spacing: 3px;
         }
 
         .release h3 {
@@ -494,6 +499,10 @@
             color: #9b9b96;
         }
 
+        .footer-links a:hover {
+            color: #e6e3dc;
+        }
+
         .copyright {
             color: #555;
             font-size: 9px;
@@ -594,12 +603,8 @@
 
 <body>
 
-    <!-- =========================
-         HEADER
-    ========================= -->
-
+    <!-- HEADER -->
     <header>
-
         <div class="header-inner">
 
             <a href="#home" class="brand">
@@ -608,7 +613,6 @@
             </a>
 
             <nav>
-
                 <a href="#music">
                     <span class="lang-en">MUSIC</span>
                     <span class="lang-fr">MUSIQUE</span>
@@ -643,37 +647,20 @@
                     <span class="lang-en">CONTACT</span>
                     <span class="lang-fr">CONTACT</span>
                 </a>
-
             </nav>
 
             <div class="language">
-
-                <button id="enButton"
-                        class="active"
-                        onclick="setLanguage('en')">
-                    EN
-                </button>
-
+                <button id="enButton" class="active" onclick="setLanguage('en')">EN</button>
                 <span>/</span>
-
-                <button id="frButton"
-                        onclick="setLanguage('fr')">
-                    FR
-                </button>
-
+                <button id="frButton" onclick="setLanguage('fr')">FR</button>
             </div>
 
         </div>
-
     </header>
-
-
-    <!-- =========================
-         HOME
-    ========================= -->
 
     <main id="home">
 
+        <!-- HERO -->
         <section class="hero">
 
             <div class="hero-logo">
@@ -687,57 +674,36 @@
             </div>
 
             <div class="official">
-
-                <span class="lang-en">
-                    OFFICIAL WEBSITE
-                </span>
-
-                <span class="lang-fr">
-                    SITE OFFICIEL
-                </span>
-
+                <span class="lang-en">OFFICIAL WEBSITE</span>
+                <span class="lang-fr">SITE OFFICIEL</span>
             </div>
 
         </section>
 
-
-        <!-- =========================
-             MUSIC
-        ========================= -->
-
+        <!-- MUSIC -->
         <section id="music" class="content-section">
 
             <h2 class="section-title">
-
                 <span class="lang-en">MUSIC</span>
                 <span class="lang-fr">MUSIQUE</span>
-
             </h2>
 
             <div class="release-grid">
 
-
-                <!-- =====================
-                     1ST CHAPTER
-                ====================== -->
-
+                <!-- 1ST CHAPTER -->
                 <article class="release">
 
                     <div>
 
                         <div class="release-cover">
-
                             <img
                                 src="https://fortyfour-44.github.io/1st-chapter.png?v=20260917"
                                 alt="1st Chapter — FORTY-FOUR"
                                 loading="eager"
                             >
-
                         </div>
 
-                        <h3>
-                            1st Chapter
-                        </h3>
+                        <h3>1st Chapter</h3>
 
                         <p class="lang-en">
                             The first chapter of Forty-Four.
@@ -750,24 +716,13 @@
                     </div>
 
                     <div class="release-status">
-
-                        <span class="lang-en">
-                            RELEASED — 2023
-                        </span>
-
-                        <span class="lang-fr">
-                            SORTI — 2023
-                        </span>
-
+                        <span class="lang-en">RELEASED — 2023</span>
+                        <span class="lang-fr">SORTI — 2023</span>
                     </div>
 
                 </article>
 
-
-                <!-- =====================
-                     2ND COMMUNION
-                ====================== -->
-
+                <!-- 2ND COMMUNION -->
                 <article class="release">
 
                     <div>
@@ -782,9 +737,7 @@
 
                         </div>
 
-                        <h3>
-                            2nd Communion
-                        </h3>
+                        <h3>2nd Communion</h3>
 
                         <p class="lang-en">
                             The second chapter is currently being
@@ -799,44 +752,28 @@
                     </div>
 
                     <div class="release-status">
-
-                        <span class="lang-en">
-                            REMIX &amp; MASTERING
-                        </span>
-
-                        <span class="lang-fr">
-                            REMIX &amp; MASTERING
-                        </span>
-
+                        <span class="lang-en">REMIX &amp; MASTERING</span>
+                        <span class="lang-fr">REMIX &amp; MASTERING</span>
                     </div>
 
                 </article>
 
             </div>
-
         </section>
 
-
-        <!-- =========================
-             NEWS
-        ========================= -->
-
+        <!-- NEWS -->
         <section id="news" class="content-section">
 
             <h2 class="section-title">
-
                 <span class="lang-en">NEWS</span>
                 <span class="lang-fr">ACTUALITÉS</span>
-
             </h2>
 
             <div class="news-list">
 
                 <article class="news-item">
 
-                    <div class="news-date">
-                        2026
-                    </div>
+                    <div class="news-date">2026</div>
 
                     <div class="news-content">
 
@@ -859,12 +796,9 @@
 
                 </article>
 
-
                 <article class="news-item">
 
-                    <div class="news-date">
-                        ARCHIVES
-                    </div>
+                    <div class="news-date">ARCHIVES</div>
 
                     <div class="news-content">
 
@@ -889,14 +823,9 @@
                 </article>
 
             </div>
-
         </section>
 
-
-        <!-- =========================
-             ARCHIVES
-        ========================= -->
-
+        <!-- ARCHIVES -->
         <section id="archives" class="content-section">
 
             <h2 class="section-title">
@@ -922,33 +851,19 @@
                 </p>
 
                 <a href="#" class="archive-button">
-
-                    <span class="lang-en">
-                        ENTER ARCHIVES
-                    </span>
-
-                    <span class="lang-fr">
-                        ENTRER DANS LES ARCHIVES
-                    </span>
-
+                    <span class="lang-en">ENTER ARCHIVES</span>
+                    <span class="lang-fr">ENTRER DANS LES ARCHIVES</span>
                 </a>
 
             </div>
-
         </section>
 
-
-        <!-- =========================
-             STORY
-        ========================= -->
-
+        <!-- STORY -->
         <section id="story" class="content-section">
 
             <h2 class="section-title">
-
                 <span class="lang-en">STORY</span>
                 <span class="lang-fr">HISTOIRE</span>
-
             </h2>
 
             <div class="story-content">
@@ -981,21 +896,14 @@
                 </p>
 
             </div>
-
         </section>
 
-
-        <!-- =========================
-             VISUALS
-        ========================= -->
-
+        <!-- VISUALS -->
         <section id="visuals" class="content-section">
 
             <h2 class="section-title">
-
                 <span class="lang-en">VISUALS</span>
                 <span class="lang-fr">VISUELS</span>
-
             </h2>
 
             <div class="visual-grid">
@@ -1031,28 +939,19 @@
                 </div>
 
             </div>
-
         </section>
 
-
-        <!-- =========================
-             MERCH
-        ========================= -->
-
+        <!-- MERCH -->
         <section id="merch" class="content-section">
 
             <h2 class="section-title">
-
                 <span class="lang-en">MERCH</span>
                 <span class="lang-fr">MERCH</span>
-
             </h2>
 
             <div class="merch-box">
 
-                <h3>
-                    FORTY-FOUR
-                </h3>
+                <h3>FORTY-FOUR</h3>
 
                 <p class="lang-en">
                     Official Forty-Four items and editions.
@@ -1065,30 +964,21 @@
                 </p>
 
             </div>
-
         </section>
 
-
-        <!-- =========================
-             CONTACT
-        ========================= -->
-
+        <!-- CONTACT -->
         <section id="contact" class="content-section">
 
             <h2 class="section-title">
-
                 <span class="lang-en">CONTACT</span>
                 <span class="lang-fr">CONTACT</span>
-
             </h2>
 
             <div class="contact-grid">
 
                 <div class="contact-box">
 
-                    <h3>
-                        FORTY-FOUR
-                    </h3>
+                    <h3>FORTY-FOUR</h3>
 
                     <p class="lang-en">
                         FORTY-FOUR<br>
@@ -1104,12 +994,9 @@
 
                 </div>
 
-
                 <div class="contact-box">
 
-                    <h3>
-                        PRESS / EPK
-                    </h3>
+                    <h3>PRESS / EPK</h3>
 
                     <p class="lang-en">
                         Press information, biography,
@@ -1128,16 +1015,11 @@
                 </div>
 
             </div>
-
         </section>
 
     </main>
 
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
+    <!-- FOOTER -->
     <footer>
 
         <div class="footer-name">
@@ -1150,7 +1032,19 @@
 
         <div class="footer-links">
 
-            <a href="#">
+            <a
+                href="https://forty-fourabannedpagan.bandcamp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                BANDCAMP
+            </a>
+
+            <a
+                href="https://www.facebook.com/profile.php?id=100089897472402"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 FACEBOOK
             </a>
 
@@ -1169,7 +1063,6 @@
         </div>
 
     </footer>
-
 
     <script>
 
@@ -1197,7 +1090,6 @@
                 document.documentElement.lang = "en";
 
             }
-
         }
 
         setLanguage("en");
@@ -1206,3 +1098,4 @@
 
 </body>
 </html>
+```
