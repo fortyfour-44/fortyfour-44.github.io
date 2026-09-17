@@ -68,7 +68,6 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-
             background: rgba(21, 21, 21, 0.97);
             border-bottom: 1px solid #343434;
         }
@@ -222,7 +221,7 @@
         .release {
             border: 1px solid #343434;
             padding: 35px;
-            min-height: 370px;
+            min-height: 500px;
 
             display: flex;
             flex-direction: column;
@@ -230,7 +229,8 @@
         }
 
         .release-cover {
-            height: 200px;
+            width: 100%;
+            aspect-ratio: 1 / 1;
 
             border: 1px solid #343434;
 
@@ -238,11 +238,22 @@
             align-items: center;
             justify-content: center;
 
+            overflow: hidden;
+
+            margin-bottom: 30px;
+        }
+
+        .release-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .release-cover-placeholder {
             color: #666;
             font-size: 10px;
             letter-spacing: 3px;
-
-            margin-bottom: 30px;
         }
 
         .release h3 {
@@ -562,10 +573,11 @@
 
             .release {
                 padding: 25px;
+                min-height: auto;
             }
 
             .release-cover {
-                height: 170px;
+                margin-bottom: 25px;
             }
 
             .archive-access {
@@ -679,8 +691,15 @@
             </div>
 
             <div class="official">
-                <span class="lang-en">OFFICIAL WEBSITE</span>
-                <span class="lang-fr">SITE OFFICIEL</span>
+
+                <span class="lang-en">
+                    OFFICIAL WEBSITE
+                </span>
+
+                <span class="lang-fr">
+                    SITE OFFICIEL
+                </span>
+
             </div>
 
         </section>
@@ -702,7 +721,9 @@
             <div class="release-grid">
 
 
-                <!-- 1ST CHAPTER -->
+                <!-- =====================
+                     1ST CHAPTER
+                ====================== -->
 
                 <article class="release">
 
@@ -710,13 +731,10 @@
 
                         <div class="release-cover">
 
-                            <span class="lang-en">
-                                1ST CHAPTER
-                            </span>
-
-                            <span class="lang-fr">
-                                1ER CHAPITRE
-                            </span>
+                            <img
+                                src="1st-chapter.png"
+                                alt="1st Chapter — FORTY-FOUR"
+                            >
 
                         </div>
 
@@ -749,7 +767,9 @@
                 </article>
 
 
-                <!-- 2ND COMMUNION -->
+                <!-- =====================
+                     2ND COMMUNION
+                ====================== -->
 
                 <article class="release">
 
@@ -757,13 +777,17 @@
 
                         <div class="release-cover">
 
-                            <span class="lang-en">
-                                2ND COMMUNION
-                            </span>
+                            <div class="release-cover-placeholder">
 
-                            <span class="lang-fr">
-                                2ND COMMUNION
-                            </span>
+                                <span class="lang-en">
+                                    2ND COMMUNION
+                                </span>
+
+                                <span class="lang-fr">
+                                    2ND COMMUNION
+                                </span>
+
+                            </div>
 
                         </div>
 
@@ -816,7 +840,6 @@
             </h2>
 
             <div class="news-list">
-
 
                 <article class="news-item">
 
@@ -1070,7 +1093,6 @@
 
             <div class="contact-grid">
 
-
                 <div class="contact-box">
 
                     <h3>
@@ -1157,10 +1179,6 @@
 
     </footer>
 
-
-    <!-- =========================
-         LANGUAGE SCRIPT
-    ========================= -->
 
     <script>
 
