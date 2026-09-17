@@ -1,1613 +1,1697 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>FORTY-FOUR (A BANNED PAGAN) — Official Website</title>
-
-    <meta
-        name="description"
-        content="FORTY-FOUR (A BANNED PAGAN) — Dark music rooted in deathrock, goth rock, coldwave and alternative rock."
-    >
-
-    <meta
-        name="keywords"
-        content="Forty-Four, A Banned Pagan, deathrock, goth rock, coldwave, post-punk, dark music, alternative rock"
-    >
-
-    <meta name="author" content="FORTY-FOUR (A BANNED PAGAN)">
-
-    <meta property="og:title" content="FORTY-FOUR (A BANNED PAGAN)">
-    <meta
-        property="og:description"
-        content="Official website of FORTY-FOUR (A BANNED PAGAN). Dark music, archives, story and releases."
-    >
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://fortyfour-44.github.io/">
-
-    <style>
-
-        /* =========================================================
-           RESET
-        ========================================================= */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: #151515;
-            color: #e6e3dc;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-
-        /* =========================================================
-           VARIABLES
-        ========================================================= */
-
-        :root {
-            --bg: #151515;
-            --bg-soft: #1b1b1b;
-            --text: #e6e3dc;
-            --soft: #9b9b96;
-            --accent: #dedbd3;
-            --line: #343434;
-        }
-
-
-        /* =========================================================
-           HEADER
-        ========================================================= */
-
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-
-            background: rgba(21, 21, 21, 0.96);
-            border-bottom: 1px solid var(--line);
-        }
-
-        .header-inner {
-            max-width: 1400px;
-            margin: 0 auto;
-            min-height: 72px;
-
-            padding: 0 35px;
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>FORTY-FOUR (A BANNED PAGAN) — Official Website</title>
+
+<meta
+name="description"
+content="Official website of FORTY-FOUR (A BANNED PAGAN) — dark music rooted in deathrock, goth rock, coldwave and alternative rock."
+>
 
-        /* =========================================================
-           HEADER LOGO
-        ========================================================= */
+<meta
+name="keywords"
+content="Forty-Four, A Banned Pagan, deathrock, goth rock, coldwave, post-punk, dark music, alternative rock"
+>
 
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 14px;
+<meta name="author" content="FORTY-FOUR (A BANNED PAGAN)">
 
-            white-space: nowrap;
-        }
+<meta property="og:title" content="FORTY-FOUR (A BANNED PAGAN)">
+<meta
+property="og:description"
+content="Official website of FORTY-FOUR (A BANNED PAGAN). Music, archives, story and visuals."
+>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fortyfour-44.github.io/">
 
-        .logo-image {
-            width: 42px;
-            height: 42px;
+<style>
 
-            object-fit: contain;
-        }
+/* =========================================================
+RESET
+========================================================= */
 
-        .brand-name {
-            font-size: 0.82rem;
-            letter-spacing: 0.25em;
-            font-weight: 400;
-            color: var(--accent);
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+}
 
-        /* =========================================================
-           NAVIGATION
-        ========================================================= */
+body {
+    background: #151515;
+    color: #e6e3dc;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 28px;
-        }
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-        nav a {
-            position: relative;
+img {
+    max-width: 100%;
+    display: block;
+}
 
-            font-size: 0.67rem;
-            letter-spacing: 0.17em;
-            color: var(--soft);
 
-            transition: color 0.2s ease;
-        }
+/* =========================================================
+VARIABLES
+========================================================= */
 
-        nav a:hover {
-            color: var(--accent);
-        }
+:root {
+    --bg: #151515;
+    --bg-soft: #1b1b1b;
+    --text: #e6e3dc;
+    --soft: #9b9b96;
+    --accent: #dedbd3;
+    --line: #343434;
+}
 
 
-        /* =========================================================
-           LANGUAGE
-        ========================================================= */
+/* =========================================================
+HEADER
+========================================================= */
 
-        .language-switch {
-            display: flex;
-            gap: 8px;
-            margin-left: 10px;
-        }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 
-        .language-switch button {
-            border: 0;
-            background: none;
-            color: var(--soft);
+    background: rgba(21, 21, 21, 0.96);
 
-            cursor: pointer;
+    border-bottom: 1px solid var(--line);
+}
 
-            font-family: inherit;
-            font-size: 0.65rem;
-            letter-spacing: 0.12em;
-        }
+.header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
 
-        .language-switch button.active {
-            color: var(--accent);
-        }
+    min-height: 72px;
 
+    padding: 0 35px;
 
-        /* =========================================================
-           HERO
-        ========================================================= */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-        .hero {
-            min-height: 100vh;
+    gap: 30px;
+}
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
 
-            text-align: center;
+/* =========================================================
+BRAND
+========================================================= */
 
-            padding: 120px 30px 80px;
-        }
+.brand {
+    display: flex;
+    align-items: center;
 
-        .hero-content {
-            width: 100%;
-            max-width: 900px;
-        }
+    gap: 14px;
 
-        .hero-logo {
-            width: clamp(180px, 30vw, 390px);
-            height: auto;
+    white-space: nowrap;
+}
 
-            margin: 0 auto 42px auto;
+.logo-image {
+    width: 42px;
+    height: 42px;
 
-            object-fit: contain;
-        }
+    object-fit: contain;
+}
 
-        .hero h1 {
-            margin: 0;
+.brand-name {
+    font-size: 0.82rem;
 
-            font-size: clamp(2.3rem, 7vw, 5.8rem);
-            font-weight: 400;
+    letter-spacing: 0.25em;
 
-            letter-spacing: 0.18em;
-            line-height: 1;
+    font-weight: 400;
 
-            color: var(--accent);
-        }
+    color: var(--accent);
+}
 
-        .hero-subtitle {
-            margin: 20px 0 0;
 
-            font-size: clamp(0.65rem, 1.3vw, 0.85rem);
-            letter-spacing: 0.38em;
+/* =========================================================
+NAVIGATION
+========================================================= */
 
-            color: var(--soft);
-        }
+nav {
+    display: flex;
+    align-items: center;
 
-        .hero-official {
-            margin: 12px 0 0;
+    gap: 28px;
+}
 
-            font-size: 0.58rem;
-            letter-spacing: 0.28em;
+nav a {
+    font-size: 0.67rem;
 
-            color: #777773;
+    letter-spacing: 0.17em;
 
-            text-transform: uppercase;
-        }
+    color: var(--soft);
 
+    transition: color 0.2s ease;
+}
 
-        /* =========================================================
-           SECTIONS
-        ========================================================= */
+nav a:hover {
+    color: var(--accent);
+}
 
-        section.content-section {
-            max-width: 1200px;
-            margin: 0 auto;
 
-            padding: 120px 35px;
+/* =========================================================
+LANGUAGE
+========================================================= */
 
-            border-top: 1px solid var(--line);
-        }
+.language-switch {
+    display: flex;
 
-        .section-title {
-            margin-bottom: 55px;
+    gap: 8px;
 
-            font-size: 0.72rem;
-            font-weight: 400;
+    margin-left: 10px;
+}
 
-            letter-spacing: 0.35em;
-            text-transform: uppercase;
+.language-switch button {
+    border: 0;
 
-            color: var(--accent);
-        }
+    background: none;
 
-        .section-intro {
-            max-width: 750px;
+    color: var(--soft);
 
-            margin-bottom: 50px;
+    cursor: pointer;
 
-            font-size: 1rem;
-            line-height: 1.9;
+    font-family: inherit;
 
-            color: var(--soft);
-        }
+    font-size: 0.65rem;
 
+    letter-spacing: 0.12em;
+}
 
-        /* =========================================================
-           MUSIC
-        ========================================================= */
+.language-switch button.active {
+    color: var(--accent);
+}
 
-        .release-grid {
-            display: grid;
 
-            grid-template-columns: repeat(2, 1fr);
+/* =========================================================
+HERO
+========================================================= */
 
-            gap: 50px;
-        }
+.hero {
+    min-height: 100vh;
 
-        .release {
-            border: 1px solid var(--line);
-            padding: 28px;
-        }
+    display: flex;
 
-        .release-cover {
-            aspect-ratio: 1 / 1;
+    align-items: center;
+    justify-content: center;
 
-            border: 1px solid var(--line);
+    text-align: center;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    padding: 120px 30px 80px;
+}
 
-            margin-bottom: 28px;
+.hero-content {
+    width: 100%;
 
-            color: #555550;
+    max-width: 900px;
+}
 
-            font-size: 0.65rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-        }
+.hero-logo {
+    width: clamp(180px, 30vw, 390px);
 
-        .release h3 {
-            font-size: 1.15rem;
-            font-weight: 400;
+    height: auto;
 
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
+    margin: 0 auto 42px auto;
 
-            margin-bottom: 10px;
-        }
+    object-fit: contain;
+}
 
-        .release p {
-            color: var(--soft);
-            font-size: 0.85rem;
+.hero h1 {
+    margin: 0;
 
-            margin-bottom: 22px;
-        }
+    font-size: clamp(2.3rem, 7vw, 5.8rem);
 
-        .release-link {
-            display: inline-block;
+    font-weight: 400;
 
-            font-size: 0.65rem;
-            letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
 
-            color: var(--accent);
+    line-height: 1;
 
-            border-bottom: 1px solid #555550;
+    color: var(--accent);
+}
 
-            padding-bottom: 5px;
-        }
+.hero-subtitle {
+    margin: 20px 0 0;
 
+    font-size: clamp(0.65rem, 1.3vw, 0.85rem);
 
-        /* =========================================================
-           NEWS
-        ========================================================= */
+    letter-spacing: 0.38em;
 
-        .news-list {
-            border-top: 1px solid var(--line);
-        }
+    color: var(--soft);
+}
 
-        .news-item {
-            display: grid;
+.hero-official {
+    margin: 12px 0 0;
 
-            grid-template-columns: 150px 1fr;
+    font-size: 0.58rem;
 
-            gap: 35px;
+    letter-spacing: 0.28em;
 
-            padding: 28px 0;
+    color: #777773;
 
-            border-bottom: 1px solid var(--line);
-        }
+    text-transform: uppercase;
+}
 
-        .news-date {
-            font-size: 0.65rem;
 
-            letter-spacing: 0.16em;
+/* =========================================================
+SECTIONS
+========================================================= */
 
-            color: #777773;
-        }
+.content-section {
+    max-width: 1200px;
 
-        .news-content h3 {
-            font-size: 1rem;
-            font-weight: 400;
+    margin: 0 auto;
 
-            letter-spacing: 0.1em;
+    padding: 120px 35px;
 
-            margin-bottom: 8px;
-        }
+    border-top: 1px solid var(--line);
+}
 
-        .news-content p {
-            max-width: 700px;
+.section-title {
+    margin-bottom: 50px;
 
-            color: var(--soft);
+    font-size: 0.72rem;
 
-            font-size: 0.85rem;
-        }
+    font-weight: 400;
 
+    letter-spacing: 0.35em;
 
-        /* =========================================================
-           ARCHIVES
-        ========================================================= */
+    text-transform: uppercase;
 
-        .archive-grid {
-            display: grid;
+    color: var(--accent);
+}
 
-            grid-template-columns: repeat(3, 1fr);
+.section-intro {
+    max-width: 750px;
 
-            gap: 25px;
-        }
+    margin-bottom: 45px;
 
-        .archive-card {
-            min-height: 230px;
+    font-size: 1rem;
 
-            border: 1px solid var(--line);
+    line-height: 1.9;
 
-            padding: 25px;
+    color: var(--soft);
+}
 
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
 
-        .archive-number {
-            font-size: 0.65rem;
+/* =========================================================
+MUSIC
+========================================================= */
 
-            letter-spacing: 0.25em;
+.release-grid {
+    display: grid;
 
-            color: #777773;
-        }
+    grid-template-columns: repeat(2, 1fr);
 
-        .archive-card h3 {
-            font-size: 1rem;
-            font-weight: 400;
+    gap: 50px;
+}
 
-            letter-spacing: 0.12em;
+.release {
+    border: 1px solid var(--line);
 
-            text-transform: uppercase;
-        }
+    padding: 28px;
+}
 
-        .archive-card p {
-            font-size: 0.8rem;
+.release-cover {
+    aspect-ratio: 1 / 1;
 
-            color: var(--soft);
-        }
+    border: 1px solid var(--line);
 
+    display: flex;
 
-        /* =========================================================
-           STORY
-        ========================================================= */
+    align-items: center;
+    justify-content: center;
 
-        .story {
-            max-width: 850px;
-        }
+    margin-bottom: 28px;
 
-        .story p {
-            margin-bottom: 25px;
+    color: #555550;
 
-            color: var(--soft);
+    font-size: 0.65rem;
 
-            font-size: 0.95rem;
-            line-height: 2;
-        }
+    letter-spacing: 0.2em;
 
-        .story p:last-child {
-            margin-bottom: 0;
-        }
+    text-transform: uppercase;
+}
 
+.release h3 {
+    font-size: 1.15rem;
 
-        /* =========================================================
-           VISUALS
-        ========================================================= */
+    font-weight: 400;
 
-        .visual-grid {
-            display: grid;
+    letter-spacing: 0.16em;
 
-            grid-template-columns: repeat(3, 1fr);
+    text-transform: uppercase;
 
-            gap: 20px;
-        }
+    margin-bottom: 10px;
+}
 
-        .visual-box {
-            aspect-ratio: 1 / 1;
+.release p {
+    color: var(--soft);
 
-            border: 1px solid var(--line);
+    font-size: 0.85rem;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    margin-bottom: 22px;
+}
 
-            color: #555550;
+.release-link {
+    display: inline-block;
 
-            font-size: 0.62rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-        }
+    font-size: 0.65rem;
 
+    letter-spacing: 0.2em;
 
-        /* =========================================================
-           MERCH
-        ========================================================= */
+    color: var(--accent);
 
-        .merch-box {
-            border: 1px solid var(--line);
+    border-bottom: 1px solid #555550;
 
-            padding: 45px;
+    padding-bottom: 5px;
+}
 
-            text-align: center;
-        }
 
-        .merch-box h3 {
-            font-size: 1rem;
-            font-weight: 400;
+/* =========================================================
+NEWS
+========================================================= */
 
-            letter-spacing: 0.18em;
+.news-list {
+    border-top: 1px solid var(--line);
+}
 
-            margin-bottom: 15px;
-        }
+.news-item {
+    display: grid;
 
-        .merch-box p {
-            color: var(--soft);
+    grid-template-columns: 150px 1fr;
 
-            font-size: 0.85rem;
+    gap: 35px;
 
-            margin-bottom: 25px;
-        }
+    padding: 28px 0;
 
-        .merch-link {
-            display: inline-block;
+    border-bottom: 1px solid var(--line);
+}
 
-            padding: 12px 20px;
+.news-date {
+    font-size: 0.65rem;
 
-            border: 1px solid #555550;
+    letter-spacing: 0.16em;
 
-            font-size: 0.65rem;
+    color: #777773;
+}
 
-            letter-spacing: 0.2em;
+.news-content h3 {
+    font-size: 1rem;
 
-            color: var(--accent);
-        }
+    font-weight: 400;
 
+    letter-spacing: 0.1em;
 
-        /* =========================================================
-           CONTACT
-        ========================================================= */
+    margin-bottom: 8px;
+}
 
-        .contact-grid {
-            display: grid;
+.news-content p {
+    max-width: 700px;
 
-            grid-template-columns: 1fr 1fr;
+    color: var(--soft);
 
-            gap: 50px;
-        }
+    font-size: 0.85rem;
+}
 
-        .contact-block h3 {
-            margin-bottom: 15px;
 
-            font-size: 0.7rem;
-            font-weight: 400;
+/* =========================================================
+ARCHIVES ACCESS
+========================================================= */
 
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
+.archive-access {
+    border: 1px solid var(--line);
 
-            color: var(--accent);
-        }
+    padding: 65px 45px;
 
-        .contact-block p {
-            color: var(--soft);
+    text-align: center;
+}
 
-            font-size: 0.85rem;
+.archive-access h3 {
+    font-size: 1.35rem;
 
-            line-height: 1.9;
-        }
+    font-weight: 400;
 
-        .contact-block a {
-            color: var(--accent);
+    letter-spacing: 0.2em;
 
-            border-bottom: 1px solid #555550;
-        }
+    margin-bottom: 20px;
+}
 
+.archive-access p {
+    max-width: 650px;
 
-        /* =========================================================
-           FOOTER
-        ========================================================= */
+    margin: 0 auto 30px;
 
-        footer {
-            border-top: 1px solid var(--line);
+    color: var(--soft);
 
-            padding: 60px 35px 40px;
-        }
+    font-size: 0.9rem;
 
-        .footer-inner {
-            max-width: 1200px;
-            margin: 0 auto;
+    line-height: 1.9;
+}
 
-            display: flex;
+.archive-button {
+    display: inline-block;
 
-            align-items: center;
-            justify-content: space-between;
+    border: 1px solid #555550;
 
-            gap: 30px;
-        }
+    padding: 13px 24px;
 
-        .footer-brand {
-            font-size: 0.7rem;
+    font-size: 0.63rem;
 
-            letter-spacing: 0.22em;
+    letter-spacing: 0.2em;
 
-            color: var(--accent);
-        }
+    color: var(--accent);
+}
 
-        .footer-links {
-            display: flex;
+.archive-button:hover {
+    border-color: var(--accent);
+}
 
-            gap: 25px;
 
-            flex-wrap: wrap;
-        }
+/* =========================================================
+STORY
+========================================================= */
 
-        .footer-links a {
-            font-size: 0.62rem;
+.story {
+    max-width: 850px;
+}
 
-            letter-spacing: 0.17em;
+.story p {
+    margin-bottom: 25px;
 
-            color: var(--soft);
-        }
+    color: var(--soft);
 
-        .footer-links a:hover {
-            color: var(--accent);
-        }
+    font-size: 0.95rem;
 
-        .copyright {
-            max-width: 1200px;
+    line-height: 2;
+}
 
-            margin: 35px auto 0;
+.story p:last-child {
+    margin-bottom: 0;
+}
 
-            padding-top: 25px;
 
-            border-top: 1px solid var(--line);
+/* =========================================================
+VISUALS
+========================================================= */
 
-            font-size: 0.58rem;
+.visual-grid {
+    display: grid;
 
-            letter-spacing: 0.16em;
+    grid-template-columns: repeat(3, 1fr);
 
-            color: #666662;
+    gap: 20px;
+}
 
-            text-align: center;
-        }
+.visual-box {
+    aspect-ratio: 1 / 1;
 
+    border: 1px solid var(--line);
 
-        /* =========================================================
-           LANGUAGE CONTENT
-        ========================================================= */
+    display: flex;
 
-        .lang-fr {
-            display: none;
-        }
+    align-items: center;
+    justify-content: center;
 
+    color: #555550;
 
-        /* =========================================================
-           TABLET
-        ========================================================= */
+    font-size: 0.62rem;
 
-        @media (max-width: 950px) {
+    letter-spacing: 0.2em;
 
-            .header-inner {
-                padding: 0 25px;
-            }
+    text-transform: uppercase;
+}
 
-            nav {
-                gap: 17px;
-            }
 
-            nav a {
-                font-size: 0.6rem;
-            }
+/* =========================================================
+MERCH
+========================================================= */
 
-            .release-grid {
-                grid-template-columns: 1fr;
-            }
+.merch-box {
+    border: 1px solid var(--line);
 
-            .archive-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+    padding: 45px;
 
-            .visual-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
+    text-align: center;
+}
 
+.merch-box h3 {
+    font-size: 1rem;
 
-        /* =========================================================
-           MOBILE
-        ========================================================= */
+    font-weight: 400;
 
-        @media (max-width: 700px) {
+    letter-spacing: 0.18em;
 
-            header {
-                position: relative;
-            }
+    margin-bottom: 15px;
+}
 
-            .header-inner {
-                min-height: auto;
+.merch-box p {
+    color: var(--soft);
 
-                padding: 18px 20px;
+    font-size: 0.85rem;
 
-                flex-wrap: wrap;
+    margin-bottom: 25px;
+}
 
-                justify-content: center;
-            }
+.merch-link {
+    display: inline-block;
 
-            .brand {
-                width: 100%;
+    padding: 12px 20px;
 
-                justify-content: center;
-            }
+    border: 1px solid #555550;
 
-            nav {
-                width: 100%;
+    font-size: 0.65rem;
 
-                justify-content: center;
+    letter-spacing: 0.2em;
 
-                flex-wrap: wrap;
+    color: var(--accent);
+}
 
-                gap: 13px 18px;
-            }
 
-            nav a {
-                font-size: 0.56rem;
-            }
+/* =========================================================
+CONTACT
+========================================================= */
 
-            .language-switch {
-                margin-left: 0;
-            }
+.contact-grid {
+    display: grid;
 
+    grid-template-columns: 1fr 1fr;
 
-            .hero {
-                min-height: 85vh;
+    gap: 50px;
+}
 
-                padding: 80px 20px 70px;
-            }
+.contact-block h3 {
+    margin-bottom: 15px;
 
-            .hero-logo {
-                width: min(65vw, 280px);
+    font-size: 0.7rem;
 
-                margin-bottom: 32px;
-            }
+    font-weight: 400;
 
-            .hero h1 {
-                font-size: clamp(2rem, 10vw, 3.5rem);
+    letter-spacing: 0.25em;
 
-                letter-spacing: 0.13em;
-            }
+    text-transform: uppercase;
 
-            .hero-subtitle {
-                font-size: 0.6rem;
+    color: var(--accent);
+}
 
-                letter-spacing: 0.28em;
-            }
+.contact-block p {
+    color: var(--soft);
 
-            .hero-official {
-                font-size: 0.5rem;
+    font-size: 0.85rem;
 
-                letter-spacing: 0.22em;
-            }
+    line-height: 1.9;
+}
 
+.contact-block a {
+    color: var(--accent);
 
-            section.content-section {
-                padding: 85px 20px;
-            }
+    border-bottom: 1px solid #555550;
+}
 
-            .section-title {
-                margin-bottom: 40px;
-            }
 
+/* =========================================================
+FOOTER
+========================================================= */
 
-            .news-item {
-                grid-template-columns: 1fr;
+footer {
+    border-top: 1px solid var(--line);
 
-                gap: 10px;
-            }
+    padding: 60px 35px 40px;
+}
 
+.footer-inner {
+    max-width: 1200px;
 
-            .archive-grid {
-                grid-template-columns: 1fr;
-            }
+    margin: 0 auto;
 
-            .visual-grid {
-                grid-template-columns: 1fr;
-            }
+    display: flex;
 
+    align-items: center;
 
-            .contact-grid {
-                grid-template-columns: 1fr;
+    justify-content: space-between;
 
-                gap: 35px;
-            }
+    gap: 30px;
+}
 
+.footer-brand {
+    font-size: 0.7rem;
 
-            .merch-box {
-                padding: 30px 20px;
-            }
+    letter-spacing: 0.22em;
 
+    color: var(--accent);
+}
 
-            footer {
-                padding: 45px 20px 30px;
-            }
+.footer-links {
+    display: flex;
 
-            .footer-inner {
-                flex-direction: column;
+    gap: 25px;
 
-                text-align: center;
-            }
+    flex-wrap: wrap;
+}
 
-            .footer-links {
-                justify-content: center;
-            }
-        }
+.footer-links a {
+    font-size: 0.62rem;
 
-    </style>
+    letter-spacing: 0.17em;
+
+    color: var(--soft);
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+.copyright {
+    max-width: 1200px;
+
+    margin: 35px auto 0;
+
+    padding-top: 25px;
+
+    border-top: 1px solid var(--line);
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.16em;
+
+    color: #666662;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+LANGUAGE
+========================================================= */
+
+.lang-fr {
+    display: none;
+}
+
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .header-inner {
+        padding: 0 25px;
+    }
+
+    nav {
+        gap: 17px;
+    }
+
+    nav a {
+        font-size: 0.6rem;
+    }
+
+    .release-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .visual-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    header {
+        position: relative;
+    }
+
+    .header-inner {
+        min-height: auto;
+
+        padding: 18px 20px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .brand {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    nav {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 13px 18px;
+    }
+
+    nav a {
+        font-size: 0.56rem;
+    }
+
+    .language-switch {
+        margin-left: 0;
+    }
+
+
+    .hero {
+        min-height: 85vh;
+
+        padding: 80px 20px 70px;
+    }
+
+    .hero-logo {
+        width: min(65vw, 280px);
+
+        margin-bottom: 32px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 10vw, 3.5rem);
+
+        letter-spacing: 0.13em;
+    }
+
+    .hero-subtitle {
+        font-size: 0.6rem;
+
+        letter-spacing: 0.28em;
+    }
+
+    .hero-official {
+        font-size: 0.5rem;
+
+        letter-spacing: 0.22em;
+    }
+
+
+    .content-section {
+        padding: 85px 20px;
+    }
+
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+
+    .news-item {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+
+    .archive-access {
+        padding: 45px 25px;
+    }
+
+
+    .visual-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .merch-box {
+        padding: 30px 20px;
+    }
+
+
+    footer {
+        padding: 45px 20px 30px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+
+}
+
+</style>
+
 </head>
 
 
 <body>
 
 
-    <!-- =========================================================
-         HEADER
-    ========================================================= -->
+<!-- =========================================================
+HEADER
+========================================================= -->
 
-    <header>
+<header>
 
-        <div class="header-inner">
+<div class="header-inner">
 
-            <a href="#home" class="brand">
 
-                <img
-                    src="logo44.png"
-                    alt="FORTY-FOUR logo"
-                    class="logo-image"
-                >
+<a href="#home" class="brand">
 
-                <span class="brand-name">
-                    FORTY-FOUR
-                </span>
+<img
+src="logo44.png"
+alt="FORTY-FOUR logo"
+class="logo-image"
+>
 
-            </a>
+<span class="brand-name">
+FORTY-FOUR
+</span>
 
+</a>
 
-            <nav>
 
-                <a href="#music">MUSIC</a>
-                <a href="#news">NEWS</a>
-                <a href="#archives">ARCHIVES</a>
-                <a href="#story">STORY</a>
-                <a href="#visuals">VISUALS</a>
-                <a href="#merch">MERCH</a>
-                <a href="#contact">CONTACT</a>
+<nav>
 
+<a href="#music">
+<span class="lang-en">MUSIC</span>
+<span class="lang-fr">MUSIQUE</span>
+</a>
 
-                <div class="language-switch">
+<a href="#news">
+<span class="lang-en">NEWS</span>
+<span class="lang-fr">ACTUALITÉS</span>
+</a>
 
-                    <button
-                        id="enButton"
-                        class="active"
-                        onclick="setLanguage('en')"
-                    >
-                        EN
-                    </button>
+<a href="#archives">
+<span class="lang-en">ARCHIVES</span>
+<span class="lang-fr">ARCHIVES</span>
+</a>
 
-                    <span>/</span>
+<a href="#story">
+<span class="lang-en">STORY</span>
+<span class="lang-fr">HISTOIRE</span>
+</a>
 
-                    <button
-                        id="frButton"
-                        onclick="setLanguage('fr')"
-                    >
-                        FR
-                    </button>
+<a href="#visuals">
+<span class="lang-en">VISUALS</span>
+<span class="lang-fr">VISUELS</span>
+</a>
 
-                </div>
+<a href="#merch">
+<span class="lang-en">MERCH</span>
+<span class="lang-fr">MERCH</span>
+</a>
 
-            </nav>
+<a href="#contact">
+<span class="lang-en">CONTACT</span>
+<span class="lang-fr">CONTACT</span>
+</a>
 
-        </div>
 
-    </header>
+<div class="language-switch">
 
+<button
+id="enButton"
+class="active"
+onclick="setLanguage('en')"
+>
+EN
+</button>
 
+<span>/</span>
 
-    <!-- =========================================================
-         HERO
-    ========================================================= -->
+<button
+id="frButton"
+onclick="setLanguage('fr')"
+>
+FR
+</button>
 
-    <main id="home">
+</div>
 
-        <section class="hero">
+</nav>
 
-            <div class="hero-content">
+</div>
 
-                <img
-                    src="logo44.png"
-                    alt="FORTY-FOUR"
-                    class="hero-logo"
-                >
+</header>
 
-                <h1>
-                    FORTY-FOUR
-                </h1>
 
-                <p class="hero-subtitle">
-                    (A BANNED PAGAN)
-                </p>
 
-                <p class="hero-official">
-                    OFFICIAL WEBSITE
-                </p>
+<!-- =========================================================
+HERO
+========================================================= -->
 
-            </div>
+<main id="home">
 
-        </section>
 
+<section class="hero">
 
+<div class="hero-content">
 
-        <!-- =====================================================
-             MUSIC
-        ===================================================== -->
+<img
+src="logo44.png"
+alt="FORTY-FOUR"
+class="hero-logo"
+>
 
-        <section
-            id="music"
-            class="content-section"
-        >
+<h1>
+FORTY-FOUR
+</h1>
 
-            <h2 class="section-title">
+<p class="hero-subtitle">
+(A BANNED PAGAN)
+</p>
 
-                <span class="lang-en">
-                    MUSIC
-                </span>
+<p class="hero-official">
+OFFICIAL WEBSITE
+</p>
 
-                <span class="lang-fr">
-                    MUSIQUE
-                </span>
+</div>
 
-            </h2>
+</section>
 
 
-            <p class="section-intro lang-en">
-                Dark music rooted in deathrock, goth rock,
-                coldwave and alternative rock.
-                Cold guitars, machines, hypnotic rhythms
-                and a fragmented inner narrative.
-            </p>
 
-            <p class="section-intro lang-fr">
-                Une musique sombre enracinée dans le deathrock,
-                le goth rock, la coldwave et le rock alternatif.
-                Guitares froides, machines, rythmes hypnotiques
-                et narration intérieure fragmentée.
-            </p>
+<!-- =========================================================
+MUSIC
+========================================================= -->
 
+<section
+id="music"
+class="content-section"
+>
 
-            <div class="release-grid">
+<h2 class="section-title">
 
+<span class="lang-en">
+MUSIC
+</span>
 
-                <!-- 1ST CHAPTER -->
+<span class="lang-fr">
+MUSIQUE
+</span>
 
-                <article class="release">
+</h2>
 
-                    <div class="release-cover">
-                        1ST CHAPTER
-                    </div>
 
-                    <h3>
-                        1st Chapter
-                    </h3>
+<p class="section-intro lang-en">
 
-                    <p class="lang-en">
-                        The first chapter.
-                        Five tracks written around exile,
-                        insanity, silence, control and the end.
-                    </p>
+Dark music rooted in deathrock, goth rock,
+coldwave and alternative rock.
+Cold guitars, machines, hypnotic rhythms
+and a fragmented inner narrative.
 
-                    <p class="lang-fr">
-                        Le premier chapitre.
-                        Cinq titres autour de l'exil,
-                        de la folie, du silence, du contrôle
-                        et de la fin.
-                    </p>
+</p>
 
-                    <a
-                        href="#"
-                        class="release-link"
-                    >
-                        LISTEN
-                    </a>
 
-                </article>
+<p class="section-intro lang-fr">
 
+Une musique sombre enracinée dans le deathrock,
+le goth rock, la coldwave et le rock alternatif.
+Guitares froides, machines, rythmes hypnotiques
+et une narration intérieure fragmentée.
 
+</p>
 
-                <!-- 2ND COMMUNION -->
 
-                <article class="release">
+<div class="release-grid">
 
-                    <div class="release-cover">
-                        2ND COMMUNION
-                    </div>
 
-                    <h3>
-                        2nd Communion
-                    </h3>
+<!-- 1ST CHAPTER -->
 
-                    <p class="lang-en">
-                        A new chapter.
-                        Itchy Soul, Blood On My Hands,
-                        I'm Fed Up, Ashes Of The Pact
-                        and In The Silent Chair.
-                    </p>
+<article class="release">
 
-                    <p class="lang-fr">
-                        Un nouveau chapitre.
-                        Itchy Soul, Blood On My Hands,
-                        I'm Fed Up, Ashes Of The Pact
-                        et In The Silent Chair.
-                    </p>
+<div class="release-cover">
+1ST CHAPTER
+</div>
 
-                    <a
-                        href="#"
-                        class="release-link"
-                    >
-                        LISTEN
-                    </a>
+<h3>
+1st Chapter
+</h3>
 
-                </article>
 
-            </div>
+<p class="lang-en">
 
-        </section>
+The first chapter.
+Five tracks built around exile,
+insanity, silence, control and the end.
 
+</p>
 
 
-        <!-- =====================================================
-             NEWS
-        ===================================================== -->
+<p class="lang-fr">
 
-        <section
-            id="news"
-            class="content-section"
-        >
+Le premier chapitre.
+Cinq titres construits autour de l'exil,
+de la folie, du silence, du contrôle et de la fin.
 
-            <h2 class="section-title">
-                NEWS
-            </h2>
+</p>
 
 
-            <div class="news-list">
+<a
+href="#"
+class="release-link"
+>
+<span class="lang-en">LISTEN</span>
+<span class="lang-fr">ÉCOUTER</span>
+</a>
 
+</article>
 
-                <article class="news-item">
 
-                    <div class="news-date">
-                        2026
-                    </div>
 
-                    <div class="news-content">
+<!-- 2ND COMMUNION -->
 
-                        <h3 class="lang-en">
-                            2nd Communion — Remix & Mastering
-                        </h3>
+<article class="release">
 
-                        <h3 class="lang-fr">
-                            2nd Communion — Remix & Mastering
-                        </h3>
+<div class="release-cover">
+2ND COMMUNION
+</div>
 
-                        <p class="lang-en">
-                            The second chapter is currently
-                            being reworked and prepared for
-                            its final mastering stage.
-                        </p>
+<h3>
+2nd Communion
+</h3>
 
-                        <p class="lang-fr">
-                            Le deuxième chapitre est actuellement
-                            retravaillé et préparé pour son
-                            mastering final.
-                        </p>
 
-                    </div>
+<p class="lang-en">
 
-                </article>
+A new chapter.
+Itchy Soul, Blood On My Hands,
+I'm Fed Up, Ashes Of The Pact
+and In The Silent Chair.
 
+</p>
 
-                <article class="news-item">
 
-                    <div class="news-date">
-                        ARCHIVES
-                    </div>
+<p class="lang-fr">
 
-                    <div class="news-content">
+Un nouveau chapitre.
+Itchy Soul, Blood On My Hands,
+I'm Fed Up, Ashes Of The Pact
+et In The Silent Chair.
 
-                        <h3 class="lang-en">
-                            The Story Behind The Silence
-                        </h3>
+</p>
 
-                        <h3 class="lang-fr">
-                            The Story Behind The Silence
-                        </h3>
 
-                        <p class="lang-en">
-                            The Forty-Four story continues
-                            through a series of personal archives,
-                            thoughts, music and images.
-                        </p>
+<a
+href="#"
+class="release-link"
+>
+<span class="lang-en">LISTEN</span>
+<span class="lang-fr">ÉCOUTER</span>
+</a>
 
-                        <p class="lang-fr">
-                            L'histoire de Forty-Four continue
-                            à travers une série d'archives personnelles,
-                            de réflexions, de musique et d'images.
-                        </p>
+</article>
 
-                    </div>
+</div>
 
-                </article>
+</section>
 
-            </div>
 
-        </section>
 
+<!-- =========================================================
+NEWS
+========================================================= -->
 
+<section
+id="news"
+class="content-section"
+>
 
-        <!-- =====================================================
-             ARCHIVES 44
-        ===================================================== -->
+<h2 class="section-title">
 
-        <section
-            id="archives"
-            class="content-section"
-        >
+<span class="lang-en">
+NEWS
+</span>
 
-            <h2 class="section-title">
-                ARCHIVES 44
-            </h2>
+<span class="lang-fr">
+ACTUALITÉS
+</span>
 
+</h2>
 
-            <p class="section-intro lang-en">
-                Personal archives documenting the path,
-                the writing, the recording and the evolution
-                of Forty-Four.
-            </p>
 
-            <p class="section-intro lang-fr">
-                Des archives personnelles retraçant le parcours,
-                l'écriture, l'enregistrement et l'évolution
-                de Forty-Four.
-            </p>
+<div class="news-list">
 
 
-            <div class="archive-grid">
+<article class="news-item">
 
+<div class="news-date">
+2026
+</div>
 
-                <article class="archive-card">
 
-                    <span class="archive-number">
-                        EPISODE 01
-                    </span>
+<div class="news-content">
 
-                    <h3>
-                        The Beginning
-                    </h3>
+<h3 class="lang-en">
+2nd Communion — Remix & Mastering
+</h3>
 
-                    <p class="lang-en">
-                        Before the name.
-                        Before the project.
-                    </p>
+<h3 class="lang-fr">
+2nd Communion — Remix & Mastering
+</h3>
 
-                    <p class="lang-fr">
-                        Avant le nom.
-                        Avant le projet.
-                    </p>
 
-                </article>
+<p class="lang-en">
 
+The second chapter is currently being reworked
+and prepared for its final mastering stage.
 
-                <article class="archive-card">
+</p>
 
-                    <span class="archive-number">
-                        EPISODE 02
-                    </span>
 
-                    <h3>
-                        The First Steps
-                    </h3>
+<p class="lang-fr">
 
-                    <p class="lang-en">
-                        The first ideas taking shape.
-                    </p>
+Le deuxième chapitre est actuellement retravaillé
+et préparé pour son mastering final.
 
-                    <p class="lang-fr">
-                        Les premières idées prennent forme.
-                    </p>
+</p>
 
-                </article>
+</div>
 
+</article>
 
-                <article class="archive-card">
 
-                    <span class="archive-number">
-                        EPISODE 03
-                    </span>
 
-                    <h3>
-                        The Itch
-                    </h3>
+<article class="news-item">
 
-                    <p class="lang-en">
-                        When the inspiration returned.
-                    </p>
+<div class="news-date">
+ARCHIVES
+</div>
 
-                    <p class="lang-fr">
-                        Quand l'inspiration est revenue.
-                    </p>
 
-                </article>
+<div class="news-content">
 
+<h3 class="lang-en">
+The Story Behind The Silence
+</h3>
 
-                <article class="archive-card">
+<h3 class="lang-fr">
+The Story Behind The Silence
+</h3>
 
-                    <span class="archive-number">
-                        EPISODE 04
-                    </span>
 
-                    <h3>
-                        The Voice
-                    </h3>
+<p class="lang-en">
 
-                    <p class="lang-en">
-                        The risk of singing for the first time.
-                    </p>
+The Forty-Four story continues through a series
+of personal archives, thoughts, music and images.
 
-                    <p class="lang-fr">
-                        Le risque de chanter pour la première fois.
-                    </p>
+</p>
 
-                </article>
 
+<p class="lang-fr">
 
-                <article class="archive-card">
+L'histoire de Forty-Four continue à travers une série
+d'archives personnelles, de réflexions, de musique et d'images.
 
-                    <span class="archive-number">
-                        EPISODE 05
-                    </span>
+</p>
 
-                    <h3>
-                        The Recording
-                    </h3>
+</div>
 
-                    <p class="lang-en">
-                        From ideas to sound.
-                    </p>
+</article>
 
-                    <p class="lang-fr">
-                        Des idées au son.
-                    </p>
 
-                </article>
+</div>
 
+</section>
 
-                <article class="archive-card">
 
-                    <span class="archive-number">
-                        EPISODE 07
-                    </span>
 
-                    <h3>
-                        1st Chapter
-                    </h3>
+<!-- =========================================================
+ARCHIVES 44
+========================================================= -->
 
-                    <p class="lang-en">
-                        The first chapter becomes real.
-                    </p>
+<section
+id="archives"
+class="content-section"
+>
 
-                    <p class="lang-fr">
-                        Le premier chapitre devient réel.
-                    </p>
+<h2 class="section-title">
+ARCHIVES 44
+</h2>
 
-                </article>
 
-            </div>
+<div class="archive-access">
 
-        </section>
 
+<h3>
+THE STORY BEHIND THE SILENCE
+</h3>
 
 
-        <!-- =====================================================
-             STORY
-        ===================================================== -->
+<p class="lang-en">
 
-        <section
-            id="story"
-            class="content-section"
-        >
+Personal archives documenting the story behind
+the music, from the first ideas to the evolution
+of Forty-Four.
 
-            <h2 class="section-title">
-                STORY
-            </h2>
+</p>
 
 
-            <div class="story">
+<p class="lang-fr">
 
-                <p class="lang-en">
-                    Forty-Four was born from a need to create
-                    outside the expectations and structures
-                    that had existed before.
-                </p>
+Des archives personnelles qui racontent l'histoire
+derrière la musique, des premières idées jusqu'à
+l'évolution de Forty-Four.
 
-                <p class="lang-en">
-                    It is not a continuation.
-                    It is not a return.
-                    It is a rebirth.
-                </p>
+</p>
 
-                <p class="lang-en">
-                    The music became an inner journal:
-                    fragments of identity, psychological collapse,
-                    ritual symbolism, silence, anger and renewal.
-                </p>
 
+<a
+href="#"
+class="archive-button"
+>
 
-                <p class="lang-fr">
-                    Forty-Four est né du besoin de créer
-                    en dehors des attentes et des structures
-                    qui existaient auparavant.
-                </p>
+<span class="lang-en">
+ENTER ARCHIVES
+</span>
 
-                <p class="lang-fr">
-                    Ce n'est pas une continuation.
-                    Ce n'est pas un retour.
-                    C'est une renaissance.
-                </p>
+<span class="lang-fr">
+ENTRER DANS LES ARCHIVES
+</span>
 
-                <p class="lang-fr">
-                    La musique est devenue un journal intérieur :
-                    fragments d'identité, effondrement psychologique,
-                    symbolisme rituel, silence, colère et renouveau.
-                </p>
+</a>
 
-            </div>
+</div>
 
-        </section>
+</section>
 
 
 
-        <!-- =====================================================
-             VISUALS
-        ===================================================== -->
+<!-- =========================================================
+STORY
+========================================================= -->
 
-        <section
-            id="visuals"
-            class="content-section"
-        >
+<section
+id="story"
+class="content-section"
+>
 
-            <h2 class="section-title">
-                VISUALS
-            </h2>
+<h2 class="section-title">
 
+<span class="lang-en">
+STORY
+</span>
 
-            <div class="visual-grid">
+<span class="lang-fr">
+HISTOIRE
+</span>
 
-                <div class="visual-box">
-                    VISUAL 01
-                </div>
+</h2>
 
-                <div class="visual-box">
-                    VISUAL 02
-                </div>
 
-                <div class="visual-box">
-                    VISUAL 03
-                </div>
+<div class="story">
 
-                <div class="visual-box">
-                    VISUAL 04
-                </div>
 
-                <div class="visual-box">
-                    VISUAL 05
-                </div>
+<p class="lang-en">
 
-                <div class="visual-box">
-                    VISUAL 06
-                </div>
+Forty-Four was born from a need to create
+outside the expectations and structures
+that had existed before.
 
-            </div>
+</p>
 
-        </section>
 
+<p class="lang-en">
 
+It is not a continuation.
+It is not a return.
+It is a rebirth.
 
-        <!-- =====================================================
-             MERCH
-        ===================================================== -->
+</p>
 
-        <section
-            id="merch"
-            class="content-section"
-        >
 
-            <h2 class="section-title">
-                MERCH
-            </h2>
+<p class="lang-en">
 
+The music became an inner journal:
+fragments of identity, psychological collapse,
+ritual symbolism, silence, anger and renewal.
 
-            <div class="merch-box">
+</p>
 
-                <h3>
-                    FORTY-FOUR
-                </h3>
 
-                <p class="lang-en">
-                    Official merchandise will appear here.
-                </p>
 
-                <p class="lang-fr">
-                    Les produits officiels apparaîtront ici.
-                </p>
+<p class="lang-fr">
 
-                <a
-                    href="#"
-                    class="merch-link"
-                >
-                    COMING SOON
-                </a>
+Forty-Four est né du besoin de créer
+en dehors des attentes et des structures
+qui existaient auparavant.
 
-            </div>
+</p>
 
-        </section>
 
+<p class="lang-fr">
 
+Ce n'est pas une continuation.
+Ce n'est pas un retour.
+C'est une renaissance.
 
-        <!-- =====================================================
-             CONTACT
-        ===================================================== -->
+</p>
 
-        <section
-            id="contact"
-            class="content-section"
-        >
 
-            <h2 class="section-title">
-                CONTACT
-            </h2>
+<p class="lang-fr">
 
+La musique est devenue un journal intérieur :
+fragments d'identité, effondrement psychologique,
+symbolisme rituel, silence, colère et renouveau.
 
-            <div class="contact-grid">
+</p>
 
+</div>
 
-                <div class="contact-block">
+</section>
 
-                    <h3>
-                        FORTY-FOUR
-                    </h3>
 
-                    <p>
-                        FORTY-FOUR<br>
-                        (A BANNED PAGAN)<br>
-                        Official Website
-                    </p>
 
-                </div>
+<!-- =========================================================
+VISUALS
+========================================================= -->
 
+<section
+id="visuals"
+class="content-section"
+>
 
-                <div class="contact-block">
+<h2 class="section-title">
 
-                    <h3>
-                        PRESS / EPK
-                    </h3>
+<span class="lang-en">
+VISUALS
+</span>
 
-                    <p class="lang-en">
-                        Press information, biography,
-                        visuals and electronic press kit.
-                    </p>
+<span class="lang-fr">
+VISUELS
+</span>
 
-                    <p class="lang-fr">
-                        Informations presse, biographie,
-                        visuels et dossier de presse électronique.
-                    </p>
+</h2>
 
-                    <br>
 
-                    <a href="#">
-                        PRESS / EPK
-                    </a>
+<div class="visual-grid">
 
-                </div>
+<div class="visual-box">
+VISUAL 01
+</div>
 
-            </div>
+<div class="visual-box">
+VISUAL 02
+</div>
 
-        </section>
+<div class="visual-box">
+VISUAL 03
+</div>
 
-    </main>
+<div class="visual-box">
+VISUAL 04
+</div>
 
+<div class="visual-box">
+VISUAL 05
+</div>
 
+<div class="visual-box">
+VISUAL 06
+</div>
 
-    <!-- =========================================================
-         FOOTER
-    ========================================================= -->
+</div>
 
-    <footer>
+</section>
 
-        <div class="footer-inner">
 
 
-            <div class="footer-brand">
-                FORTY-FOUR
-            </div>
+<!-- =========================================================
+MERCH
+========================================================= -->
 
+<section
+id="merch"
+class="content-section"
+>
 
-            <div class="footer-links">
+<h2 class="section-title">
+MERCH
+</h2>
 
-                <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    FACEBOOK
-                </a>
 
-                <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    STREAMING
-                </a>
+<div class="merch-box">
 
-                <a href="#contact">
-                    PRESS / EPK
-                </a>
+<h3>
+FORTY-FOUR
+</h3>
 
-            </div>
 
-        </div>
+<p class="lang-en">
+Official merchandise will appear here.
+</p>
 
 
-        <div class="copyright">
-            © 2026 FORTY-FOUR (A BANNED PAGAN)
-        </div>
+<p class="lang-fr">
+Les produits officiels apparaîtront ici.
+</p>
 
-    </footer>
 
+<a
+href="#"
+class="merch-link"
+>
 
+<span class="lang-en">
+COMING SOON
+</span>
 
-    <!-- =========================================================
-         LANGUAGE SCRIPT
-    ========================================================= -->
+<span class="lang-fr">
+BIENTÔT
+</span>
 
-    <script>
+</a>
 
-        function setLanguage(language) {
+</div>
 
-            const englishElements =
-                document.querySelectorAll('.lang-en');
+</section>
 
-            const frenchElements =
-                document.querySelectorAll('.lang-fr');
 
-            const enButton =
-                document.getElementById('enButton');
 
-            const frButton =
-                document.getElementById('frButton');
+<!-- =========================================================
+CONTACT
+========================================================= -->
 
+<section
+id="contact"
+class="content-section"
+>
 
-            if (language === 'fr') {
+<h2 class="section-title">
+CONTACT
+</h2>
 
-                englishElements.forEach(function(element) {
-                    element.style.display = 'none';
-                });
 
-                frenchElements.forEach(function(element) {
-                    element.style.display = '';
-                });
+<div class="contact-grid">
 
-                enButton.classList.remove('active');
-                frButton.classList.add('active');
 
-                document.documentElement.lang = 'fr';
+<div class="contact-block">
 
-            } else {
+<h3>
+FORTY-FOUR
+</h3>
 
-                englishElements.forEach(function(element) {
-                    element.style.display = '';
-                });
 
-                frenchElements.forEach(function(element) {
-                    element.style.display = 'none';
-                });
+<p>
 
-                enButton.classList.add('active');
-                frButton.classList.remove('active');
+FORTY-FOUR<br>
+(A BANNED PAGAN)<br>
+Official Website
 
-                document.documentElement.lang = 'en';
+</p>
 
-            }
+</div>
 
-        }
 
 
-        /* Default language */
+<div class="contact-block">
 
-        setLanguage('en');
+<h3>
+PRESS / EPK
+</h3>
 
-    </script>
+
+<p class="lang-en">
+
+Press information, biography,
+visuals and electronic press kit.
+
+</p>
+
+
+<p class="lang-fr">
+
+Informations presse, biographie,
+visuels et dossier de presse électronique.
+
+</p>
+
+
+<br>
+
+
+<a href="#">
+PRESS / EPK
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<!-- =========================================================
+FOOTER
+========================================================= -->
+
+<footer>
+
+
+<div class="footer-inner">
+
+
+<div class="footer-brand">
+FORTY-FOUR
+</div>
+
+
+<div class="footer-links">
+
+<a
+href="#"
+target="_blank"
+rel="noopener"
+>
+FACEBOOK
+</a>
+
+
+<a
+href="#"
+target="_blank"
+rel="noopener"
+>
+STREAMING
+</a>
+
+
+<a href="#contact">
+PRESS / EPK
+</a>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 FORTY-FOUR (A BANNED PAGAN)
+
+</div>
+
+</footer>
+
+
+
+<!-- =========================================================
+LANGUAGE SCRIPT
+========================================================= -->
+
+<script>
+
+function setLanguage(language) {
+
+const englishElements =
+document.querySelectorAll('.lang-en');
+
+const frenchElements =
+document.querySelectorAll('.lang-fr');
+
+const enButton =
+document.getElementById('enButton');
+
+const frButton =
+document.getElementById('frButton');
+
+
+if (language === 'fr') {
+
+englishElements.forEach(function(element) {
+element.style.display = 'none';
+});
+
+frenchElements.forEach(function(element) {
+element.style.display = '';
+});
+
+enButton.classList.remove('active');
+
+frButton.classList.add('active');
+
+document.documentElement.lang = 'fr';
+
+}
+
+else {
+
+englishElements.forEach(function(element) {
+element.style.display = '';
+});
+
+frenchElements.forEach(function(element) {
+element.style.display = 'none';
+});
+
+enButton.classList.add('active');
+
+frButton.classList.remove('active');
+
+document.documentElement.lang = 'en';
+
+}
+
+}
+
+
+/* Default language */
+
+setLanguage('en');
+
+</script>
 
 
 </body>
+
 </html>
