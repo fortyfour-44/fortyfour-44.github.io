@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Forty-Four Journal — Archives</title>
+
+<style>
+:root {
+    --bg: #0b0b0b;
+    --text: #d6d2c8;
+    --muted: #77746d;
+    --line: #292929;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* HEADER */
+
+header {
+    width: 100%;
+    border-bottom: 1px solid var(--line);
+    padding: 25px 5%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--text);
+}
+
+.language {
+    display: flex;
+    gap: 8px;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+}
+
+.language span {
+    cursor: pointer;
+}
+
+.language .selected {
+    color: var(--text);
+}
+
+
+/* PAGE INTRO */
+
+.archive-header {
+    width: min(1000px, 90%);
+    margin: 0 auto;
+    padding: 120px 0 100px;
+    border-bottom: 1px solid var(--line);
+}
+
+.archive-header h1 {
+    font-size: clamp(28px, 5vw, 54px);
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    margin-bottom: 20px;
+}
+
+.archive-header h2 {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    color: var(--muted);
+    margin-bottom: 35px;
+}
+
+.archive-header p {
+    max-width: 650px;
+    color: #96938c;
+}
+
+
+/* ARCHIVE ENTRIES */
+
+.archives-container {
+    width: min(1000px, 90%);
+    margin: 0 auto;
+}
+
+.archive-entry {
+    padding: 100px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.archive-meta {
+    margin-bottom: 45px;
+}
+
+.archive-series {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.archive-number {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    color: #8d8981;
+    margin-bottom: 10px;
+}
+
+.archive-entry h2 {
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+}
+
+
+.archive-content {
+    display: grid;
+    grid-template-columns: minmax(250px, 430px) 1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.archive-image img {
+    width: 100%;
+    display: block;
+}
+
+.archive-text {
+    color: #a09d96;
+    max-width: 520px;
+}
+
+.archive-intro {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: var(--text);
+    margin-bottom: 35px;
+}
+
+.archive-text p {
+    margin-bottom: 24px;
+}
+
+.archive-ending {
+    margin-top: 45px;
+    color: var(--text);
+    font-style: italic;
+}
+
+
+/* BACK */
+
+.archive-back {
+    padding: 70px 0;
+}
+
+.archive-back a {
+    display: inline-block;
+    border: 1px solid #55524c;
+    padding: 13px 25px;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.archive-back a:hover {
+    background: var(--text);
+    color: var(--bg);
+}
+
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid var(--line);
+    padding: 45px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.footer-links a {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+}
+
+.footer-links a:hover {
+    color: var(--text);
+}
+
+.footer-copy {
+    color: #55534e;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+}
+
+
+/* LANGUAGE */
+
+.lang-fr {
+    display: none;
+}
+
+body.fr .lang-en {
+    display: none;
+}
+
+body.fr .lang-fr {
+    display: block;
+}
+
+body.fr .language .en {
+    color: var(--muted);
+}
+
+body.fr .language .fr {
+    color: var(--text);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 20px 5%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .archive-header {
+        padding: 80px 0 70px;
+    }
+
+    .archive-entry {
+        padding: 75px 0;
+    }
+
+    .archive-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .archive-image {
+        max-width: 500px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <nav>
+
+        <div class="nav-links">
+
+            <a href="index.html#music">
+                <span class="lang-en">MUSIC</span>
+                <span class="lang-fr">MUSIQUE</span>
+            </a>
+
+            <a href="index.html#news">
+                <span class="lang-en">NEWS</span>
+                <span class="lang-fr">ACTUALITÉS</span>
+            </a>
+
+            <a href="archives.html" class="active">
+                ARCHIVES
+            </a>
+
+            <a href="index.html#story">
+                <span class="lang-en">STORY</span>
+                <span class="lang-fr">HISTOIRE</span>
+            </a>
+
+            <a href="index.html#visuals">
+                <span class="lang-en">VISUALS</span>
+                <span class="lang-fr">VISUELS</span>
+            </a>
+
+            <a href="index.html#merch">
+                MERCH
+            </a>
+
+            <a href="index.html#contact">
+                CONTACT
+            </a>
+
+        </div>
+
+        <div class="language">
+            <span class="en selected" onclick="setLanguage('en')">EN</span>
+            <span>/</span>
+            <span class="fr" onclick="setLanguage('fr')">FR</span>
+        </div>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+    <!-- ARCHIVE INTRO -->
+
+    <section class="archive-header">
+
+        <h1>
+            THE FORTY-FOUR JOURNAL
+        </h1>
+
+        <h2>
+            THE STORY BEHIND THE SILENCE
+        </h2>
+
+        <p class="lang-en">
+            Personal archives documenting the story behind
+            Forty-Four — the ideas, fragments, decisions,
+            images and moments that shaped the project.
+        </p>
+
+        <p class="lang-fr">
+            Des archives personnelles qui racontent l'histoire
+            derrière Forty-Four — les idées, les fragments,
+            les décisions, les images et les moments qui ont
+            façonné le projet.
+        </p>
+
+    </section>
+
+
+    <div class="archives-container">
+
+
+        <!-- ARCHIVE 001 -->
+
+        <article class="archive-entry" id="archive001">
+
+            <div class="archive-meta">
+
+                <div class="archive-series">
+                    THE FORTY-FOUR JOURNAL
+                </div>
+
+                <div class="archive-number">
+                    ARCHIVE 001
+                </div>
+
+                <h2>
+                    The Beginning
+                </h2>
+
+            </div>
+
+
+            <div class="archive-content">
+
+                <div class="archive-image">
+
+                    <img
+                        src="https://fortyfour-44.github.io/arch001.png?v=20260917"
+                        alt="Archive 001 — The Beginning"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <div class="archive-text">
+
+                    <p class="archive-intro">
+                        BEFORE FORTY-FOUR
+                    </p>
+
+
+                    <p class="lang-en">
+                        Every story begins long before its first chapter.
+                    </p>
+
+                    <p class="lang-fr">
+                        Chaque histoire commence bien avant son premier chapitre.
+                    </p>
+
+
+                    <p class="lang-en">
+                        For years, music was a shared adventure.
+                    </p>
+
+                    <p class="lang-fr">
+                        Pendant des années, la musique a été une aventure partagée.
+                    </p>
+
+
+                    <p>
+                        Des répétitions.<br>
+                        Des concerts.<br>
+                        Des kilomètres.<br>
+                        Des idées.<br>
+                        Des projets.
+                    </p>
+
+
+                    <p>
+                        Puis le temps passe.
+                    </p>
+
+
+                    <p>
+                        Les vies changent.
+                    </p>
+
+
+                    <p>
+                        Les routes s'éloignent.
+                    </p>
+
+
+                    <p>
+                        Parfois, les histoires ne se terminent pas.
+                    </p>
+
+
+                    <p>
+                        Elles prennent simplement une autre direction.
+                    </p>
+
+
+                    <p class="archive-ending">
+                        To be continued...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!--
+        FUTURE ARCHIVES
+
+        ARCHIVE 002
+        ARCHIVE 003
+        ARCHIVE 004
+        etc.
+
+        Les prochaines archives seront ajoutées ici,
+        dans l'ordre chronologique.
+        -->
+
+
+        <div class="archive-back">
+
+            <a href="index.html">
+
+                <span class="lang-en">
+                    BACK TO FORTY-FOUR
+                </span>
+
+                <span class="lang-fr">
+                    RETOUR À FORTY-FOUR
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-links">
+
+        <a
+            href="https://forty-fourabannedpagan.bandcamp.com/"
+            target="_blank"
+            rel="noopener"
+        >
+            BANDCAMP
+        </a>
+
+        <a
+            href="https://www.facebook.com/profile.php?id=100089897472402"
+            target="_blank"
+            rel="noopener"
+        >
+            FACEBOOK
+        </a>
+
+        <a href="#">
+            STREAMING
+        </a>
+
+        <a href="#">
+            PRESS / EPK
+        </a>
+
+    </div>
+
+    <div class="footer-copy">
+        © FORTY-FOUR — A BANNED PAGAN
+    </div>
+
+</footer>
+
+
+<script>
+function setLanguage(language) {
+
+    if (language === "fr") {
+        document.body.classList.add("fr");
+    } else {
+        document.body.classList.remove("fr");
+    }
+
+    document.querySelector(".language .en")
+        .classList.toggle("selected", language === "en");
+
+    document.querySelector(".language .fr")
+        .classList.toggle("selected", language === "fr");
+}
+</script>
+
+</body>
+</html>
