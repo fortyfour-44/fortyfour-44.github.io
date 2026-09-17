@@ -1,1294 +1,707 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>FORTY-FOUR — A BANNED PAGAN | Official Website</title>
-
-    <meta name="description"
-          content="FORTY-FOUR (A BANNED PAGAN) — Official website. Music, archives, story, visuals and releases.">
-    <meta name="keywords"
-          content="Forty-Four, A Banned Pagan, deathrock, goth rock, coldwave, post-punk, dark music">
-    <meta name="author" content="FORTY-FOUR">
-
-    <meta property="og:title" content="FORTY-FOUR — A BANNED PAGAN">
-    <meta property="og:description"
-          content="Official website of FORTY-FOUR (A BANNED PAGAN).">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://fortyfour-44.github.io/">
-
-    <style>
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: #151515;
-            color: #e6e3dc;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        /* =========================
-           LANGUAGE
-        ========================= */
-
-        .lang-fr {
-            display: none !important;
-        }
-
-        body.fr .lang-en {
-            display: none !important;
-        }
-
-        body.fr .lang-fr {
-            display: revert !important;
-        }
-
-        /* =========================
-           HEADER
-        ========================= */
-
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(21, 21, 21, 0.97);
-            border-bottom: 1px solid #343434;
-        }
-
-        .header-inner {
-            max-width: 1400px;
-            margin: auto;
-            padding: 14px 35px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-
-            font-size: 14px;
-            letter-spacing: 3px;
-            white-space: nowrap;
-        }
-
-        .brand img {
-            width: 34px;
-            height: 34px;
-            object-fit: contain;
-            display: block;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            font-size: 11px;
-            letter-spacing: 2px;
-            color: #9b9b96;
-            transition: color 0.2s ease;
-        }
-
-        nav a:hover {
-            color: #e6e3dc;
-        }
-
-        .language {
-            display: flex;
-            gap: 7px;
-            font-size: 10px;
-            letter-spacing: 2px;
-            white-space: nowrap;
-        }
-
-        .language button {
-            background: none;
-            border: none;
-            color: #666;
-            cursor: pointer;
-            font-size: 10px;
-            letter-spacing: 2px;
-            padding: 0;
-        }
-
-        .language button.active {
-            color: #e6e3dc;
-        }
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            min-height: 100vh;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            text-align: center;
-
-            padding: 120px 30px 80px;
-        }
-
-        .hero-logo {
-            width: clamp(180px, 30vw, 390px);
-            max-width: 80%;
-            margin-bottom: 45px;
-        }
-
-        .hero-logo img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .hero h1 {
-            font-size: clamp(34px, 5vw, 70px);
-            font-weight: 400;
-            letter-spacing: 10px;
-            margin-bottom: 12px;
-        }
-
-        .hero-subtitle {
-            font-size: 14px;
-            letter-spacing: 5px;
-            color: #9b9b96;
-            margin-bottom: 20px;
-        }
-
-        .official {
-            font-size: 10px;
-            letter-spacing: 4px;
-            color: #666;
-        }
-
-        /* =========================
-           SECTIONS
-        ========================= */
-
-        .content-section {
-            max-width: 1400px;
-            margin: auto;
-            padding: 110px 45px;
-            border-top: 1px solid #343434;
-        }
-
-        .section-title {
-            font-size: 13px;
-            font-weight: 400;
-            letter-spacing: 5px;
-            margin-bottom: 55px;
-        }
-
-        /* =========================
-           MUSIC
-        ========================= */
-
-        .release-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 50px;
-        }
-
-        .release {
-            border: 1px solid #343434;
-            padding: 35px;
-            min-height: 500px;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .release-cover {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-
-            border: 1px solid #343434;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            overflow: hidden;
-
-            margin-bottom: 30px;
-        }
-
-        .release-cover img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            display: block;
-        }
-
-        .release-cover-placeholder {
-            color: #666;
-            font-size: 10px;
-            letter-spacing: 3px;
-        }
-
-        .release h3 {
-            font-size: 19px;
-            font-weight: 400;
-            letter-spacing: 3px;
-            margin-bottom: 10px;
-        }
-
-        .release p {
-            color: #9b9b96;
-            font-size: 12px;
-            letter-spacing: 1px;
-        }
-
-        .release-status {
-            margin-top: 18px;
-            font-size: 9px;
-            letter-spacing: 3px;
-            color: #666;
-        }
-
-        /* =========================
-           NEWS
-        ========================= */
-
-        .news-list {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .news-item {
-            display: grid;
-            grid-template-columns: 150px 1fr;
-            gap: 40px;
-
-            padding: 30px 0;
-            border-top: 1px solid #343434;
-        }
-
-        .news-item:last-child {
-            border-bottom: 1px solid #343434;
-        }
-
-        .news-date {
-            font-size: 11px;
-            letter-spacing: 3px;
-            color: #666;
-        }
-
-        .news-content h3 {
-            font-size: 17px;
-            font-weight: 400;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
-
-        .news-content p {
-            max-width: 750px;
-            color: #9b9b96;
-            font-size: 13px;
-        }
-
-        /* =========================
-           ARCHIVES
-        ========================= */
-
-        .archive-access {
-            max-width: 850px;
-            margin: auto;
-
-            border: 1px solid #343434;
-            padding: 60px 45px;
-
-            text-align: center;
-        }
-
-        .archive-access h3 {
-            font-size: 18px;
-            font-weight: 400;
-            letter-spacing: 4px;
-            margin-bottom: 25px;
-        }
-
-        .archive-access p {
-            max-width: 650px;
-            margin: 0 auto 35px;
-
-            color: #9b9b96;
-            font-size: 13px;
-        }
-
-        .archive-button {
-            display: inline-block;
-
-            border: 1px solid #555;
-            padding: 13px 25px;
-
-            font-size: 10px;
-            letter-spacing: 3px;
-
-            transition: all 0.2s ease;
-        }
-
-        .archive-button:hover {
-            border-color: #e6e3dc;
-        }
-
-        /* =========================
-           ARCHIVE ENTRY
-        ========================= */
-
-        .archive-entry {
-            max-width: 850px;
-            margin: 100px auto 0;
-            padding-top: 90px;
-            border-top: 1px solid #343434;
-        }
-
-        .archive-series {
-            font-size: 11px;
-            letter-spacing: 4px;
-            color: #666;
-            margin-bottom: 18px;
-        }
-
-        .archive-number {
-            font-size: 10px;
-            letter-spacing: 4px;
-            color: #9b9b96;
-            margin-bottom: 12px;
-        }
-
-        .archive-entry h3 {
-            font-size: 28px;
-            font-weight: 400;
-            letter-spacing: 4px;
-            margin-bottom: 45px;
-        }
-
-        .archive-image {
-            width: 100%;
-            margin-bottom: 45px;
-            border: 1px solid #343434;
-            overflow: hidden;
-        }
-
-        .archive-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .archive-text {
-            max-width: 700px;
-        }
-
-        .archive-text .archive-intro {
-            font-size: 15px;
-            letter-spacing: 2px;
-            margin-bottom: 30px;
-            color: #e6e3dc;
-        }
-
-        .archive-text p {
-            color: #9b9b96;
-            font-size: 14px;
-            line-height: 1.9;
-            margin-bottom: 22px;
-        }
-
-        .archive-text .archive-ending {
-            margin-top: 35px;
-            color: #e6e3dc;
-            font-style: italic;
-            letter-spacing: 2px;
-        }
-
-        /* =========================
-           STORY
-        ========================= */
-
-        .story-content {
-            max-width: 850px;
-        }
-
-        .story-content h3 {
-            font-size: 22px;
-            font-weight: 400;
-            letter-spacing: 3px;
-            margin-bottom: 25px;
-        }
-
-        .story-content p {
-            color: #9b9b96;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-
-        /* =========================
-           VISUALS
-        ========================= */
-
-        .visual-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .visual {
-            aspect-ratio: 1 / 1;
-
-            border: 1px solid #343434;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            color: #555;
-            font-size: 10px;
-            letter-spacing: 3px;
-        }
-
-        /* =========================
-           MERCH
-        ========================= */
-
-        .merch-box {
-            max-width: 600px;
-            border: 1px solid #343434;
-            padding: 50px;
-        }
-
-        .merch-box h3 {
-            font-size: 20px;
-            font-weight: 400;
-            letter-spacing: 4px;
-            margin-bottom: 15px;
-        }
-
-        .merch-box p {
-            color: #9b9b96;
-            font-size: 13px;
-        }
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 70px;
-        }
-
-        .contact-box h3 {
-            font-size: 18px;
-            font-weight: 400;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
-        }
-
-        .contact-box p {
-            color: #9b9b96;
-            font-size: 13px;
-            margin-bottom: 20px;
-        }
-
-        .contact-link {
-            display: inline-block;
-            border-bottom: 1px solid #555;
-            padding-bottom: 5px;
-
-            font-size: 11px;
-            letter-spacing: 2px;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            border-top: 1px solid #343434;
-            padding: 50px 35px;
-            text-align: center;
-        }
-
-        .footer-name {
-            font-size: 12px;
-            letter-spacing: 4px;
-            margin-bottom: 8px;
-        }
-
-        .footer-subtitle {
-            font-size: 10px;
-            letter-spacing: 3px;
-            color: #666;
-            margin-bottom: 30px;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .footer-links a {
-            font-size: 10px;
-            letter-spacing: 2px;
-            color: #9b9b96;
-        }
-
-        .footer-links a:hover {
-            color: #e6e3dc;
-        }
-
-        .copyright {
-            color: #555;
-            font-size: 9px;
-            letter-spacing: 2px;
-        }
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 900px) {
-
-            header {
-                position: relative;
-            }
-
-            .header-inner {
-                flex-direction: column;
-                padding: 18px 20px;
-                gap: 18px;
-            }
-
-            nav {
-                gap: 14px;
-            }
-
-            nav a {
-                font-size: 9px;
-                letter-spacing: 1.5px;
-            }
-
-            .hero {
-                min-height: calc(100vh - 150px);
-                padding-top: 70px;
-            }
-
-            .content-section {
-                padding: 80px 25px;
-            }
-
-            .release-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .visual-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 45px;
-            }
-
-            .news-item {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-
-            .archive-entry {
-                margin-top: 75px;
-                padding-top: 70px;
-            }
-        }
-
-        @media (max-width: 550px) {
-
-            .hero h1 {
-                letter-spacing: 6px;
-            }
-
-            .hero-subtitle {
-                letter-spacing: 3px;
-            }
-
-            .content-section {
-                padding: 65px 20px;
-            }
-
-            .release {
-                padding: 25px;
-                min-height: auto;
-            }
-
-            .release-cover {
-                margin-bottom: 25px;
-            }
-
-            .archive-access {
-                padding: 45px 25px;
-            }
-
-            .archive-entry h3 {
-                font-size: 23px;
-            }
-
-            .archive-text p {
-                font-size: 13px;
-            }
-
-            .visual-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .merch-box {
-                padding: 35px 25px;
-            }
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Forty-Four — A Banned Pagan</title>
+
+<style>
+:root {
+    --bg: #0b0b0b;
+    --text: #d6d2c8;
+    --muted: #77746d;
+    --line: #292929;
+    --accent: #bdb8ad;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    border-bottom: 1px solid var(--line);
+    padding: 25px 5%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--text);
+}
+
+.language {
+    display: flex;
+    gap: 8px;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+}
+
+.language span {
+    cursor: pointer;
+}
+
+.language .selected {
+    color: var(--text);
+}
+
+.hero {
+    min-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-logo {
+    width: min(230px, 55vw);
+    height: auto;
+    margin-bottom: 45px;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 6vw, 64px);
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    margin-left: 0.25em;
+}
+
+.hero-subtitle {
+    margin-top: 12px;
+    font-size: 12px;
+    letter-spacing: 0.35em;
+    color: var(--muted);
+}
+
+.hero-label {
+    margin-top: 35px;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: var(--muted);
+}
+
+.content-section {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 110px 0;
+    border-top: 1px solid var(--line);
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    margin-bottom: 70px;
+}
+
+.release {
+    display: grid;
+    grid-template-columns: minmax(250px, 380px) 1fr;
+    gap: 70px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.release:last-child {
+    margin-bottom: 0;
+}
+
+.release-cover img {
+    width: 100%;
+    display: block;
+}
+
+.release-info h3 {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    margin-bottom: 12px;
+}
+
+.release-status {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    margin-bottom: 30px;
+}
+
+.release-info p {
+    max-width: 560px;
+    color: #a09d96;
+    margin-bottom: 20px;
+}
+
+.tracklist {
+    margin-top: 30px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 2;
+}
+
+.archive-access {
+    max-width: 700px;
+}
+
+.archive-access h3 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    margin-bottom: 25px;
+}
+
+.archive-access p {
+    color: #96938c;
+    margin-bottom: 15px;
+}
+
+.archive-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 25px;
+    border: 1px solid #55524c;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.archive-button:hover {
+    background: var(--text);
+    color: var(--bg);
+}
+
+.visuals-placeholder,
+.merch-placeholder,
+.contact-placeholder {
+    color: var(--muted);
+    max-width: 650px;
+}
+
+footer {
+    border-top: 1px solid var(--line);
+    padding: 45px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.footer-links a {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+}
+
+.footer-links a:hover {
+    color: var(--text);
+}
+
+.footer-copy {
+    color: #55534e;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+}
+
+.lang-fr {
+    display: none;
+}
+
+body.fr .lang-en {
+    display: none;
+}
+
+body.fr .lang-fr {
+    display: block;
+}
+
+body.fr .language .en {
+    color: var(--muted);
+}
+
+body.fr .language .fr {
+    color: var(--text);
+}
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 20px 5%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .release {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-bottom: 80px;
+    }
+
+    .release-cover {
+        max-width: 500px;
+    }
+
+    .content-section {
+        padding: 80px 0;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="header-inner">
+<header>
+    <nav>
 
-            <a href="#home" class="brand">
-                <img src="logo44.png" alt="FORTY-FOUR logo">
-                <span>FORTY-FOUR</span>
-            </a>
-
-            <nav>
-                <a href="#music">
-                    <span class="lang-en">MUSIC</span>
-                    <span class="lang-fr">MUSIQUE</span>
-                </a>
-
-                <a href="#news">
-                    <span class="lang-en">NEWS</span>
-                    <span class="lang-fr">ACTUALITÉS</span>
-                </a>
-
-                <a href="#archives">
-                    <span class="lang-en">ARCHIVES</span>
-                    <span class="lang-fr">ARCHIVES</span>
-                </a>
-
-                <a href="#story">
-                    <span class="lang-en">STORY</span>
-                    <span class="lang-fr">HISTOIRE</span>
-                </a>
-
-                <a href="#visuals">
-                    <span class="lang-en">VISUALS</span>
-                    <span class="lang-fr">VISUELS</span>
-                </a>
-
-                <a href="#merch">
-                    <span class="lang-en">MERCH</span>
-                    <span class="lang-fr">MERCH</span>
-                </a>
-
-                <a href="#contact">
-                    <span class="lang-en">CONTACT</span>
-                    <span class="lang-fr">CONTACT</span>
-                </a>
-            </nav>
-
-            <div class="language">
-                <button id="enButton" class="active" onclick="setLanguage('en')">EN</button>
-                <span>/</span>
-                <button id="frButton" onclick="setLanguage('fr')">FR</button>
-            </div>
-
-        </div>
-    </header>
-
-    <main id="home">
-
-        <!-- HERO -->
-        <section class="hero">
-
-            <div class="hero-logo">
-                <img src="logo44.png" alt="FORTY-FOUR">
-            </div>
-
-            <h1>FORTY-FOUR</h1>
-
-            <div class="hero-subtitle">
-                (A BANNED PAGAN)
-            </div>
-
-            <div class="official">
-                <span class="lang-en">OFFICIAL WEBSITE</span>
-                <span class="lang-fr">SITE OFFICIEL</span>
-            </div>
-
-        </section>
-
-        <!-- MUSIC -->
-        <section id="music" class="content-section">
-
-            <h2 class="section-title">
+        <div class="nav-links">
+            <a href="#music">
                 <span class="lang-en">MUSIC</span>
                 <span class="lang-fr">MUSIQUE</span>
-            </h2>
+            </a>
 
-            <div class="release-grid">
-
-                <!-- 1ST CHAPTER -->
-                <article class="release">
-
-                    <div>
-
-                        <div class="release-cover">
-                            <img
-                                src="https://fortyfour-44.github.io/1st-chapter.png?v=20260917"
-                                alt="1st Chapter — FORTY-FOUR"
-                                loading="eager"
-                            >
-                        </div>
-
-                        <h3>1st Chapter</h3>
-
-                        <p class="lang-en">
-                            The first chapter of Forty-Four.
-                        </p>
-
-                        <p class="lang-fr">
-                            Le premier chapitre de Forty-Four.
-                        </p>
-
-                    </div>
-
-                    <div class="release-status">
-                        <span class="lang-en">RELEASED — 2023</span>
-                        <span class="lang-fr">SORTI — 2023</span>
-                    </div>
-
-                </article>
-
-                <!-- 2ND COMMUNION -->
-                <article class="release">
-
-                    <div>
-
-                        <div class="release-cover">
-
-                            <img
-                                src="https://fortyfour-44.github.io/2nd-communion.png?v=20260917"
-                                alt="2nd Communion — FORTY-FOUR"
-                                loading="eager"
-                            >
-
-                        </div>
-
-                        <h3>2nd Communion</h3>
-
-                        <p class="lang-en">
-                            The second chapter is currently being
-                            reworked and prepared for final mastering.
-                        </p>
-
-                        <p class="lang-fr">
-                            Le deuxième chapitre est actuellement
-                            retravaillé et préparé pour son mastering final.
-                        </p>
-
-                    </div>
-
-                    <div class="release-status">
-                        <span class="lang-en">REMIX &amp; MASTERING</span>
-                        <span class="lang-fr">REMIX &amp; MASTERING</span>
-                    </div>
-
-                </article>
-
-            </div>
-        </section>
-
-        <!-- NEWS -->
-        <section id="news" class="content-section">
-
-            <h2 class="section-title">
+            <a href="#news">
                 <span class="lang-en">NEWS</span>
                 <span class="lang-fr">ACTUALITÉS</span>
-            </h2>
+            </a>
 
-            <div class="news-list">
+            <a href="archives.html" class="active">
+                ARCHIVES
+            </a>
 
-                <article class="news-item">
-
-                    <div class="news-date">2026</div>
-
-                    <div class="news-content">
-
-                        <h3>
-                            2nd Communion — Remix &amp; Mastering
-                        </h3>
-
-                        <p class="lang-en">
-                            The second chapter is currently being
-                            reworked and prepared for its final
-                            mastering stage.
-                        </p>
-
-                        <p class="lang-fr">
-                            Le deuxième chapitre est actuellement
-                            retravaillé et préparé pour son mastering final.
-                        </p>
-
-                    </div>
-
-                </article>
-
-                <article class="news-item">
-
-                    <div class="news-date">ARCHIVES</div>
-
-                    <div class="news-content">
-
-                        <h3>
-                            The Story Behind The Silence
-                        </h3>
-
-                        <p class="lang-en">
-                            The Forty-Four story continues through
-                            a series of personal archives, thoughts,
-                            music and images.
-                        </p>
-
-                        <p class="lang-fr">
-                            L'histoire de Forty-Four continue à travers
-                            une série d'archives personnelles, de réflexions,
-                            de musique et d'images.
-                        </p>
-
-                    </div>
-
-                </article>
-
-            </div>
-        </section>
-
-        <!-- ARCHIVES -->
-        <section id="archives" class="content-section">
-
-            <h2 class="section-title">
-                ARCHIVES 44
-            </h2>
-
-            <div class="archive-access">
-
-                <h3>
-                    THE STORY BEHIND THE SILENCE
-                </h3>
-
-                <p class="lang-en">
-                    Personal archives documenting the story behind
-                    the music, from the first ideas to the evolution
-                    of Forty-Four.
-                </p>
-
-                <p class="lang-fr">
-                    Des archives personnelles qui racontent l'histoire
-                    derrière la musique, des premières idées jusqu'à
-                    l'évolution de Forty-Four.
-                </p>
-
-                <a href="#archive001" class="archive-button">
-                    <span class="lang-en">ENTER ARCHIVES</span>
-                    <span class="lang-fr">ENTRER DANS LES ARCHIVES</span>
-                </a>
-
-            </div>
-
-            <!-- ARCHIVE 001 -->
-            <article id="archive001" class="archive-entry">
-
-                <div class="archive-series">
-                    THE FORTY-FOUR JOURNAL
-                </div>
-
-                <div class="archive-number">
-                    ARCHIVE 001
-                </div>
-
-                <h3>
-                    The Beginning
-                </h3>
-
-                <div class="archive-image">
-                    <img
-                        src="https://fortyfour-44.github.io/arch001.png?v=20260917"
-                        alt="Archive 001 — The Beginning"
-                        loading="lazy"
-                    >
-                </div>
-
-                <div class="archive-text">
-
-                    <p class="archive-intro">
-                        BEFORE FORTY-FOUR
-                    </p>
-
-                    <p class="lang-en">
-                        Every story begins long before its first chapter.
-                    </p>
-
-                    <p class="lang-fr">
-                        Chaque histoire commence bien avant son premier chapitre.
-                    </p>
-
-                    <p class="lang-en">
-                        Pendant des années, la musique a été une aventure partagée.
-                    </p>
-
-                    <p class="lang-fr">
-                        Pendant des années, la musique a été une aventure partagée.
-                    </p>
-
-                    <p class="lang-en">
-                        Des répétitions.<br>
-                        Des concerts.<br>
-                        Des kilomètres.<br>
-                        Des idées.<br>
-                        Des projets.
-                    </p>
-
-                    <p class="lang-fr">
-                        Des répétitions.<br>
-                        Des concerts.<br>
-                        Des kilomètres.<br>
-                        Des idées.<br>
-                        Des projets.
-                    </p>
-
-                    <p class="lang-en">
-                        Puis le temps passe.
-                    </p>
-
-                    <p class="lang-fr">
-                        Puis le temps passe.
-                    </p>
-
-                    <p class="lang-en">
-                        Les vies changent.
-                    </p>
-
-                    <p class="lang-fr">
-                        Les vies changent.
-                    </p>
-
-                    <p class="lang-en">
-                        Les routes s'éloignent.
-                    </p>
-
-                    <p class="lang-fr">
-                        Les routes s'éloignent.
-                    </p>
-
-                    <p class="lang-en">
-                        Parfois, les histoires ne se terminent pas.
-                    </p>
-
-                    <p class="lang-fr">
-                        Parfois, les histoires ne se terminent pas.
-                    </p>
-
-                    <p class="lang-en">
-                        Elles prennent simplement une autre direction.
-                    </p>
-
-                    <p class="lang-fr">
-                        Elles prennent simplement une autre direction.
-                    </p>
-
-                    <p class="archive-ending">
-                        To be continued...
-                    </p>
-
-                </div>
-
-            </article>
-
-        </section>
-
-        <!-- STORY -->
-        <section id="story" class="content-section">
-
-            <h2 class="section-title">
+            <a href="#story">
                 <span class="lang-en">STORY</span>
                 <span class="lang-fr">HISTOIRE</span>
-            </h2>
+            </a>
 
-            <div class="story-content">
-
-                <h3>
-                    The Story Behind The Silence
-                </h3>
-
-                <p class="lang-en">
-                    Forty-Four is a personal musical project built
-                    around darkness, identity, isolation and transformation.
-                </p>
-
-                <p class="lang-fr">
-                    Forty-Four est un projet musical personnel construit
-                    autour de la noirceur, de l'identité, de l'isolement
-                    et de la transformation.
-                </p>
-
-                <p class="lang-en">
-                    The music moves between deathrock, goth rock,
-                    coldwave and alternative rock, combining cold guitars,
-                    machines, hypnotic rhythms and dark lyrics.
-                </p>
-
-                <p class="lang-fr">
-                    La musique évolue entre deathrock, goth rock,
-                    coldwave et rock alternatif, mêlant guitares froides,
-                    machines, rythmes hypnotiques et textes sombres.
-                </p>
-
-            </div>
-        </section>
-
-        <!-- VISUALS -->
-        <section id="visuals" class="content-section">
-
-            <h2 class="section-title">
+            <a href="#visuals">
                 <span class="lang-en">VISUALS</span>
                 <span class="lang-fr">VISUELS</span>
-            </h2>
-
-            <div class="visual-grid">
-
-                <div class="visual">
-                    <span class="lang-en">VISUAL 01</span>
-                    <span class="lang-fr">VISUEL 01</span>
-                </div>
-
-                <div class="visual">
-                    <span class="lang-en">VISUAL 02</span>
-                    <span class="lang-fr">VISUEL 02</span>
-                </div>
-
-                <div class="visual">
-                    <span class="lang-en">VISUAL 03</span>
-                    <span class="lang-fr">VISUEL 03</span>
-                </div>
-
-                <div class="visual">
-                    <span class="lang-en">VISUAL 04</span>
-                    <span class="lang-fr">VISUEL 04</span>
-                </div>
-
-                <div class="visual">
-                    <span class="lang-en">VISUAL 05</span>
-                    <span class="lang-fr">VISUEL 05</span>
-                </div>
-
-                <div class="visual">
-                    <span class="lang-en">VISUAL 06</span>
-                    <span class="lang-fr">VISUEL 06</span>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- MERCH -->
-        <section id="merch" class="content-section">
-
-            <h2 class="section-title">
-                <span class="lang-en">MERCH</span>
-                <span class="lang-fr">MERCH</span>
-            </h2>
-
-            <div class="merch-box">
-
-                <h3>FORTY-FOUR</h3>
-
-                <p class="lang-en">
-                    Official Forty-Four items and editions.
-                    More information coming soon.
-                </p>
-
-                <p class="lang-fr">
-                    Articles et éditions officiels Forty-Four.
-                    Plus d'informations prochainement.
-                </p>
-
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact" class="content-section">
-
-            <h2 class="section-title">
-                <span class="lang-en">CONTACT</span>
-                <span class="lang-fr">CONTACT</span>
-            </h2>
-
-            <div class="contact-grid">
-
-                <div class="contact-box">
-
-                    <h3>FORTY-FOUR</h3>
-
-                    <p class="lang-en">
-                        FORTY-FOUR<br>
-                        (A BANNED PAGAN)<br>
-                        Official Website
-                    </p>
-
-                    <p class="lang-fr">
-                        FORTY-FOUR<br>
-                        (A BANNED PAGAN)<br>
-                        Site officiel
-                    </p>
-
-                </div>
-
-                <div class="contact-box">
-
-                    <h3>PRESS / EPK</h3>
-
-                    <p class="lang-en">
-                        Press information, biography,
-                        music and project materials.
-                    </p>
-
-                    <p class="lang-fr">
-                        Informations presse, biographie,
-                        musique et éléments du projet.
-                    </p>
-
-                    <a href="#" class="contact-link">
-                        PRESS / EPK
-                    </a>
-
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-
-        <div class="footer-name">
-            FORTY-FOUR
-        </div>
-
-        <div class="footer-subtitle">
-            (A BANNED PAGAN)
-        </div>
-
-        <div class="footer-links">
-
-            <a
-                href="https://forty-fourabannedpagan.bandcamp.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                BANDCAMP
             </a>
 
-            <a
-                href="https://www.facebook.com/profile.php?id=100089897472402"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                FACEBOOK
-            </a>
-
-            <a href="#">
-                STREAMING
+            <a href="#merch">
+                MERCH
             </a>
 
             <a href="#contact">
-                PRESS / EPK
+                CONTACT
+            </a>
+        </div>
+
+        <div class="language">
+            <span class="en selected" onclick="setLanguage('en')">EN</span>
+            <span>/</span>
+            <span class="fr" onclick="setLanguage('fr')">FR</span>
+        </div>
+
+    </nav>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <img
+            src="logo44.png"
+            alt="Forty-Four logo"
+            class="hero-logo"
+        >
+
+        <h1>FORTY-FOUR</h1>
+
+        <div class="hero-subtitle">
+            (A BANNED PAGAN)
+        </div>
+
+        <div class="hero-label">
+            <span class="lang-en">OFFICIAL WEBSITE</span>
+            <span class="lang-fr">SITE OFFICIEL</span>
+        </div>
+
+    </section>
+
+
+    <!-- MUSIC -->
+
+    <section id="music" class="content-section">
+
+        <h2 class="section-title">
+            <span class="lang-en">MUSIC</span>
+            <span class="lang-fr">MUSIQUE</span>
+        </h2>
+
+
+        <article class="release">
+
+            <div class="release-cover">
+
+                <img
+                    src="https://fortyfour-44.github.io/1st-chapter.png?v=20260917"
+                    alt="Forty-Four — 1st Chapter"
+                >
+
+            </div>
+
+            <div class="release-info">
+
+                <h3>1ST CHAPTER</h3>
+
+                <div class="release-status">
+                    RELEASED — 2023
+                </div>
+
+                <p class="lang-en">
+                    The first chapter of Forty-Four.
+                    A beginning shaped by isolation, rupture,
+                    darkness and transformation.
+                </p>
+
+                <p class="lang-fr">
+                    Le premier chapitre de Forty-Four.
+                    Un début marqué par l'isolement, la rupture,
+                    l'obscurité et la transformation.
+                </p>
+
+                <div class="tracklist">
+                    Insanity<br>
+                    Exile<br>
+                    All Is Dread Silence Here<br>
+                    Let Me<br>
+                    Here Is My End
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="release">
+
+            <div class="release-cover">
+
+                <img
+                    src="https://fortyfour-44.github.io/2nd-communion.png?v=20260917"
+                    alt="Forty-Four — 2nd Communion"
+                >
+
+            </div>
+
+            <div class="release-info">
+
+                <h3>2ND COMMUNION</h3>
+
+                <div class="release-status">
+                    REMIX &amp; MASTERING
+                </div>
+
+                <p class="lang-en">
+                    The second chapter is being reworked,
+                    reshaped and prepared for final mastering.
+                </p>
+
+                <p class="lang-fr">
+                    Le deuxième chapitre est actuellement
+                    retravaillé, remodelé et préparé pour
+                    le mastering final.
+                </p>
+
+                <div class="tracklist">
+                    Itchy Soul<br>
+                    Blood On My Hands<br>
+                    I'm Fed Up<br>
+                    Ashes Of The Pact<br>
+                    In The Silent Chair
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- NEWS -->
+
+    <section id="news" class="content-section">
+
+        <h2 class="section-title">
+            <span class="lang-en">NEWS</span>
+            <span class="lang-fr">ACTUALITÉS</span>
+        </h2>
+
+        <div class="visuals-placeholder">
+
+            <p class="lang-en">
+                News, releases, updates and announcements
+                will appear here.
+            </p>
+
+            <p class="lang-fr">
+                Les actualités, sorties, mises à jour et annonces
+                apparaîtront ici.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ARCHIVES -->
+
+    <section id="archives" class="content-section">
+
+        <h2 class="section-title">
+            ARCHIVES 44
+        </h2>
+
+        <div class="archive-access">
+
+            <h3>
+                THE STORY BEHIND THE SILENCE
+            </h3>
+
+            <p class="lang-en">
+                Personal archives documenting the story behind
+                the music, from the first ideas to the evolution
+                of Forty-Four.
+            </p>
+
+            <p class="lang-fr">
+                Des archives personnelles qui racontent l'histoire
+                derrière la musique, des premières idées jusqu'à
+                l'évolution de Forty-Four.
+            </p>
+
+            <a href="archives.html" class="archive-button">
+
+                <span class="lang-en">
+                    ENTER ARCHIVES
+                </span>
+
+                <span class="lang-fr">
+                    ENTRER DANS LES ARCHIVES
+                </span>
+
             </a>
 
         </div>
 
-        <div class="copyright">
-            © 2026 FORTY-FOUR (A BANNED PAGAN)
+    </section>
+
+
+    <!-- STORY -->
+
+    <section id="story" class="content-section">
+
+        <h2 class="section-title">
+            <span class="lang-en">STORY</span>
+            <span class="lang-fr">HISTOIRE</span>
+        </h2>
+
+        <div class="visuals-placeholder">
+
+            <p class="lang-en">
+                Forty-Four is a solo project born from rupture,
+                isolation and the need to create something
+                outside what came before.
+            </p>
+
+            <p class="lang-fr">
+                Forty-Four est un projet solo né de la rupture,
+                de l'isolement et du besoin de créer quelque chose
+                en dehors de ce qui existait auparavant.
+            </p>
+
         </div>
 
-    </footer>
+    </section>
 
-    <script>
 
-        function setLanguage(language) {
+    <!-- VISUALS -->
 
-            const enButton = document.getElementById("enButton");
-            const frButton = document.getElementById("frButton");
+    <section id="visuals" class="content-section">
 
-            if (language === "fr") {
+        <h2 class="section-title">
+            <span class="lang-en">VISUALS</span>
+            <span class="lang-fr">VISUELS</span>
+        </h2>
 
-                document.body.classList.add("fr");
+        <div class="visuals-placeholder">
 
-                enButton.classList.remove("active");
-                frButton.classList.add("active");
+            <p class="lang-en">
+                Visual material, artwork and images from
+                the Forty-Four universe.
+            </p>
 
-                document.documentElement.lang = "fr";
+            <p class="lang-fr">
+                Matériel visuel, artworks et images issus
+                de l'univers de Forty-Four.
+            </p>
 
-            } else {
+        </div>
 
-                document.body.classList.remove("fr");
+    </section>
 
-                enButton.classList.add("active");
-                frButton.classList.remove("active");
 
-                document.documentElement.lang = "en";
+    <!-- MERCH -->
 
-            }
-        }
+    <section id="merch" class="content-section">
 
-        setLanguage("en");
+        <h2 class="section-title">
+            MERCH
+        </h2>
 
-    </script>
+        <div class="merch-placeholder">
+
+            <p class="lang-en">
+                Merchandise coming later.
+            </p>
+
+            <p class="lang-fr">
+                Merchandising à venir.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="content-section">
+
+        <h2 class="section-title">
+            CONTACT
+        </h2>
+
+        <div class="contact-placeholder">
+
+            <p>
+                Forty-Four (A Banned Pagan)
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-links">
+
+        <a
+            href="https://forty-fourabannedpagan.bandcamp.com/"
+            target="_blank"
+            rel="noopener"
+        >
+            BANDCAMP
+        </a>
+
+        <a
+            href="https://www.facebook.com/profile.php?id=100089897472402"
+            target="_blank"
+            rel="noopener"
+        >
+            FACEBOOK
+        </a>
+
+        <a href="#">
+            STREAMING
+        </a>
+
+        <a href="#">
+            PRESS / EPK
+        </a>
+
+    </div>
+
+    <div class="footer-copy">
+        © FORTY-FOUR — A BANNED PAGAN
+    </div>
+
+</footer>
+
+
+<script>
+function setLanguage(language) {
+
+    if (language === "fr") {
+        document.body.classList.add("fr");
+    } else {
+        document.body.classList.remove("fr");
+    }
+
+    document.querySelector(".language .en")
+        .classList.toggle("selected", language === "en");
+
+    document.querySelector(".language .fr")
+        .classList.toggle("selected", language === "fr");
+}
+</script>
 
 </body>
 </html>
-```
