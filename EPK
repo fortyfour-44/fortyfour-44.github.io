@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Forty-Four — Press / EPK</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #151515;
+            color: #e6e3dc;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* HEADER */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(21, 21, 21, 0.96);
+            border-bottom: 1px solid #333;
+        }
+
+        .header-inner {
+            max-width: 1400px;
+            margin: auto;
+            padding: 20px 45px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-logo img {
+            width: 48px;
+            height: auto;
+            display: block;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        nav a {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: opacity 0.2s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.55;
+        }
+
+        .language {
+            cursor: pointer;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-left: 10px;
+        }
+
+        /* MAIN */
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 170px 45px 120px;
+        }
+
+        .epk-header {
+            border-bottom: 1px solid #444;
+            padding-bottom: 55px;
+            margin-bottom: 80px;
+        }
+
+        .epk-header img {
+            width: 150px;
+            height: auto;
+            display: block;
+            margin-bottom: 45px;
+        }
+
+        .epk-header h1 {
+            font-size: clamp(42px, 7vw, 82px);
+            font-weight: 400;
+            letter-spacing: 9px;
+            line-height: 1;
+            margin-bottom: 18px;
+        }
+
+        .epk-header h2 {
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #aaa;
+        }
+
+        .epk-label {
+            margin-top: 45px;
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #888;
+        }
+
+        /* SECTIONS */
+
+        .epk-section {
+            padding: 0 0 75px;
+            margin-bottom: 75px;
+            border-bottom: 1px solid #303030;
+        }
+
+        .section-number {
+            font-size: 11px;
+            letter-spacing: 4px;
+            color: #777;
+            margin-bottom: 12px;
+        }
+
+        .epk-section h2 {
+            font-size: clamp(24px, 4vw, 38px);
+            font-weight: 400;
+            letter-spacing: 4px;
+            margin-bottom: 35px;
+            text-transform: uppercase;
+        }
+
+        .epk-section h3 {
+            font-size: 17px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            margin: 38px 0 18px;
+            text-transform: uppercase;
+        }
+
+        .epk-section p {
+            max-width: 850px;
+            margin-bottom: 20px;
+            color: #d4d1ca;
+            font-size: 16px;
+        }
+
+        .track {
+            margin-bottom: 25px;
+        }
+
+        .track strong {
+            display: block;
+            font-size: 14px;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .track span {
+            display: block;
+            color: #aaa;
+            max-width: 800px;
+        }
+
+        .tracklist {
+            margin-top: 25px;
+        }
+
+        .tracklist p {
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .quote {
+            margin-top: 35px;
+            padding-left: 25px;
+            border-left: 1px solid #666;
+            font-size: 20px;
+            line-height: 1.6;
+            color: #e6e3dc;
+        }
+
+        .links {
+            margin-top: 25px;
+        }
+
+        .links a {
+            display: inline-block;
+            margin-right: 25px;
+            margin-bottom: 10px;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #666;
+            padding-bottom: 3px;
+        }
+
+        .links a:hover {
+            border-color: #e6e3dc;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #333;
+            padding: 55px 45px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: #777;
+        }
+
+        .back-home {
+            display: inline-block;
+            margin-top: 25px;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #555;
+            padding-bottom: 4px;
+        }
+
+        /* LANGUAGE */
+
+        .lang-fr {
+            display: none;
+        }
+
+        body.fr .lang-en {
+            display: none;
+        }
+
+        body.fr .lang-fr {
+            display: block;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            header {
+                position: relative;
+            }
+
+            .header-inner {
+                padding: 18px 25px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 10px;
+                letter-spacing: 1.5px;
+            }
+
+            main {
+                padding: 80px 25px 80px;
+            }
+
+            .epk-header {
+                margin-bottom: 55px;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .header-inner {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .epk-header h1 {
+                letter-spacing: 5px;
+            }
+
+            .epk-section {
+                padding-bottom: 55px;
+                margin-bottom: 55px;
+            }
+
+            .epk-section p {
+                font-size: 15px;
+            }
+
+            footer {
+                padding: 45px 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+
+        <a href="index.html" class="header-logo">
+            <img src="logo44.png" alt="Forty-Four">
+        </a>
+
+        <nav>
+            <a href="index.html">
+                <span class="lang-en">HOME</span>
+                <span class="lang-fr">ACCUEIL</span>
+            </a>
+
+            <a href="archives.html">
+                ARCHIVES
+            </a>
+
+            <a href="#contact">
+                CONTACT
+            </a>
+
+            <span class="language" onclick="toggleLanguage()">
+                EN / FR
+            </span>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+    <div class="epk-header">
+
+        <img src="logo44.png" alt="Forty-Four logo">
+
+        <h1>FORTY-FOUR</h1>
+
+        <h2>A BANNED PAGAN</h2>
+
+        <div class="epk-label">
+            <span class="lang-en">Electronic Press Kit</span>
+            <span class="lang-fr">Dossier de presse électronique</span>
+        </div>
+
+    </div>
+
+
+    <!-- 01 -->
+
+    <section class="epk-section">
+
+        <div class="section-number">01</div>
+
+        <h2>
+            <span class="lang-en">The Project</span>
+            <span class="lang-fr">Le Projet</span>
+        </h2>
+
+        <div class="lang-en">
+
+            <p>
+                <strong>FORTY-FOUR (A BANNED PAGAN)</strong> is a solo music project initiated by Coccs.
+            </p>
+
+            <p>
+                Born from a break with a previous musical path, Forty-Four is neither an attempt to continue what existed before nor to recreate it.
+            </p>
+
+            <p>
+                The project moves between <strong>deathrock, goth rock, coldwave and alternative rock</strong>.
+            </p>
+
+            <p>
+                Cold guitars, machines, hypnotic and sometimes tribal rhythms build a dark and tense atmosphere shaped by themes of psychological collapse, fragmented identity, isolation and transformation.
+            </p>
+
+            <p>
+                Forty-Four is a personal space.
+            </p>
+
+            <p>
+                A way of transforming what remains when a story takes another direction.
+            </p>
+
+            <div class="quote">
+                Not a continuation.<br>
+                Not a return.<br>
+                A new chapter.
+            </div>
+
+        </div>
+
+        <div class="lang-fr">
+
+            <p>
+                <strong>FORTY-FOUR (A BANNED PAGAN)</strong> est un projet musical solo initié par Coccs.
+            </p>
+
+            <p>
+                Né d'une rupture avec un précédent parcours musical, Forty-Four ne cherche ni à prolonger ce qui existait, ni à le reproduire.
+            </p>
+
+            <p>
+                Le projet s'inscrit dans un univers où se rencontrent <strong>deathrock, goth rock, coldwave et rock alternatif</strong>.
+            </p>
+
+            <p>
+                Guitares froides, machines, rythmes hypnotiques et parfois tribaux construisent une musique sombre et tendue, traversée par des thèmes liés à l'effondrement psychologique, à la fragmentation de l'identité, à l'isolement et à la transformation.
+            </p>
+
+            <p>
+                Forty-Four est un espace personnel.
+            </p>
+
+            <p>
+                Une manière de transformer ce qui reste lorsqu'une histoire prend une autre direction.
+            </p>
+
+            <div class="quote">
+                Pas une continuation.<br>
+                Pas un retour.<br>
+                Un nouveau chapitre.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 02 -->
+
+    <section class="epk-section">
+
+        <div class="section-number">02</div>
+
+        <h2>
+            <span class="lang-en">The Story</span>
+            <span class="lang-fr">L'Histoire</span>
+        </h2>
+
+        <div class="lang-en">
+
+            <p>
+                Before Forty-Four, there were years of shared music.
+            </p>
+
+            <p>
+                Rehearsals.<br>
+                Concerts.<br>
+                Miles travelled.<br>
+                Ideas.<br>
+                Projects.
+            </p>
+
+            <p>
+                Then time passes.
+            </p>
+
+            <p>
+                Lives change. Paths separate.
+            </p>
+
+            <p>
+                What was meant to continue together eventually takes another direction.
+            </p>
+
+            <p>
+                Forty-Four begins in that space.
+            </p>
+
+            <p>
+                Not as an attempt to rebuild what existed before, but as a possibility to start again differently.
+            </p>
+
+            <p>
+                For Coccs, the project gradually becomes a space for writing, experimentation and introspection.
+            </p>
+
+            <p>
+                The music is created alone.
+            </p>
+
+            <p>
+                And for the first time, there is also something new to face: <strong>singing</strong>.
+            </p>
+
+            <p>
+                Having never sung before, Coccs chose not to hide that vulnerability.
+            </p>
+
+            <p>
+                The voice became part of the language of Forty-Four.
+            </p>
+
+            <p>
+                Direct. Imperfect. Sometimes distant. Sometimes confrontational.
+            </p>
+
+            <p>
+                A voice that belongs to the project precisely because it carries its doubts and its fractures.
+            </p>
+
+        </div>
+
+        <div class="lang-fr">
+
+            <p>
+                Avant Forty-Four, il y a eu des années de musique partagée.
+            </p>
+
+            <p>
+                Des répétitions.<br>
+                Des concerts.<br>
+                Des kilomètres.<br>
+                Des idées.<br>
+                Des projets.
+            </p>
+
+            <p>
+                Puis le temps passe.
+            </p>
+
+            <p>
+                Les vies changent. Les chemins s'éloignent.
+            </p>
+
+            <p>
+                Ce qui devait continuer ensemble prend finalement une autre direction.
+            </p>
+
+            <p>
+                Forty-Four naît dans cet espace.
+            </p>
+
+            <p>
+                Pas comme une tentative de reconstruire ce qui existait auparavant, mais comme la possibilité de repartir autrement.
+            </p>
+
+            <p>
+                Pour Coccs, le projet devient progressivement un espace d'écriture, d'expérimentation et d'introspection.
+            </p>
+
+            <p>
+                La création se fait seul.
+            </p>
+
+            <p>
+                Et pour la première fois, il faut aussi affronter une chose nouvelle : <strong>chanter</strong>.
+            </p>
+
+            <p>
+                N'ayant jamais chanté auparavant, Coccs choisit de ne pas chercher à effacer cette fragilité.
+            </p>
+
+            <p>
+                La voix devient alors une partie du langage de Forty-Four.
+            </p>
+
+            <p>
+                Directe. Imparfaite. Parfois distante. Parfois confrontante.
+            </p>
+
+            <p>
+                Une voix qui appartient au projet parce qu'elle en porte aussi les hésitations et les failles.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 03 -->
+
+    <section class="epk-section">
+
+        <div class="section-number">03</div>
+
+        <h2>
+            <span class="lang-en">The Sound</span>
+            <span class="lang-fr">Le Son</span>
+        </h2>
+
+        <div class="lang-en">
+
+            <p>
+                Forty-Four moves between <strong>deathrock, goth rock, coldwave and alternative rock</strong>.
+            </p>
+
+            <p>
+                Cold guitars meet machines and hypnotic rhythms — sometimes irregular, sometimes close to a tribal pulse.
+            </p>
+
+            <p>
+                Repetition, tension and silence play an important role in the compositions.
+            </p>
+
+            <p>
+                The songs do not always seek traditional structures.
+            </p>
+
+            <p>
+                They can move through accumulation, rupture or obsession.
+            </p>
+
+            <p>
+                The lyrics explore psychological collapse, identity, exile, guilt, control, isolation, death and transformation.
+            </p>
+
+            <p>
+                The music remains deliberately dark, but deeply personal.
+            </p>
+
+        </div>
+
+        <div class="lang-fr">
+
+            <p>
+                Forty-Four évolue entre <strong>deathrock, goth rock, coldwave et rock alternatif</strong>.
+            </p>
+
+            <p>
+                Les guitares froides rencontrent les machines et des rythmes hypnotiques — parfois irréguliers, parfois proches d'une pulsation tribale.
+            </p>
+
+            <p>
+                La répétition, la tension et le silence occupent une place importante dans les compositions.
+            </p>
+
+            <p>
+                Les morceaux ne cherchent pas systématiquement la construction traditionnelle.
+            </p>
+
+            <p>
+                Ils peuvent avancer par accumulation, rupture ou obsession.
+            </p>
+
+            <p>
+                Les textes explorent notamment l'effondrement intérieur, l'identité, l'exil, la culpabilité, le contrôle, la solitude, la mort et la transformation.
+            </p>
+
+            <p>
+                La musique reste volontairement sombre, mais profondément personnelle.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 04 -->
+
+    <section class="epk-section">
+
+        <div class="section-number">04</div>
+
+        <h2>
+            <span class="lang-en">1st Chapter</span>
+            <span class="lang-fr">1st Chapter</span>
+        </h2>
+
+        <h3>
+            <span class="lang-en">First EP — July 2023</span>
+            <span class="lang-fr">Premier EP — Juillet 2023</span>
+        </h3>
+
+        <div class="lang-en">
+
+            <p>
+                <strong>1st Chapter</strong> is Forty-Four's first EP.
+            </p>
+
+            <p>
+                Five tracks form the project's first journey.
+            </p>
+
+            <div class="track">
+                <strong>01 — INSANITY</strong>
+                <span>The fragmentation of the mind. A gradual descent where the perception of self begins to fracture.</span>
+            </div>
+
+            <div class="track">
+                <strong>02 — EXILE</strong>
+                <span>Leaving. Distance, separation from what was familiar, and the feeling that there is no choice but to move forward.</span>
+            </div>
+
+            <div class="track">
+                <strong>03 — ALL IS DREAD SILENCE HERE</strong>
+                <span>After the violence, only silence remains. A battlefield, ruins, and a throne built from what is left.</span>
+            </div>
+
+            <div class="track">
+                <strong>04 — LET ME</strong>
+                <span>Control. A presence imposing its will, and the struggle to reclaim a space of one's own.</span>
+            </div>
+
+            <div class="track">
+                <strong>05 — HERE IS MY END</strong>
+                <span>The end. Death as disappearance, but perhaps also as a passage towards something else.</span>
+            </div>
+
+        </div>
+
+        <div class="lang-fr">
+
+            <p>
+                <strong>1st Chapter</strong> est le premier EP de Forty-Four.
+            </p>
+
+            <p>
+                Cinq morceaux constituent le premier parcours du projet.
+            </p>
+
+            <div class="track">
+                <strong>01 — INSANITY</strong>
+                <span>La fragmentation de l'esprit. Un basculement progressif où la perception de soi commence à se fissurer.</span>
+            </div>
+
+            <div class="track">
+                <strong>02 — EXILE</strong>
+                <span>Partir. L'éloignement, la rupture avec ce qui était connu et la sensation de ne plus avoir d'autre choix que d'avancer.</span>
+            </div>
+
+            <div class="track">
+                <strong>03 — ALL IS DREAD SILENCE HERE</strong>
+                <span>Après la violence, il ne reste que le silence. Un champ de bataille, des ruines et un trône construit avec ce qui demeure.</span>
+            </div>
+
+            <div class="track">
+                <strong>04 — LET ME</strong>
+                <span>Le contrôle. Une présence qui impose sa volonté et une lutte pour retrouver un espace à soi.</span>
+            </div>
+
+            <div class="track">
+                <strong>05 — HERE IS MY END</strong>
+                <span>La fin. La mort comme disparition, mais peut-être aussi comme passage vers autre chose.</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 05 -->
+
+    <section class="epk-section">
+
+        <div class="section-number">05</div>
+
+        <h2>2nd Communion</h2>
+
+        <h3>
+            <span class="lang-en">Second EP</span>
+            <span class="lang-fr">Second EP</span>
+        </h3>
+
+        <div class="lang-en">
+
+            <p>
+                <strong>2nd Communion</strong> continues to explore the Forty-Four universe.
+            </p>
+
+            <p>
+                The songs move deeper into frustration, obsession, guilt, inner conflict and transformation.
+            </p>
+
+        </div>
+
+        <div class="lang-fr">
+
+            <p>
+                <strong>2nd Communion</strong> poursuit l'exploration de l'univers Forty-Four.
+            </p>
+
+            <p>
+                Les morceaux deviennent plus directs et plus intérieurs, autour de la frustration, de l'obsession, de la culpabilité, du conflit intérieur et de la transformation.
+            </p>
+
+        </div>
+
+        <div class="tracklist">
+            <p>01 — ITCHY SOUL</p>
+            <p>02 — BLOOD ON MY HANDS</p>
+            <p>03 — I'M FED UP</p>
+            <p>04 — ASHES OF THE PACT</p>
+            <p>05 — IN THE SILENT CHAIR</p>
+        </div>
+
+        <p style="margin-top: 30px;">
+            <span class="lang-en">
+                The tracks are currently being revisited for final mixing and mastering.
+            </span>
+
+            <span class="lang-fr">
+                Les morceaux sont actuellement retravaillés en vue du mixage final et du mastering.
+            </span>
+        </p>
+
+    </section>
+
+
+    <!-- 06 -->
+
+    <section class="epk-section">
+
+        <div class="section-number">06</div>
+
+        <h2>The Story Behind The Silence</h2>
+
+        <div class="lang-en">
+
+            <p>
+                <strong>The Story Behind The Silence</strong> is the journal surrounding Forty-Four.
+            </p>
+
+            <p>
+                It gathers the fragments that exist around the music: memories, ideas, images, reflections, doubts and moments of creation.
+            </p>
+
+            <p>
+                The archives are not intended to explain everything.
+            </p>
+
+            <p>
+                They tell what exists <strong>behind</strong> the songs.
+            </p>
+
+            <p>
+                They progressively form a parallel story around the musical project.
+            </p>
+
+            <p>
+                The official Forty-Four website will host these archives over time.
+            </p>
+
+        </div>
+
+        <div class="lang-fr">
+
+            <p>
+                <strong>The Story Behind The Silence</strong> est le journal qui accompagne Forty-Four.
+            </p>
+
+            <p>
+                Il rassemble les fragments qui existent autour de la musique : souvenirs, idées, images, réflexions, doutes et moments de création.
+            </p>
+
+            <p>
+                Les archives ne cherchent pas à tout expliquer.
+            </p>
+
+            <p>
+                Elles racontent ce qui existe <strong>derrière</strong> les morceaux.
+            </p>
+
+            <p>
+                Elles constituent progressivement une histoire parallèle au projet musical.
+            </p>
+
+            <p>
+                Le site officiel de Forty-Four accueillera ces archives au fil du temps.
+            </p>
+
+        </div>
+
+        <div class="links">
+            <a href="archives.html">
+                <span class="lang-en">ENTER ARCHIVES</span>
+                <span class="lang-fr">ENTRER DANS LES ARCHIVES</span>
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- 07 -->
+
+    <section class="epk-section">
+
+        <div class="section-number">07</div>
+
+        <h2>
+            <span class="lang-en">Visual Identity</span>
+            <span class="lang-fr">Identité Visuelle</span>
+        </h2>
+
+        <div class="lang-en">
+
+            <p>
+                The visual identity of Forty-Four is deliberately minimal, dark and geometric.
+            </p>
+
+            <p>
+                The logo is built around a <strong>mirrored double four</strong>, integrated into a broken circular form.
+            </p>
+
+            <p>
+                Its geometry evokes cycles, rupture, repetition and transformation.
+            </p>
+
+            <p>
+                The project's visual language draws from post-punk graphic design, Bauhaus, sacred geometry and minimalist design.
+            </p>
+
+            <p>
+                Black, white, grey and cold tones form its visual foundation.
+            </p>
+
+            <p>
+                The imagery does not decorate the music.
+            </p>
+
+            <p>
+                It extends its atmosphere.
+            </p>
+
+        </div>
+
+        <div class="lang-fr">
+
+            <p>
+                L'identité visuelle de Forty-Four est volontairement minimale, sombre et géométrique.
+            </p>
+
+            <p>
+                Le logo repose sur un <strong>double quatre inversé</strong>, intégré dans une forme circulaire brisée.
+            </p>
+
+            <p>
+                La géométrie évoque les cycles, la rupture, la répétition et la transformation.
+            </p>
+
+            <p>
+                L'esthétique du projet puise dans le graphisme post-punk, le Bauhaus, la géométrie sacrée et le design minimaliste.
+            </p>
+
+            <p>
+                Le noir, le blanc, les gris et les tonalités froides constituent son langage visuel.
+            </p>
+
+            <p>
+                L'image ne vient pas décorer la musique.
+            </p>
+
+            <p>
+                Elle en prolonge l'atmosphère.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 08 -->
+
+    <section class="epk-section">
+
+        <div class="section-number">08</div>
+
+        <h2>
+            <span class="lang-en">Listen</span>
+            <span class="lang-fr">Écouter</span>
+        </h2>
+
+        <div class="links">
+
+            <a href="https://forty-fourabannedpagan.bandcamp.com/" target="_blank">
+                Bandcamp
+            </a>
+
+            <a href="#" target="_blank">
+                Spotify
+            </a>
+
+            <a href="#" target="_blank">
+                Deezer
+            </a>
+
+            <a href="#" target="_blank">
+                Amazon Music
+            </a>
+
+        </div>
+
+        <p style="margin-top: 30px;">
+            <span class="lang-en">
+                Forty-Four is available across major streaming platforms.
+            </span>
+
+            <span class="lang-fr">
+                Forty-Four est disponible sur les principales plateformes de streaming.
+            </span>
+        </p>
+
+    </section>
+
+
+    <!-- 09 -->
+
+    <section class="epk-section">
+
+        <div class="section-number">09</div>
+
+        <h2>
+            <span class="lang-en">Official Website</span>
+            <span class="lang-fr">Site Officiel</span>
+        </h2>
+
+        <h3>FORTYFOUR-44.COM</h3>
+
+        <div class="lang-en">
+
+            <p>
+                The official Forty-Four website progressively brings together the music, visuals, archives and information surrounding the project.
+            </p>
+
+            <p>
+                It is also the home of <strong>The Story Behind The Silence</strong>.
+            </p>
+
+        </div>
+
+        <div class="lang-fr">
+
+            <p>
+                Le site officiel de Forty-Four rassemble progressivement la musique, les visuels, les archives et les informations autour du projet.
+            </p>
+
+            <p>
+                Il constitue également l'espace où se développe <strong>The Story Behind The Silence</strong>.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="epk-section" id="contact">
+
+        <div class="section-number">10</div>
+
+        <h2>
+            <span class="lang-en">Contact</span>
+            <span class="lang-fr">Contact</span>
+        </h2>
+
+        <p>
+            <strong>FORTY-FOUR</strong><br>
+            <em>A Banned Pagan</em>
+        </p>
+
+        <div class="links">
+
+            <a href="https://forty-fourabannedpagan.bandcamp.com/" target="_blank">
+                Bandcamp
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=100089897472402" target="_blank">
+                Facebook
+            </a>
+
+        </div>
+
+        <p style="margin-top: 35px;">
+            <span class="lang-en">
+                For press enquiries, interviews, reviews, features, booking or professional collaborations.
+            </span>
+
+            <span class="lang-fr">
+                Pour toute demande presse, interview, chronique, article, programmation ou collaboration professionnelle.
+            </span>
+        </p>
+
+    </section>
+
+
+    <div class="epk-header" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
+
+        <div class="quote">
+            <span class="lang-en">
+                Not a continuation.<br>
+                Not a return.<br>
+                A new chapter.
+            </span>
+
+            <span class="lang-fr">
+                Pas une continuation.<br>
+                Pas un retour.<br>
+                Un nouveau chapitre.
+            </span>
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <p>
+        FORTY-FOUR — A BANNED PAGAN
+    </p>
+
+    <a href="index.html" class="back-home">
+        <span class="lang-en">BACK TO HOME</span>
+        <span class="lang-fr">RETOUR À L'ACCUEIL</span>
+    </a>
+
+</footer>
+
+
+<script>
+
+    function toggleLanguage() {
+
+        document.body.classList.toggle("fr");
+
+        if (document.body.classList.contains("fr")) {
+            document.documentElement.lang = "fr";
+        } else {
+            document.documentElement.lang = "en";
+        }
+
+    }
+
+</script>
+
+</body>
+</html>
