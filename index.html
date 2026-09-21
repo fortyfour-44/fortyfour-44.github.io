@@ -1,22 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en" translate="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Prevent automatic translation -->
+    <meta name="google" content="notranslate">
+
+    <!-- =========================
+         SEO
+    ========================= -->
+
     <title>FORTY-FOUR — A BANNED PAGAN | Official Website</title>
 
     <meta name="description"
-          content="FORTY-FOUR (A BANNED PAGAN) — Official website. Music, archives, story, visuals and releases.">
-    <meta name="keywords"
-          content="Forty-Four, A Banned Pagan, deathrock, goth rock, coldwave, post-punk, dark music">
+          content="FORTY-FOUR (A BANNED PAGAN) is a solo music project moving between deathrock, goth rock, coldwave and alternative rock. Official website, music, archives, story and visuals.">
+
     <meta name="author" content="FORTY-FOUR">
 
-    <meta property="og:title" content="FORTY-FOUR — A BANNED PAGAN">
-    <meta property="og:description"
-          content="Official website of FORTY-FOUR (A BANNED PAGAN).">
+    <meta name="robots" content="index, follow">
+
+    <meta name="keywords"
+          content="FORTY-FOUR, Forty Four, A Banned Pagan, deathrock, goth rock, coldwave, alternative rock, post-punk, dark music, 1st Chapter, 2nd Communion">
+
+    <link rel="canonical" href="https://fortyfour-44.com/">
+
+    <!-- =========================
+         OPEN GRAPH / FACEBOOK
+    ========================= -->
+
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://fortyfour-44.github.io/">
+
+    <meta property="og:title"
+          content="FORTY-FOUR — A BANNED PAGAN">
+
+    <meta property="og:description"
+          content="Official website of FORTY-FOUR (A BANNED PAGAN). Music, archives, story, visuals and releases.">
+
+    <meta property="og:url"
+          content="https://fortyfour-44.com/">
+
+    <meta property="og:site_name"
+          content="FORTY-FOUR — A BANNED PAGAN">
+
+    <meta property="og:locale" content="en_GB">
+
+    <meta property="og:image"
+          content="https://fortyfour-44.com/logo44.png">
+
+    <meta property="og:image:alt"
+          content="FORTY-FOUR — A BANNED PAGAN logo">
+
+    <!-- =========================
+         TWITTER / X
+    ========================= -->
+
+    <meta name="twitter:card" content="summary">
+
+    <meta name="twitter:title"
+          content="FORTY-FOUR — A BANNED PAGAN">
+
+    <meta name="twitter:description"
+          content="Official website of FORTY-FOUR (A BANNED PAGAN). Music, archives, story, visuals and releases.">
+
+    <meta name="twitter:image"
+          content="https://fortyfour-44.com/logo44.png">
+
+    <!-- =========================
+         STRUCTURED DATA
+    ========================= -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        "name": "FORTY-FOUR",
+        "alternateName": "FORTY-FOUR (A BANNED PAGAN)",
+        "url": "https://fortyfour-44.com/",
+        "genre": [
+            "Deathrock",
+            "Goth rock",
+            "Coldwave",
+            "Alternative rock",
+            "Post-punk"
+        ],
+        "sameAs": [
+            "https://forty-fourabannedpagan.bandcamp.com/",
+            "https://www.facebook.com/profile.php?id=100089897472402",
+            "https://music.amazon.com/artists/B0CB79NFM7/forty-four-a-banned-pagan"
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "FORTY-FOUR — A BANNED PAGAN",
+        "url": "https://fortyfour-44.com/"
+    }
+    </script>
 
     <style>
 
@@ -612,15 +696,25 @@
 <body>
 
     <!-- HEADER -->
+
     <header>
+
         <div class="header-inner">
 
-            <a href="#home" class="brand">
-                <img src="logo44.png" alt="FORTY-FOUR logo">
+            <a href="#home"
+               class="brand"
+               aria-label="FORTY-FOUR official website">
+
+                <img
+                    src="logo44.png"
+                    alt="FORTY-FOUR A BANNED PAGAN logo"
+                >
+
                 <span>FORTY-FOUR</span>
+
             </a>
 
-            <nav>
+            <nav aria-label="Main navigation">
 
                 <a href="#music">
                     <span class="lang-en">MUSIC</span>
@@ -664,80 +758,154 @@
 
             </nav>
 
-            <div class="language">
-                <button id="enButton" class="active" onclick="setLanguage('en')">EN</button>
+            <div class="language" aria-label="Language selection">
+
+                <button
+                    id="enButton"
+                    class="active"
+                    onclick="setLanguage('en')"
+                    type="button"
+                >
+                    EN
+                </button>
+
                 <span>/</span>
-                <button id="frButton" onclick="setLanguage('fr')">FR</button>
+
+                <button
+                    id="frButton"
+                    onclick="setLanguage('fr')"
+                    type="button"
+                >
+                    FR
+                </button>
+
             </div>
 
         </div>
+
     </header>
+
 
     <main id="home">
 
-        <!-- HERO -->
-        <section class="hero">
+        <!-- =========================
+             HERO
+        ========================= -->
+
+        <section
+            class="hero"
+            aria-labelledby="main-title"
+        >
 
             <div class="hero-logo">
-                <img src="logo44.png" alt="FORTY-FOUR">
+
+                <img
+                    src="logo44.png"
+                    alt="FORTY-FOUR A BANNED PAGAN"
+                >
+
             </div>
 
-            <h1>FORTY-FOUR</h1>
+            <h1 id="main-title">
+                FORTY-FOUR
+            </h1>
 
             <div class="hero-subtitle">
                 (A BANNED PAGAN)
             </div>
 
             <div class="official">
-                <span class="lang-en">OFFICIAL WEBSITE</span>
-                <span class="lang-fr">SITE OFFICIEL</span>
+
+                <span class="lang-en">
+                    OFFICIAL WEBSITE
+                </span>
+
+                <span class="lang-fr">
+                    SITE OFFICIEL
+                </span>
+
             </div>
 
         </section>
 
-        <!-- MUSIC -->
-        <section id="music" class="content-section">
 
-            <h2 class="section-title">
-                <span class="lang-en">MUSIC</span>
-                <span class="lang-fr">MUSIQUE</span>
+        <!-- =========================
+             MUSIC
+        ========================= -->
+
+        <section
+            id="music"
+            class="content-section"
+            aria-labelledby="music-title"
+        >
+
+            <h2
+                id="music-title"
+                class="section-title"
+            >
+
+                <span class="lang-en">
+                    MUSIC
+                </span>
+
+                <span class="lang-fr">
+                    MUSIQUE
+                </span>
+
             </h2>
 
             <div class="release-grid">
 
+
                 <!-- 1ST CHAPTER -->
+
                 <article class="release">
 
                     <div>
 
                         <div class="release-cover">
+
                             <img
-                                src="https://fortyfour-44.github.io/1st-chapter.png?v=20260917"
-                                alt="1st Chapter — FORTY-FOUR"
+                                src="1st-chapter.png"
+                                alt="1st Chapter — debut EP by FORTY-FOUR"
                                 loading="eager"
                             >
+
                         </div>
 
-                        <h3>1st Chapter</h3>
+                        <h3>
+                            1st Chapter
+                        </h3>
 
                         <p class="lang-en">
-                            The first chapter of Forty-Four.
+                            The first chapter of FORTY-FOUR,
+                            released in 2023.
                         </p>
 
                         <p class="lang-fr">
-                            Le premier chapitre de Forty-Four.
+                            Le premier chapitre de FORTY-FOUR,
+                            sorti en 2023.
                         </p>
 
                     </div>
 
                     <div class="release-status">
-                        <span class="lang-en">RELEASED — 2023</span>
-                        <span class="lang-fr">SORTI — 2023</span>
+
+                        <span class="lang-en">
+                            RELEASED — 2023
+                        </span>
+
+                        <span class="lang-fr">
+                            SORTI — 2023
+                        </span>
+
                     </div>
 
                 </article>
 
+
                 <!-- 2ND COMMUNION -->
+
                 <article class="release">
 
                     <div>
@@ -745,50 +913,83 @@
                         <div class="release-cover">
 
                             <img
-                                src="https://fortyfour-44.github.io/2nd-communion.png?v=20260917"
-                                alt="2nd Communion — FORTY-FOUR"
+                                src="2nd-communion.png"
+                                alt="2nd Communion — second EP by FORTY-FOUR"
                                 loading="eager"
                             >
 
                         </div>
 
-                        <h3>2nd Communion</h3>
+                        <h3>
+                            2nd Communion
+                        </h3>
 
                         <p class="lang-en">
-                            The second chapter is currently being
-                            reworked and prepared for final mastering.
+                            The second chapter of FORTY-FOUR,
+                            currently being reworked and prepared
+                            for final mastering.
                         </p>
 
                         <p class="lang-fr">
-                            Le deuxième chapitre est actuellement
-                            retravaillé et préparé pour son mastering final.
+                            Le deuxième chapitre de FORTY-FOUR,
+                            actuellement retravaillé et préparé
+                            pour son mastering final.
                         </p>
 
                     </div>
 
                     <div class="release-status">
-                        <span class="lang-en">REMIX &amp; MASTERING</span>
-                        <span class="lang-fr">REMIX &amp; MASTERING</span>
+
+                        <span class="lang-en">
+                            REMIX &amp; MASTERING
+                        </span>
+
+                        <span class="lang-fr">
+                            REMIX &amp; MASTERING
+                        </span>
+
                     </div>
 
                 </article>
 
             </div>
+
         </section>
 
-        <!-- NEWS -->
-        <section id="news" class="content-section">
 
-            <h2 class="section-title">
-                <span class="lang-en">NEWS</span>
-                <span class="lang-fr">ACTUALITÉS</span>
+        <!-- =========================
+             NEWS
+        ========================= -->
+
+        <section
+            id="news"
+            class="content-section"
+            aria-labelledby="news-title"
+        >
+
+            <h2
+                id="news-title"
+                class="section-title"
+            >
+
+                <span class="lang-en">
+                    NEWS
+                </span>
+
+                <span class="lang-fr">
+                    ACTUALITÉS
+                </span>
+
             </h2>
 
             <div class="news-list">
 
+
                 <article class="news-item">
 
-                    <div class="news-date">2026</div>
+                    <div class="news-date">
+                        2026
+                    </div>
 
                     <div class="news-content">
 
@@ -797,23 +998,27 @@
                         </h3>
 
                         <p class="lang-en">
-                            The second chapter is currently being
-                            reworked and prepared for its final
+                            The second chapter of FORTY-FOUR is currently
+                            being reworked and prepared for its final
                             mastering stage.
                         </p>
 
                         <p class="lang-fr">
-                            Le deuxième chapitre est actuellement
-                            retravaillé et préparé pour son mastering final.
+                            Le deuxième chapitre de FORTY-FOUR est
+                            actuellement retravaillé et préparé pour
+                            son mastering final.
                         </p>
 
                     </div>
 
                 </article>
 
+
                 <article class="news-item">
 
-                    <div class="news-date">ARCHIVES</div>
+                    <div class="news-date">
+                        ARCHIVES
+                    </div>
 
                     <div class="news-content">
 
@@ -822,13 +1027,13 @@
                         </h3>
 
                         <p class="lang-en">
-                            The Forty-Four story continues through
+                            The FORTY-FOUR story continues through
                             a series of personal archives, thoughts,
                             music and images.
                         </p>
 
                         <p class="lang-fr">
-                            L'histoire de Forty-Four continue à travers
+                            L'histoire de FORTY-FOUR continue à travers
                             une série d'archives personnelles, de réflexions,
                             de musique et d'images.
                         </p>
@@ -838,12 +1043,24 @@
                 </article>
 
             </div>
+
         </section>
 
-        <!-- ARCHIVES -->
-        <section id="archives" class="content-section">
 
-            <h2 class="section-title">
+        <!-- =========================
+             ARCHIVES
+        ========================= -->
+
+        <section
+            id="archives"
+            class="content-section"
+            aria-labelledby="archives-title"
+        >
+
+            <h2
+                id="archives-title"
+                class="section-title"
+            >
                 ARCHIVES 44
             </h2>
 
@@ -856,29 +1073,58 @@
                 <p class="lang-en">
                     Personal archives documenting the story behind
                     the music, from the first ideas to the evolution
-                    of Forty-Four.
+                    of FORTY-FOUR.
                 </p>
 
                 <p class="lang-fr">
                     Des archives personnelles qui racontent l'histoire
                     derrière la musique, des premières idées jusqu'à
-                    l'évolution de Forty-Four.
+                    l'évolution de FORTY-FOUR.
                 </p>
 
-                <a href="archives.html" class="archive-button">
-                    <span class="lang-en">ENTER ARCHIVES</span>
-                    <span class="lang-fr">ENTRER DANS LES ARCHIVES</span>
+                <a
+                    href="archives.html"
+                    class="archive-button"
+                >
+
+                    <span class="lang-en">
+                        ENTER ARCHIVES
+                    </span>
+
+                    <span class="lang-fr">
+                        ENTRER DANS LES ARCHIVES
+                    </span>
+
                 </a>
 
             </div>
+
         </section>
 
-        <!-- STORY -->
-        <section id="story" class="content-section">
 
-            <h2 class="section-title">
-                <span class="lang-en">STORY</span>
-                <span class="lang-fr">HISTOIRE</span>
+        <!-- =========================
+             STORY
+        ========================= -->
+
+        <section
+            id="story"
+            class="content-section"
+            aria-labelledby="story-title"
+        >
+
+            <h2
+                id="story-title"
+                class="section-title"
+            >
+
+                <span class="lang-en">
+                    STORY
+                </span>
+
+                <span class="lang-fr">
+                    HISTOIRE
+                </span>
+
             </h2>
 
             <div class="story-content">
@@ -888,14 +1134,16 @@
                 </h3>
 
                 <p class="lang-en">
-                    Forty-Four is a personal musical project built
-                    around darkness, identity, isolation and transformation.
+                    FORTY-FOUR (A BANNED PAGAN) is a solo music project
+                    initiated by Coccs. The project explores darkness,
+                    identity, isolation and transformation through music.
                 </p>
 
                 <p class="lang-fr">
-                    Forty-Four est un projet musical personnel construit
-                    autour de la noirceur, de l'identité, de l'isolement
-                    et de la transformation.
+                    FORTY-FOUR (A BANNED PAGAN) est un projet musical
+                    solo initié par Coccs. Le projet explore la noirceur,
+                    l'identité, l'isolement et la transformation à travers
+                    la musique.
                 </p>
 
                 <p class="lang-en">
@@ -910,102 +1158,218 @@
                     machines, rythmes hypnotiques et textes sombres.
                 </p>
 
+                <p class="lang-en">
+                    FORTY-FOUR is not a continuation and not a return.
+                    It is a new space for writing, experimentation
+                    and transformation.
+                </p>
+
+                <p class="lang-fr">
+                    FORTY-FOUR n'est ni une continuation ni un retour.
+                    C'est un nouvel espace d'écriture,
+                    d'expérimentation et de transformation.
+                </p>
+
             </div>
+
         </section>
 
-        <!-- VISUALS -->
-        <section id="visuals" class="content-section">
 
-            <h2 class="section-title">
-                <span class="lang-en">VISUALS</span>
-                <span class="lang-fr">VISUELS</span>
+        <!-- =========================
+             VISUALS
+        ========================= -->
+
+        <section
+            id="visuals"
+            class="content-section"
+            aria-labelledby="visuals-title"
+        >
+
+            <h2
+                id="visuals-title"
+                class="section-title"
+            >
+
+                <span class="lang-en">
+                    VISUALS
+                </span>
+
+                <span class="lang-fr">
+                    VISUELS
+                </span>
+
             </h2>
 
             <div class="visual-grid">
 
+
                 <!-- VISUAL 01 -->
+
                 <div class="visual">
+
                     <img
                         src="visual1.jpg"
-                        alt="Forty-Four Visual 01"
+                        alt="FORTY-FOUR Visual 01"
                         loading="lazy"
                     >
+
                 </div>
+
 
                 <!-- VISUAL 02 -->
+
                 <div class="visual">
+
                     <img
                         src="visual2.jpg"
-                        alt="Forty-Four Visual 02"
+                        alt="FORTY-FOUR Visual 02"
                         loading="lazy"
                     >
+
                 </div>
+
 
                 <!-- VISUAL 03 -->
-<div class="visual">
-    <img
-        src="visual3.jpg"
-        alt="Forty-Four Visual 03"
-        loading="lazy"
-    >
-</div>
 
                 <div class="visual">
-                    <span class="lang-en">VISUAL 04</span>
-                    <span class="lang-fr">VISUEL 04</span>
+
+                    <img
+                        src="visual3.jpg"
+                        alt="FORTY-FOUR Visual 03"
+                        loading="lazy"
+                    >
+
                 </div>
 
-                <div class="visual">
-                    <span class="lang-en">VISUAL 05</span>
-                    <span class="lang-fr">VISUEL 05</span>
-                </div>
+
+                <!-- VISUAL 04 -->
 
                 <div class="visual">
-                    <span class="lang-en">VISUAL 06</span>
-                    <span class="lang-fr">VISUEL 06</span>
+
+                    <span class="lang-en">
+                        VISUAL 04
+                    </span>
+
+                    <span class="lang-fr">
+                        VISUEL 04
+                    </span>
+
+                </div>
+
+
+                <!-- VISUAL 05 -->
+
+                <div class="visual">
+
+                    <span class="lang-en">
+                        VISUAL 05
+                    </span>
+
+                    <span class="lang-fr">
+                        VISUEL 05
+                    </span>
+
+                </div>
+
+
+                <!-- VISUAL 06 -->
+
+                <div class="visual">
+
+                    <span class="lang-en">
+                        VISUAL 06
+                    </span>
+
+                    <span class="lang-fr">
+                        VISUEL 06
+                    </span>
+
                 </div>
 
             </div>
+
         </section>
 
-        <!-- MERCH -->
-        <section id="merch" class="content-section">
 
-            <h2 class="section-title">
-                <span class="lang-en">MERCH</span>
-                <span class="lang-fr">MERCH</span>
+        <!-- =========================
+             MERCH
+        ========================= -->
+
+        <section
+            id="merch"
+            class="content-section"
+            aria-labelledby="merch-title"
+        >
+
+            <h2
+                id="merch-title"
+                class="section-title"
+            >
+
+                <span class="lang-en">
+                    MERCH
+                </span>
+
+                <span class="lang-fr">
+                    MERCH
+                </span>
+
             </h2>
 
             <div class="merch-box">
 
-                <h3>FORTY-FOUR</h3>
+                <h3>
+                    FORTY-FOUR
+                </h3>
 
                 <p class="lang-en">
-                    Official Forty-Four items and editions.
+                    Official FORTY-FOUR items and editions.
                     More information coming soon.
                 </p>
 
                 <p class="lang-fr">
-                    Articles et éditions officiels Forty-Four.
+                    Articles et éditions officiels FORTY-FOUR.
                     Plus d'informations prochainement.
                 </p>
 
             </div>
+
         </section>
 
-        <!-- CONTACT -->
-        <section id="contact" class="content-section">
 
-            <h2 class="section-title">
-                <span class="lang-en">CONTACT</span>
-                <span class="lang-fr">CONTACT</span>
+        <!-- =========================
+             CONTACT
+        ========================= -->
+
+        <section
+            id="contact"
+            class="content-section"
+            aria-labelledby="contact-title"
+        >
+
+            <h2
+                id="contact-title"
+                class="section-title"
+            >
+
+                <span class="lang-en">
+                    CONTACT
+                </span>
+
+                <span class="lang-fr">
+                    CONTACT
+                </span>
+
             </h2>
 
             <div class="contact-grid">
 
+
                 <div class="contact-box">
 
-                    <h3>FORTY-FOUR</h3>
+                    <h3>
+                        FORTY-FOUR
+                    </h3>
 
                     <p class="lang-en">
                         FORTY-FOUR<br>
@@ -1021,9 +1385,12 @@
 
                 </div>
 
+
                 <div class="contact-box">
 
-                    <h3>PRESS / EPK</h3>
+                    <h3>
+                        PRESS / EPK
+                    </h3>
 
                     <p class="lang-en">
                         Press information, biography,
@@ -1035,18 +1402,26 @@
                         musique et éléments du projet.
                     </p>
 
-                    <a href="press.html" class="contact-link">
+                    <a
+                        href="press.html"
+                        class="contact-link"
+                    >
                         PRESS / EPK
                     </a>
 
                 </div>
 
             </div>
+
         </section>
 
     </main>
 
-    <!-- FOOTER -->
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
     <footer>
 
         <div class="footer-name">
@@ -1075,8 +1450,12 @@
                 FACEBOOK
             </a>
 
-            <a href="#">
-                STREAMING
+            <a
+                href="https://music.amazon.com/artists/B0CB79NFM7/forty-four-a-banned-pagan"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                AMAZON MUSIC
             </a>
 
             <a href="press.html">
@@ -1090,6 +1469,11 @@
         </div>
 
     </footer>
+
+
+    <!-- =========================
+         LANGUAGE SCRIPT
+    ========================= -->
 
     <script>
 
@@ -1117,6 +1501,7 @@
                 document.documentElement.lang = "en";
 
             }
+
         }
 
         setLanguage("en");
