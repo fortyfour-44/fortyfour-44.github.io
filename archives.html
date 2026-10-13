@@ -1,12 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en" translate="no">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The Forty-Four Journal — Archives</title>
+<title>Archive 005 — Why 44? | The Forty-Four Journal</title>
 
-<meta name="description" content="The Forty-Four Journal — personal archives documenting the story behind FORTY-FOUR (A BANNED PAGAN).">
+<meta name="description" content="Archive 005 — Why 44? The story behind the number, the doubled image and the identity of FORTY-FOUR (A BANNED PAGAN).">
+
+<meta name="theme-color" content="#0b0b0b">
+
+<link rel="canonical" href="https://fortyfour-44.com/archives.html">
 
 <style>
 :root {
@@ -39,7 +44,6 @@ a {
     color: inherit;
     text-decoration: none;
 }
-
 
 /* HEADER */
 
@@ -91,7 +95,6 @@ nav {
     color: var(--text);
 }
 
-
 /* PAGE INTRO */
 
 .archive-header {
@@ -121,7 +124,6 @@ nav {
     color: #96938c;
 }
 
-
 /* ARCHIVE ENTRIES */
 
 .archives-container {
@@ -132,6 +134,7 @@ nav {
 .archive-entry {
     padding: 100px 0;
     border-bottom: 1px solid var(--line);
+    scroll-margin-top: 30px;
 }
 
 .archive-meta {
@@ -167,6 +170,7 @@ nav {
 
 .archive-image img {
     width: 100%;
+    height: auto;
     display: block;
 }
 
@@ -192,7 +196,6 @@ nav {
     font-style: italic;
 }
 
-
 /* BACK */
 
 .archive-back {
@@ -212,7 +215,6 @@ nav {
     background: var(--text);
     color: var(--bg);
 }
-
 
 /* FOOTER */
 
@@ -247,7 +249,6 @@ footer {
     letter-spacing: 0.12em;
 }
 
-
 /* LANGUAGE */
 
 .lang-fr {
@@ -270,11 +271,9 @@ body.fr .language .fr {
     color: var(--text);
 }
 
-
 /* MOBILE */
 
 @media (max-width: 800px) {
-
     header {
         padding: 20px 5%;
     }
@@ -316,9 +315,7 @@ body.fr .language .fr {
 <body>
 
 <header>
-
     <nav>
-
         <div class="nav-links">
 
             <a href="index.html#music">
@@ -331,9 +328,7 @@ body.fr .language .fr {
                 <span class="lang-fr">ACTUALITÉS</span>
             </a>
 
-            <a href="archives.html" class="active">
-                ARCHIVES
-            </a>
+            <a href="archives.html" class="active">ARCHIVES</a>
 
             <a href="index.html#story">
                 <span class="lang-en">STORY</span>
@@ -345,40 +340,33 @@ body.fr .language .fr {
                 <span class="lang-fr">VISUELS</span>
             </a>
 
-            <a href="index.html#merch">
-                MERCH
-            </a>
-
-            <a href="index.html#contact">
-                CONTACT
-            </a>
-
+            <a href="index.html#merch">MERCH</a>
+            <a href="index.html#contact">CONTACT</a>
         </div>
 
-        <div class="language">
-            <span class="en selected" onclick="setLanguage('en')">EN</span>
+        <div class="language" aria-label="Language selection">
+            <span class="en selected"
+                  role="button"
+                  tabindex="0"
+                  onclick="setLanguage('en')"
+                  onkeydown="if(event.key==='Enter'||event.key===' '){setLanguage('en')}">EN</span>
             <span>/</span>
-            <span class="fr" onclick="setLanguage('fr')">FR</span>
+            <span class="fr"
+                  role="button"
+                  tabindex="0"
+                  onclick="setLanguage('fr')"
+                  onkeydown="if(event.key==='Enter'||event.key===' '){setLanguage('fr')}">FR</span>
         </div>
-
     </nav>
-
 </header>
-
 
 <main>
 
     <!-- ARCHIVE INTRO -->
 
     <section class="archive-header">
-
-        <h1>
-            THE FORTY-FOUR JOURNAL
-        </h1>
-
-        <h2>
-            THE STORY BEHIND THE SILENCE
-        </h2>
+        <h1>THE FORTY-FOUR JOURNAL</h1>
+        <h2>THE STORY BEHIND THE SILENCE</h2>
 
         <p class="lang-en">
             Personal archives documenting the story behind
@@ -392,1199 +380,721 @@ body.fr .language .fr {
             les décisions, les images et les moments qui ont
             façonné le projet.
         </p>
-
     </section>
 
-
     <div class="archives-container">
-
 
         <!-- ========================================= -->
         <!-- ARCHIVE 001 -->
         <!-- ========================================= -->
 
         <article class="archive-entry" id="archive001">
-
             <div class="archive-meta">
-
-                <div class="archive-series">
-                    THE FORTY-FOUR JOURNAL
-                </div>
-
-                <div class="archive-number">
-                    ARCHIVE 001
-                </div>
-
+                <div class="archive-series">THE FORTY-FOUR JOURNAL</div>
+                <div class="archive-number">ARCHIVE 001</div>
                 <h2>
                     <span class="lang-en">The Beginning</span>
                     <span class="lang-fr">Le début</span>
                 </h2>
-
             </div>
-
 
             <div class="archive-content">
-
                 <div class="archive-image">
-
-                    <img
-                        src="arch001.png"
-                        alt="Archive 001 — The Beginning"
-                        loading="lazy"
-                    >
-
+                    <img src="arch001.png"
+                         alt="Archive 001 — The Beginning"
+                         loading="lazy">
                 </div>
-
 
                 <div class="archive-text">
-
-                    <p class="archive-intro">
-                        BEFORE FORTY-FOUR
-                    </p>
-
-
-                    <!-- ENGLISH -->
+                    <p class="archive-intro">BEFORE FORTY-FOUR</p>
 
                     <div class="lang-en">
-
-                        <p>
-                            Every story begins long before its first chapter.
-                        </p>
-
-                        <p>
-                            For years, music was a shared adventure.
-                        </p>
-
-                        <p>
-                            Rehearsals.<br>
-                            Concerts.<br>
-                            Miles.<br>
-                            Ideas.<br>
-                            Projects.
-                        </p>
-
-                        <p>
-                            Then time passes.
-                        </p>
-
-                        <p>
-                            Lives change.
-                        </p>
-
-                        <p>
-                            Roads drift apart.
-                        </p>
-
-                        <p>
-                            Sometimes, stories do not end.
-                        </p>
-
-                        <p>
-                            They simply take another direction.
-                        </p>
-
+                        <p>Every story begins long before its first chapter.</p>
+                        <p>For years, music was a shared adventure.</p>
+                        <p>Rehearsals.<br>Concerts.<br>Miles.<br>Ideas.<br>Projects.</p>
+                        <p>Then time passes.</p>
+                        <p>Lives change.</p>
+                        <p>Roads drift apart.</p>
+                        <p>Sometimes, stories do not end.</p>
+                        <p>They simply take another direction.</p>
                     </div>
-
-
-                    <!-- FRANÇAIS -->
 
                     <div class="lang-fr">
-
-                        <p>
-                            Chaque histoire commence bien avant son premier chapitre.
-                        </p>
-
-                        <p>
-                            Pendant des années, la musique a été une aventure partagée.
-                        </p>
-
-                        <p>
-                            Des répétitions.<br>
-                            Des concerts.<br>
-                            Des kilomètres.<br>
-                            Des idées.<br>
-                            Des projets.
-                        </p>
-
-                        <p>
-                            Puis le temps passe.
-                        </p>
-
-                        <p>
-                            Les vies changent.
-                        </p>
-
-                        <p>
-                            Les routes s'éloignent.
-                        </p>
-
-                        <p>
-                            Parfois, les histoires ne se terminent pas.
-                        </p>
-
-                        <p>
-                            Elles prennent simplement une autre direction.
-                        </p>
-
+                        <p>Chaque histoire commence bien avant son premier chapitre.</p>
+                        <p>Pendant des années, la musique a été une aventure partagée.</p>
+                        <p>Des répétitions.<br>Des concerts.<br>Des kilomètres.<br>Des idées.<br>Des projets.</p>
+                        <p>Puis le temps passe.</p>
+                        <p>Les vies changent.</p>
+                        <p>Les routes s'éloignent.</p>
+                        <p>Parfois, les histoires ne se terminent pas.</p>
+                        <p>Elles prennent simplement une autre direction.</p>
                     </div>
 
-
-                    <p class="archive-ending">
-                        To be continued...
-                    </p>
-
+                    <p class="archive-ending">To be continued...</p>
                 </div>
-
             </div>
-
         </article>
-
 
         <!-- ========================================= -->
         <!-- ARCHIVE 002 -->
         <!-- ========================================= -->
 
         <article class="archive-entry" id="archive002">
-
             <div class="archive-meta">
-
-                <div class="archive-series">
-                    THE FORTY-FOUR JOURNAL
-                </div>
-
-                <div class="archive-number">
-                    ARCHIVE 002
-                </div>
-
+                <div class="archive-series">THE FORTY-FOUR JOURNAL</div>
+                <div class="archive-number">ARCHIVE 002</div>
                 <h2>
                     <span class="lang-en">Silence</span>
                     <span class="lang-fr">Silence</span>
                 </h2>
-
             </div>
-
 
             <div class="archive-content">
-
                 <div class="archive-image">
-
-                    <img
-                        src="arch02.jpg"
-                        alt="Archive 002 — Silence"
-                        loading="lazy"
-                    >
-
+                    <img src="arch02.jpg"
+                         alt="Archive 002 — Silence"
+                         loading="lazy">
                 </div>
-
 
                 <div class="archive-text">
-
-                    <p class="archive-intro">
-                        BEFORE FORTY-FOUR
-                    </p>
-
-
-                    <!-- ENGLISH -->
+                    <p class="archive-intro">BEFORE FORTY-FOUR</p>
 
                     <div class="lang-en">
-
-                        <p>
-                            Then comes the separation.
-                        </p>
-
-                        <p>
-                            Or perhaps the clash.
-                        </p>
-
-                        <p>
-                            The brotherhood breaks apart.
-                        </p>
-
-                        <p>
-                            And with it, something difficult to replace disappears.
-                        </p>
-
-                        <p>
-                            Then comes the silence.
-                        </p>
-
-                        <p>
-                            Why keep creating?
-                        </p>
-
-                        <p>
-                            For whom?
-                        </p>
-
-                        <p>
-                            What future is there for music?
-                        </p>
-
-                        <p>
-                            And above all...
-                        </p>
-
-                        <p>
-                            Do I really want this?
-                        </p>
-
-                        <p>
-                            Continue alone.
-                        </p>
-
-                        <p>
-                            Without the debates.<br>
-                            Without ideas colliding.<br>
-                            Without that complicity.<br>
-                            Without those moments when we tease each other,
-                            when we understand each other without even needing to speak.
-                        </p>
-
-                        <p>
-                            Creating is no longer obvious.
-                        </p>
-
-                        <p>
-                            The bass, the guitar, the keyboards remain there.
-                        </p>
-
-                        <p>
-                            But they no longer say much.
-                        </p>
-
-                        <p>
-                            An empty chair.
-                        </p>
-
-                        <p>
-                            A silent room.
-                        </p>
-
-                        <p>
-                            Time.
-                        </p>
-
-                        <p>
-                            A lot of time.
-                        </p>
-
-                        <p>
-                            Maybe the story ends here.
-                        </p>
-
-                        <p>
-                            Or maybe, deep down,
-                        </p>
-
-                        <p>
-                            something is simply waiting to be reborn.
-                        </p>
-
+                        <p>Then comes the separation.</p>
+                        <p>Or perhaps the clash.</p>
+                        <p>The brotherhood breaks apart.</p>
+                        <p>And with it, something difficult to replace disappears.</p>
+                        <p>Then comes the silence.</p>
+                        <p>Why keep creating?</p>
+                        <p>For whom?</p>
+                        <p>What future is there for music?</p>
+                        <p>And above all...</p>
+                        <p>Do I really want this?</p>
+                        <p>Continue alone.</p>
+                        <p>Without the debates.<br>
+                        Without ideas colliding.<br>
+                        Without that complicity.<br>
+                        Without those moments when we tease each other,
+                        when we understand each other without even needing to speak.</p>
+                        <p>Creating is no longer obvious.</p>
+                        <p>The bass, the guitar, the keyboards remain there.</p>
+                        <p>But they no longer say much.</p>
+                        <p>An empty chair.</p>
+                        <p>A silent room.</p>
+                        <p>Time.</p>
+                        <p>A lot of time.</p>
+                        <p>Maybe the story ends here.</p>
+                        <p>Or maybe, deep down,</p>
+                        <p>something is simply waiting to be reborn.</p>
                     </div>
-
-
-                    <!-- FRANÇAIS -->
 
                     <div class="lang-fr">
-
-                        <p>
-                            Puis vient la séparation.
-                        </p>
-
-                        <p>
-                            Ou peut-être le clash.
-                        </p>
-
-                        <p>
-                            La confrérie se brise.
-                        </p>
-
-                        <p>
-                            Et avec elle disparaît quelque chose de difficile à remplacer.
-                        </p>
-
-                        <p>
-                            Alors vient le silence.
-                        </p>
-
-                        <p>
-                            Pourquoi continuer à créer ?
-                        </p>
-
-                        <p>
-                            Pour qui ?
-                        </p>
-
-                        <p>
-                            Quel avenir pour la musique ?
-                        </p>
-
-                        <p>
-                            Et surtout...
-                        </p>
-
-                        <p>
-                            En ai-je vraiment envie ?
-                        </p>
-
-                        <p>
-                            Continuer seul.
-                        </p>
-
-                        <p>
-                            Sans les débats.<br>
-                            Sans les idées qui se confrontent.<br>
-                            Sans cette complicité.<br>
-                            Sans les moments où l'on se taquine,
-                            où l'on se comprend sans même avoir besoin de parler.
-                        </p>
-
-                        <p>
-                            Créer n'est plus une évidence.
-                        </p>
-
-                        <p>
-                            La basse, la guitare, les claviers restent là.
-                        </p>
-
-                        <p>
-                            Mais ils ne disent plus grand-chose.
-                        </p>
-
-                        <p>
-                            Une chaise vide.
-                        </p>
-
-                        <p>
-                            Une pièce silencieuse.
-                        </p>
-
-                        <p>
-                            Du temps.
-                        </p>
-
-                        <p>
-                            Beaucoup de temps.
-                        </p>
-
-                        <p>
-                            Peut-être que l'histoire s'arrête ici.
-                        </p>
-
-                        <p>
-                            Ou peut-être qu'au fond,
-                        </p>
-
-                        <p>
-                            quelque chose attend simplement de renaître.
-                        </p>
-
+                        <p>Puis vient la séparation.</p>
+                        <p>Ou peut-être le clash.</p>
+                        <p>La confrérie se brise.</p>
+                        <p>Et avec elle disparaît quelque chose de difficile à remplacer.</p>
+                        <p>Alors vient le silence.</p>
+                        <p>Pourquoi continuer à créer ?</p>
+                        <p>Pour qui ?</p>
+                        <p>Quel avenir pour la musique ?</p>
+                        <p>Et surtout...</p>
+                        <p>En ai-je vraiment envie ?</p>
+                        <p>Continuer seul.</p>
+                        <p>Sans les débats.<br>
+                        Sans les idées qui se confrontent.<br>
+                        Sans cette complicité.<br>
+                        Sans les moments où l'on se taquine,
+                        où l'on se comprend sans même avoir besoin de parler.</p>
+                        <p>Créer n'est plus une évidence.</p>
+                        <p>La basse, la guitare, les claviers restent là.</p>
+                        <p>Mais ils ne disent plus grand-chose.</p>
+                        <p>Une chaise vide.</p>
+                        <p>Une pièce silencieuse.</p>
+                        <p>Du temps.</p>
+                        <p>Beaucoup de temps.</p>
+                        <p>Peut-être que l'histoire s'arrête ici.</p>
+                        <p>Ou peut-être qu'au fond,</p>
+                        <p>quelque chose attend simplement de renaître.</p>
                     </div>
 
-
-                    <p class="archive-ending">
-                        To be continued...
-                    </p>
-
+                    <p class="archive-ending">To be continued...</p>
                 </div>
-
             </div>
-
         </article>
-
 
         <!-- ========================================= -->
         <!-- ARCHIVE 003 -->
         <!-- ========================================= -->
 
         <article class="archive-entry" id="archive003">
-
             <div class="archive-meta">
-
-                <div class="archive-series">
-                    THE FORTY-FOUR JOURNAL
-                </div>
-
-                <div class="archive-number">
-                    ARCHIVE 003
-                </div>
-
+                <div class="archive-series">THE FORTY-FOUR JOURNAL</div>
+                <div class="archive-number">ARCHIVE 003</div>
                 <h2>
-                    <span class="lang-en">The itch / La démangeaison</span>
-                    <span class="lang-fr">The itch / La démangeaison</span>
+                    <span class="lang-en">The Itch / La démangeaison</span>
+                    <span class="lang-fr">The Itch / La démangeaison</span>
                 </h2>
-
             </div>
-
 
             <div class="archive-content">
-
                 <div class="archive-image">
-
-                    <img
-                        src="arch03.jpg"
-                        alt="Archive 003 — The itch / La démangeaison"
-                        loading="lazy"
-                    >
-
+                    <img src="arch03.jpg"
+                         alt="Archive 003 — The Itch"
+                         loading="lazy">
                 </div>
-
 
                 <div class="archive-text">
-
-                    <p class="archive-intro">
-                        BEFORE FORTY-FOUR
-                    </p>
-
-
-                    <!-- ENGLISH -->
+                    <p class="archive-intro">BEFORE FORTY-FOUR</p>
 
                     <div class="lang-en">
-
-                        <p>
-                            After a few years, something starts moving again.
-                        </p>
-
-                        <p>
-                            Not really a decision.
-                        </p>
-
-                        <p>
-                            Not a project.
-                        </p>
-
-                        <p>
-                            Even less an ambition.
-                        </p>
-
-                        <p>
-                            Just that strange, familiar feeling...
-                        </p>
-
-                        <p>
-                            An itch.
-                        </p>
-
-                        <p>
-                            The urge to pick up an instrument again.
-                        </p>
-
-                        <p>
-                            To look for a sound.
-                        </p>
-
-                        <p>
-                            To plug in a few machines.
-                        </p>
-
-                        <p>
-                            To play a few notes, without knowing where they will lead.
-                        </p>
-
-                        <p>
-                            Music slowly comes back.
-                        </p>
-
-                        <p>
-                            An idea here.
-                        </p>
-
-                        <p>
-                            A riff there.
-                        </p>
-
-                        <p>
-                            A bass line.
-                        </p>
-
-                        <p>
-                            An atmosphere.
-                        </p>
-
-                        <p>
-                            A few words scribbled on a piece of paper.
-                        </p>
-
-                        <p>
-                            Nothing is really planned.
-                        </p>
-
-                        <p>
-                            And that is exactly what I like about it.
-                        </p>
-
-                        <p>
-                            I no longer want to think about what it should be.
-                        </p>
-
-                        <p>
-                            I simply want to play.
-                        </p>
-
-                        <p>
-                            After making music with others for so long,
-                            the idea of starting again alone does not really scare me.
-                        </p>
-
-                        <p>
-                            On the contrary.
-                        </p>
-
-                        <p>
-                            I can try.
-                        </p>
-
-                        <p>
-                            Make mistakes.
-                        </p>
-
-                        <p>
-                            Start again.
-                        </p>
-
-                        <p>
-                            Change my mind.
-                        </p>
-
-                        <p>
-                            Nobody expects anything.
-                        </p>
-
-                        <p>
-                            No constraints.
-                        </p>
-
-                        <p>
-                            No schedule.
-                        </p>
-
-                        <p>
-                            No obligation to achieve a result.
-                        </p>
-
-                        <p>
-                            Just the pleasure of creating.
-                        </p>
-
-                        <p>
-                            Finding again that feeling of starting with almost nothing
-                            and watching something appear.
-                        </p>
-
-                        <p>
-                            A sound becomes an idea.
-                        </p>
-
-                        <p>
-                            An idea becomes a song.
-                        </p>
-
-                        <p>
-                            And without really realizing it,
-                        </p>
-
-                        <p>
-                            I start wanting music again.
-                        </p>
-
-                        <p>
-                            Not to go back.
-                        </p>
-
-                        <p>
-                            Simply to move forward again.
-                        </p>
-
+                        <p>After a few years, something starts moving again.</p>
+                        <p>Not really a decision.</p>
+                        <p>Not a project.</p>
+                        <p>Even less an ambition.</p>
+                        <p>Just that strange, familiar feeling...</p>
+                        <p>An itch.</p>
+                        <p>The urge to pick up an instrument again.</p>
+                        <p>To look for a sound.</p>
+                        <p>To plug in a few machines.</p>
+                        <p>To play a few notes, without knowing where they will lead.</p>
+                        <p>Music slowly comes back.</p>
+                        <p>An idea here.</p>
+                        <p>A riff there.</p>
+                        <p>A bass line.</p>
+                        <p>An atmosphere.</p>
+                        <p>A few words scribbled on a piece of paper.</p>
+                        <p>Nothing is really planned.</p>
+                        <p>And that is exactly what I like about it.</p>
+                        <p>I no longer want to think about what it should be.</p>
+                        <p>I simply want to play.</p>
+                        <p>After making music with others for so long,
+                        the idea of starting again alone does not really scare me.</p>
+                        <p>On the contrary.</p>
+                        <p>I can try.</p>
+                        <p>Make mistakes.</p>
+                        <p>Start again.</p>
+                        <p>Change my mind.</p>
+                        <p>Nobody expects anything.</p>
+                        <p>No constraints.</p>
+                        <p>No schedule.</p>
+                        <p>No obligation to achieve a result.</p>
+                        <p>Just the pleasure of creating.</p>
+                        <p>Finding again that feeling of starting with almost nothing
+                        and watching something appear.</p>
+                        <p>A sound becomes an idea.</p>
+                        <p>An idea becomes a song.</p>
+                        <p>And without really realizing it,</p>
+                        <p>I start wanting music again.</p>
+                        <p>Not to go back.</p>
+                        <p>Simply to move forward again.</p>
                     </div>
-
-
-                    <!-- FRANÇAIS -->
 
                     <div class="lang-fr">
-
-                        <p>
-                            Après quelques années, quelque chose recommence à bouger.
-                        </p>
-
-                        <p>
-                            Pas vraiment une décision.
-                        </p>
-
-                        <p>
-                            Pas un projet.
-                        </p>
-
-                        <p>
-                            Encore moins une ambition.
-                        </p>
-
-                        <p>
-                            Juste cette sensation étrange, familière...
-                        </p>
-
-                        <p>
-                            Une démangeaison.
-                        </p>
-
-                        <p>
-                            L'envie de reprendre un instrument.
-                        </p>
-
-                        <p>
-                            De chercher un son.
-                        </p>
-
-                        <p>
-                            De brancher quelques machines.
-                        </p>
-
-                        <p>
-                            De jouer quelques notes, sans savoir où elles vont mener.
-                        </p>
-
-                        <p>
-                            La musique revient doucement.
-                        </p>
-
-                        <p>
-                            Une idée par-ci.
-                        </p>
-
-                        <p>
-                            Un riff par-là.
-                        </p>
-
-                        <p>
-                            Une ligne de basse.
-                        </p>
-
-                        <p>
-                            Une ambiance.
-                        </p>
-
-                        <p>
-                            Quelques mots griffonnés sur un coin de papier.
-                        </p>
-
-                        <p>
-                            Rien n'est vraiment prévu.
-                        </p>
-
-                        <p>
-                            Et c'est justement ce qui me plaît.
-                        </p>
-
-                        <p>
-                            Je n'ai plus envie de réfléchir à ce que ça devrait être.
-                        </p>
-
-                        <p>
-                            Je veux simplement jouer.
-                        </p>
-
-                        <p>
-                            Après avoir longtemps fait de la musique avec d'autres,
-                            l'idée de reprendre seul ne me fait finalement pas peur.
-                        </p>
-
-                        <p>
-                            Au contraire.
-                        </p>
-
-                        <p>
-                            Je peux essayer.
-                        </p>
-
-                        <p>
-                            Me tromper.
-                        </p>
-
-                        <p>
-                            Recommencer.
-                        </p>
-
-                        <p>
-                            Changer d'avis.
-                        </p>
-
-                        <p>
-                            Personne n'attend rien.
-                        </p>
-
-                        <p>
-                            Pas de contraintes.
-                        </p>
-
-                        <p>
-                            Pas de calendrier.
-                        </p>
-
-                        <p>
-                            Pas d'obligation de résultat.
-                        </p>
-
-                        <p>
-                            Juste le plaisir de créer.
-                        </p>
-
-                        <p>
-                            Retrouver cette sensation de partir de presque rien
-                            et de voir apparaître quelque chose.
-                        </p>
-
-                        <p>
-                            Un son devient une idée.
-                        </p>
-
-                        <p>
-                            Une idée devient un morceau.
-                        </p>
-
-                        <p>
-                            Et sans vraiment m'en rendre compte,
-                        </p>
-
-                        <p>
-                            je recommence à avoir envie de musique.
-                        </p>
-
-                        <p>
-                            Pas pour revenir en arrière.
-                        </p>
-
-                        <p>
-                            Simplement pour avancer à nouveau.
-                        </p>
-
+                        <p>Après quelques années, quelque chose recommence à bouger.</p>
+                        <p>Pas vraiment une décision.</p>
+                        <p>Pas un projet.</p>
+                        <p>Encore moins une ambition.</p>
+                        <p>Juste cette sensation étrange, familière...</p>
+                        <p>Une démangeaison.</p>
+                        <p>L'envie de reprendre un instrument.</p>
+                        <p>De chercher un son.</p>
+                        <p>De brancher quelques machines.</p>
+                        <p>De jouer quelques notes, sans savoir où elles vont mener.</p>
+                        <p>La musique revient doucement.</p>
+                        <p>Une idée par-ci.</p>
+                        <p>Un riff par-là.</p>
+                        <p>Une ligne de basse.</p>
+                        <p>Une ambiance.</p>
+                        <p>Quelques mots griffonnés sur un coin de papier.</p>
+                        <p>Rien n'est vraiment prévu.</p>
+                        <p>Et c'est justement ce qui me plaît.</p>
+                        <p>Je n'ai plus envie de réfléchir à ce que ça devrait être.</p>
+                        <p>Je veux simplement jouer.</p>
+                        <p>Après avoir longtemps fait de la musique avec d'autres,
+                        l'idée de reprendre seul ne me fait finalement pas peur.</p>
+                        <p>Au contraire.</p>
+                        <p>Je peux essayer.</p>
+                        <p>Me tromper.</p>
+                        <p>Recommencer.</p>
+                        <p>Changer d'avis.</p>
+                        <p>Personne n'attend rien.</p>
+                        <p>Pas de contraintes.</p>
+                        <p>Pas de calendrier.</p>
+                        <p>Pas d'obligation de résultat.</p>
+                        <p>Juste le plaisir de créer.</p>
+                        <p>Retrouver cette sensation de partir de presque rien
+                        et de voir apparaître quelque chose.</p>
+                        <p>Un son devient une idée.</p>
+                        <p>Une idée devient un morceau.</p>
+                        <p>Et sans vraiment m'en rendre compte,</p>
+                        <p>je recommence à avoir envie de musique.</p>
+                        <p>Pas pour revenir en arrière.</p>
+                        <p>Simplement pour avancer à nouveau.</p>
                     </div>
 
-
-                    <p class="archive-ending">
-                        To be continued...
-                    </p>
-
+                    <p class="archive-ending">To be continued...</p>
                 </div>
-
             </div>
-
         </article>
-
 
         <!-- ========================================= -->
         <!-- ARCHIVE 004 -->
         <!-- ========================================= -->
 
         <article class="archive-entry" id="archive004">
-
             <div class="archive-meta">
-
-                <div class="archive-series">
-                    THE FORTY-FOUR JOURNAL
-                </div>
-
-                <div class="archive-number">
-                    ARCHIVE 004
-                </div>
-
+                <div class="archive-series">THE FORTY-FOUR JOURNAL</div>
+                <div class="archive-number">ARCHIVE 004</div>
                 <h2>
                     <span class="lang-en">The Voice / La voix</span>
                     <span class="lang-fr">La voix / The Voice</span>
                 </h2>
-
             </div>
 
+            <div class="archive-content">
+                <div class="archive-image">
+                    <img src="arch04.jpg"
+                         alt="Archive 004 — The Voice"
+                         loading="lazy">
+                </div>
+
+                <div class="archive-text">
+                    <p class="archive-intro">BEFORE FORTY-FOUR</p>
+
+                    <div class="lang-en">
+                        <p>There was still something I had never done.</p>
+                        <p><strong>Sing.</strong></p>
+                        <p>I had played music.</p>
+                        <p>I had composed.</p>
+                        <p>I had searched for sounds.</p>
+                        <p>But putting my voice on a track...</p>
+                        <p>That was something else.</p>
+                        <p>I had never sung before.</p>
+                        <p>So naturally, the first takes are hesitant.</p>
+                        <p>The voice is not confident.</p>
+                        <p>Sometimes too present.</p>
+                        <p>Sometimes not enough.</p>
+                        <p>I have to start again.</p>
+                        <p>Again.</p>
+                        <p>And again.</p>
+                        <p>Learning to hear my own voice differently.</p>
+                        <p>It is not comfortable.</p>
+                        <p>It is even a real risk.</p>
+                        <p>But as the attempts continue, something begins to appear.</p>
+                        <p>An imperfect voice.</p>
+                        <p>Fragile at times.</p>
+                        <p>Dark at others.</p>
+                        <p>But maybe that is precisely what can bring something to the project.</p>
+                        <p>A colour.</p>
+                        <p>A tension.</p>
+                        <p>An atmosphere.</p>
+                        <p>Something that might not be there with a perfectly controlled voice.</p>
+                        <p>So I decide not to try to become someone else.</p>
+                        <p>I will keep this voice.</p>
+                        <p>Work on it.</p>
+                        <p>Use it as an instrument.</p>
+                        <p>Because it is part of the story.</p>
+                        <p>And perhaps imperfections are not always flaws.</p>
+                        <p><strong>Sometimes, they become the identity.</strong></p>
+                    </div>
+
+                    <div class="lang-fr">
+                        <p>Il restait pourtant quelque chose que je n'avais jamais fait.</p>
+                        <p><strong>Chanter.</strong></p>
+                        <p>J'avais joué de la musique.</p>
+                        <p>J'avais composé.</p>
+                        <p>J'avais cherché des sons.</p>
+                        <p>Mais poser ma voix sur un morceau...</p>
+                        <p>C'était autre chose.</p>
+                        <p>Je n'avais jamais chanté auparavant.</p>
+                        <p>Alors forcément, les premières prises sont hésitantes.</p>
+                        <p>La voix n'est pas assurée.</p>
+                        <p>Parfois trop présente.</p>
+                        <p>Parfois pas assez.</p>
+                        <p>Il faut recommencer.</p>
+                        <p>Encore.</p>
+                        <p>Et encore.</p>
+                        <p>Apprendre à entendre sa propre voix autrement.</p>
+                        <p>Ce n'est pas confortable.</p>
+                        <p>C'est même une véritable prise de risque.</p>
+                        <p>Mais au fil des essais, quelque chose apparaît.</p>
+                        <p>Une voix imparfaite.</p>
+                        <p>Fragile parfois.</p>
+                        <p>Sombre à d'autres moments.</p>
+                        <p>Mais peut-être que c'est justement ce qui peut donner quelque chose au projet.</p>
+                        <p>Une couleur.</p>
+                        <p>Une tension.</p>
+                        <p>Une ambiance.</p>
+                        <p>Quelque chose qui ne serait peut-être pas là avec une voix parfaitement maîtrisée.</p>
+                        <p>Alors je décide de ne pas chercher à devenir quelqu'un d'autre.</p>
+                        <p>Je vais garder cette voix.</p>
+                        <p>La travailler.</p>
+                        <p>L'utiliser comme un instrument.</p>
+                        <p>Parce qu'elle fait partie de l'histoire.</p>
+                        <p>Et peut-être que les imperfections ne sont pas toujours des défauts.</p>
+                        <p><strong>Parfois, elles deviennent l'identité.</strong></p>
+                    </div>
+
+                    <p class="archive-ending">To be continued...</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- ========================================= -->
+        <!-- ARCHIVE 005 — WHY 44? -->
+        <!-- ========================================= -->
+
+        <article class="archive-entry" id="archive005">
+            <div class="archive-meta">
+                <div class="archive-series">THE FORTY-FOUR JOURNAL</div>
+                <div class="archive-number">ARCHIVE 005</div>
+                <h2>
+                    <span class="lang-en">Why 44?</span>
+                    <span class="lang-fr">Pourquoi 44 ?</span>
+                </h2>
+            </div>
 
             <div class="archive-content">
 
                 <div class="archive-image">
-
                     <img
-                        src="arch04.jpg"
-                        alt="Archive 004 — The Voice / La voix"
+                        src="arch05.jpg"
+                        alt="Archive 005 — Why 44? — Forty-Four (A Banned Pagan)"
                         loading="lazy"
                     >
-
                 </div>
-
 
                 <div class="archive-text">
 
                     <p class="archive-intro">
-                        BEFORE FORTY-FOUR
+                        <span class="lang-en">BEFORE THE SYMBOL</span>
+                        <span class="lang-fr">AVANT LE SYMBOLE</span>
                     </p>
-
 
                     <!-- ENGLISH -->
 
                     <div class="lang-en">
 
+                        <p><em>At the beginning, there was no symbol.</em></p>
+
                         <p>
-                            There was still something I had never done.
+                            At the beginning, there was no logo.<br>
+                            No circle.<br>
+                            No geometry planned in advance.
+                        </p>
+
+                        <p>There was simply an image.</p>
+
+                        <p>A <strong>4</strong>.</p>
+
+                        <p>Or rather… two 4s.</p>
+
+                        <p>Entangled.</p>
+
+                        <p>
+                            Like a blurred vision.<br>
+                            A doubled image.<br>
+                            Two shapes overlapping until they become almost indistinguishable.
+                        </p>
+
+                        <p><em>Two fours becoming one.</em></p>
+
+                        <p>
+                            And yet, the <strong>4</strong> is not a randomly chosen number.
                         </p>
 
                         <p>
-                            <strong>Sing.</strong>
+                            A square has four sides.<br>
+                            Four angles.<br>
+                            Four points defining a stable, constructed shape.
                         </p>
 
                         <p>
-                            I had played music.
+                            Four directions.<br>
+                            Four reference points.
                         </p>
 
                         <p>
-                            I had composed.
+                            Something simple.<br>
+                            Something raw.<br>
+                            Something constructed.
                         </p>
 
                         <p>
-                            I had searched for sounds.
+                            But the 4 can also represent a limit.<br>
+                            A boundary.<br>
+                            A structure that confines.
+                        </p>
+
+                        <p>So, two 4s…</p>
+
+                        <p>
+                            Two structures.<br>
+                            Two faces.<br>
+                            Two directions meeting.
+                        </p>
+
+                        <p>Or opposing each other.</p>
+
+                        <p><strong>44.</strong></p>
+
+                        <p><em>But why 44?</em></p>
+
+                        <p>Perhaps there is a precise answer.</p>
+
+                        <p>Perhaps several.</p>
+
+                        <p>
+                            Perhaps a date.<br>
+                            Perhaps a place.<br>
+                            Perhaps a personal reference.
+                        </p>
+
+                        <p>Or perhaps something completely different.</p>
+
+                        <p>I prefer to leave the doubt.</p>
+
+                        <p>
+                            Because at the beginning, <strong>44 was not an explanation.</strong>
+                        </p>
+
+                        <p>It was a sensation.</p>
+
+                        <p>An image.</p>
+
+                        <p>A doubling.</p>
+
+                        <p>
+                            Two 4s searching for each other, overlapping, merging,
+                            almost blurring into one.
+                        </p>
+
+                        <p><em>Before the symbol, there was only the number.</em></p>
+
+                        <p>Then the project began to evolve.</p>
+
+                        <p>
+                            The first blurred vision gradually found its own shape.
+                        </p>
+
+                        <p>44 became an identity.</p>
+
+                        <p>Then a sign.</p>
+
+                        <p>But that came later.</p>
+
+                        <p><em>The symbol came later.</em></p>
+
+                        <p>
+                            In the beginning, there were only two 4s.
                         </p>
 
                         <p>
-                            But putting my voice on a track...
+                            Entangled.<br>
+                            Doubled.<br>
+                            Almost blurred.
                         </p>
 
-                        <p>
-                            That was something else.
-                        </p>
+                        <p><strong>44.</strong></p>
 
                         <p>
-                            I had never sung before.
+                            And perhaps its true meaning will remain somewhere
+                            between what I intended to put into it…
                         </p>
 
-                        <p>
-                            So naturally, the first takes are hesitant.
-                        </p>
+                        <p>and what each person chooses to see in it.</p>
 
-                        <p>
-                            The voice is not confident.
-                        </p>
-
-                        <p>
-                            Sometimes too present.
-                        </p>
-
-                        <p>
-                            Sometimes not enough.
-                        </p>
-
-                        <p>
-                            I have to start again.
-                        </p>
-
-                        <p>
-                            Again.
-                        </p>
-
-                        <p>
-                            And again.
-                        </p>
-
-                        <p>
-                            Learning to hear my own voice differently.
-                        </p>
-
-                        <p>
-                            It is not comfortable.
-                        </p>
-
-                        <p>
-                            It is even a real risk.
-                        </p>
-
-                        <p>
-                            But as the attempts continue, something begins to appear.
-                        </p>
-
-                        <p>
-                            An imperfect voice.
-                        </p>
-
-                        <p>
-                            Fragile at times.
-                        </p>
-
-                        <p>
-                            Dark at others.
-                        </p>
-
-                        <p>
-                            But maybe that is precisely what can bring something to the project.
-                        </p>
-
-                        <p>
-                            A colour.
-                        </p>
-
-                        <p>
-                            A tension.
-                        </p>
-
-                        <p>
-                            An atmosphere.
-                        </p>
-
-                        <p>
-                            Something that might not be there with a perfectly controlled voice.
-                        </p>
-
-                        <p>
-                            So I decide not to try to become someone else.
-                        </p>
-
-                        <p>
-                            I will keep this voice.
-                        </p>
-
-                        <p>
-                            Work on it.
-                        </p>
-
-                        <p>
-                            Use it as an instrument.
-                        </p>
-
-                        <p>
-                            Because it is part of the story.
-                        </p>
-
-                        <p>
-                            And perhaps imperfections are not always flaws.
-                        </p>
-
-                        <p>
-                            <strong>Sometimes, they become the identity.</strong>
-                        </p>
+                        <p><em>Maybe the answer is not meant to be found.</em></p>
 
                     </div>
-
 
                     <!-- FRANÇAIS -->
 
                     <div class="lang-fr">
 
+                        <p><em>Au début, il n’y avait pas de symbole.</em></p>
+
                         <p>
-                            Il restait pourtant quelque chose que je n'avais jamais fait.
+                            Au début, il n’y avait pas de logo.<br>
+                            Pas de cercle.<br>
+                            Pas de géométrie pensée à l’avance.
+                        </p>
+
+                        <p>Il y avait simplement une image.</p>
+
+                        <p>Un <strong>4</strong>.</p>
+
+                        <p>Ou plutôt… deux 4.</p>
+
+                        <p>Entremêlés.</p>
+
+                        <p>
+                            Comme une vision trouble.<br>
+                            Une image dédoublée.<br>
+                            Deux formes qui se superposent jusqu’à devenir presque indissociables.
+                        </p>
+
+                        <p><em>Two fours becoming one.</em></p>
+
+                        <p>
+                            Et pourtant, le <strong>4</strong> n’est pas un chiffre choisi au hasard.
                         </p>
 
                         <p>
-                            <strong>Chanter.</strong>
+                            Le carré possède quatre côtés.<br>
+                            Quatre angles.<br>
+                            Quatre points qui définissent une forme stable, construite.
                         </p>
 
                         <p>
-                            J'avais joué de la musique.
+                            Quatre directions.<br>
+                            Quatre repères.
                         </p>
 
                         <p>
-                            J'avais composé.
+                            Quelque chose de simple.<br>
+                            De brut.<br>
+                            De construit.
                         </p>
 
                         <p>
-                            J'avais cherché des sons.
+                            Mais le 4 peut aussi représenter une limite.<br>
+                            Une frontière.<br>
+                            Une structure qui enferme.
                         </p>
 
-                        <p>
-                            Mais poser ma voix sur un morceau...
-                        </p>
+                        <p>Alors deux 4…</p>
 
                         <p>
-                            C'était autre chose.
+                            Deux structures.<br>
+                            Deux faces.<br>
+                            Deux directions qui se rencontrent.
                         </p>
 
-                        <p>
-                            Je n'avais jamais chanté auparavant.
-                        </p>
+                        <p>Ou qui s’opposent.</p>
+
+                        <p><strong>44.</strong></p>
+
+                        <p><em>But why 44?</em></p>
+
+                        <p>Peut-être qu’il existe une réponse précise.</p>
+
+                        <p>Peut-être plusieurs.</p>
 
                         <p>
-                            Alors forcément, les premières prises sont hésitantes.
+                            Peut-être une date.<br>
+                            Peut-être un lieu.<br>
+                            Peut-être une référence personnelle.
                         </p>
 
-                        <p>
-                            La voix n'est pas assurée.
-                        </p>
+                        <p>Ou peut-être quelque chose de complètement différent.</p>
+
+                        <p>Je préfère laisser le doute.</p>
 
                         <p>
-                            Parfois trop présente.
+                            Parce qu’au départ, <strong>44 n’était pas une explication.</strong>
                         </p>
 
-                        <p>
-                            Parfois pas assez.
-                        </p>
+                        <p>C’était une sensation.</p>
+
+                        <p>Une image.</p>
+
+                        <p>Un dédoublement.</p>
 
                         <p>
-                            Il faut recommencer.
+                            Deux 4 qui se cherchent, se superposent, se confondent.
                         </p>
 
-                        <p>
-                            Encore.
-                        </p>
+                        <p><em>Before the symbol, there was only the number.</em></p>
+
+                        <p>Puis le projet a commencé à évoluer.</p>
 
                         <p>
-                            Et encore.
+                            La première vision floue a peu à peu trouvé sa propre forme.
                         </p>
 
-                        <p>
-                            Apprendre à entendre sa propre voix autrement.
-                        </p>
+                        <p>Le 44 est devenu une identité.</p>
+
+                        <p>Puis un signe.</p>
+
+                        <p>Mais ça, c’est venu après.</p>
+
+                        <p><em>The symbol came later.</em></p>
+
+                        <p>Au commencement, il n’y avait que deux 4.</p>
 
                         <p>
-                            Ce n'est pas confortable.
+                            Entremêlés.<br>
+                            Dédoublés.<br>
+                            Presque flous.
                         </p>
 
-                        <p>
-                            C'est même une véritable prise de risque.
-                        </p>
+                        <p><strong>44.</strong></p>
 
                         <p>
-                            Mais au fil des essais, quelque chose apparaît.
+                            Et peut-être que sa véritable signification restera
+                            quelque part entre ce que j’ai voulu y mettre…
                         </p>
 
-                        <p>
-                            Une voix imparfaite.
-                        </p>
+                        <p>et ce que chacun choisira d’y voir.</p>
 
-                        <p>
-                            Fragile parfois.
-                        </p>
-
-                        <p>
-                            Sombre à d'autres moments.
-                        </p>
-
-                        <p>
-                            Mais peut-être que c'est justement ce qui peut donner quelque chose au projet.
-                        </p>
-
-                        <p>
-                            Une couleur.
-                        </p>
-
-                        <p>
-                            Une tension.
-                        </p>
-
-                        <p>
-                            Une ambiance.
-                        </p>
-
-                        <p>
-                            Quelque chose qui ne serait peut-être pas là avec une voix parfaitement maîtrisée.
-                        </p>
-
-                        <p>
-                            Alors je décide de ne pas chercher à devenir quelqu'un d'autre.
-                        </p>
-
-                        <p>
-                            Je vais garder cette voix.
-                        </p>
-
-                        <p>
-                            La travailler.
-                        </p>
-
-                        <p>
-                            L'utiliser comme un instrument.
-                        </p>
-
-                        <p>
-                            Parce qu'elle fait partie de l'histoire.
-                        </p>
-
-                        <p>
-                            Et peut-être que les imperfections ne sont pas toujours des défauts.
-                        </p>
-
-                        <p>
-                            <strong>Parfois, elles deviennent l'identité.</strong>
-                        </p>
+                        <p><em>Maybe the answer is not meant to be found.</em></p>
 
                     </div>
 
-
                     <p class="archive-ending">
-                        To be continued...
+                        <span class="lang-en">TO BE CONTINUED...</span>
+                        <span class="lang-fr">À SUIVRE...</span>
                     </p>
 
                 </div>
-
             </div>
-
         </article>
-
 
         <!-- BACK -->
 
         <div class="archive-back">
-
             <a href="index.html">
-
-                <span class="lang-en">
-                    BACK TO FORTY-FOUR
-                </span>
-
-                <span class="lang-fr">
-                    RETOUR À FORTY-FOUR
-                </span>
-
+                <span class="lang-en">BACK TO FORTY-FOUR</span>
+                <span class="lang-fr">RETOUR À FORTY-FOUR</span>
             </a>
-
         </div>
 
     </div>
-
 </main>
 
-
 <footer>
-
     <div class="footer-links">
+        <a href="https://forty-fourabannedpagan.bandcamp.com/"
+           target="_blank"
+           rel="noopener noreferrer">BANDCAMP</a>
 
-        <a
-            href="https://forty-fourabannedpagan.bandcamp.com/"
-            target="_blank"
-            rel="noopener"
-        >
-            BANDCAMP
-        </a>
+        <a href="https://www.facebook.com/profile.php?id=100089897472402"
+           target="_blank"
+           rel="noopener noreferrer">FACEBOOK</a>
 
-        <a
-            href="https://www.facebook.com/profile.php?id=100089897472402"
-            target="_blank"
-            rel="noopener"
-        >
-            FACEBOOK
-        </a>
-
-        <a href="#">
-            STREAMING
-        </a>
-
-        <a href="#">
-            PRESS / EPK
-        </a>
-
+        <a href="#">STREAMING</a>
+        <a href="#">PRESS / EPK</a>
     </div>
 
     <div class="footer-copy">
         © FORTY-FOUR — A BANNED PAGAN
     </div>
-
 </footer>
-
 
 <script>
 function setLanguage(language) {
+    const isFrench = language === "fr";
 
-    if (language === "fr") {
-        document.body.classList.add("fr");
-    } else {
-        document.body.classList.remove("fr");
-    }
+    document.body.classList.toggle("fr", isFrench);
 
     document.querySelector(".language .en")
-        .classList.toggle("selected", language === "en");
+        .classList.toggle("selected", !isFrench);
 
     document.querySelector(".language .fr")
-        .classList.toggle("selected", language === "fr");
+        .classList.toggle("selected", isFrench);
+
+    document.documentElement.lang = isFrench ? "fr" : "en";
 }
 </script>
 
