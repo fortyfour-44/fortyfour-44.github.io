@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en" translate="no">
 <head>
@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google" content="notranslate">
 
-    <!-- SEO -->
     <title>FORTY-FOUR — A BANNED PAGAN | Official Website</title>
     <meta name="description" content="FORTY-FOUR (A BANNED PAGAN) is a solo music project moving between deathrock, goth rock, coldwave and alternative rock. Official website, music, archives, story and visuals.">
     <meta name="author" content="FORTY-FOUR">
@@ -14,7 +13,6 @@
     <meta name="keywords" content="FORTY-FOUR, Forty Four, A Banned Pagan, deathrock, goth rock, coldwave, alternative rock, post-punk, dark music, 1st Chapter, 2nd Communion">
     <link rel="canonical" href="https://fortyfour-44.com/">
 
-    <!-- OPEN GRAPH / FACEBOOK -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="FORTY-FOUR — A BANNED PAGAN">
     <meta property="og:description" content="Official website of FORTY-FOUR (A BANNED PAGAN). Music, archives, story, visuals and releases.">
@@ -24,13 +22,11 @@
     <meta property="og:image" content="https://fortyfour-44.com/logo44.png">
     <meta property="og:image:alt" content="FORTY-FOUR — A BANNED PAGAN logo">
 
-    <!-- TWITTER / X -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="FORTY-FOUR — A BANNED PAGAN">
     <meta name="twitter:description" content="Official website of FORTY-FOUR (A BANNED PAGAN). Music, archives, story, visuals and releases.">
     <meta name="twitter:image" content="https://fortyfour-44.com/logo44.png">
 
-    <!-- STRUCTURED DATA -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -84,6 +80,10 @@
         a {
             color: inherit;
             text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
         }
 
         /* LANGUAGE */
@@ -393,21 +393,63 @@
 
         /* STORY */
 
+        .story-layout {
+            display: grid;
+            grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.18fr);
+            gap: clamp(38px, 6vw, 80px);
+            align-items: start;
+        }
+
+        .story-portrait {
+            margin: 0;
+            width: 100%;
+            max-width: 440px;
+            background: #090909;
+            overflow: hidden;
+        }
+
+        .story-portrait img {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            object-position: center 35%;
+            filter: grayscale(100%);
+        }
+
         .story-content {
-            max-width: 850px;
+            max-width: 650px;
         }
 
         .story-content h3 {
-            font-size: 22px;
+            font-size: clamp(21px, 2.3vw, 29px);
             font-weight: 400;
-            letter-spacing: 3px;
-            margin-bottom: 25px;
+            letter-spacing: 2px;
+            line-height: 1.4;
+            margin: 0 0 30px;
+            color: #e6e3dc;
         }
 
         .story-content p {
             color: #9b9b96;
             font-size: 14px;
-            margin-bottom: 20px;
+            line-height: 1.95;
+            margin-bottom: 23px;
+        }
+
+        .story-content .story-intro {
+            color: #d2d0ca;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .story-content .story-ending {
+            margin-top: 34px;
+            color: #b0aea7;
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-style: italic;
         }
 
         /* VISUALS */
@@ -546,7 +588,7 @@
             letter-spacing: 2px;
         }
 
-        /* MOBILE */
+        /* TABLET AND MOBILE */
 
         @media (max-width: 900px) {
             header {
@@ -594,6 +636,20 @@
                 grid-template-columns: 1fr;
                 gap: 10px;
             }
+
+            .story-layout {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 35px;
+            }
+
+            .story-portrait {
+                width: min(100%, 440px);
+                margin: 0 auto;
+            }
+
+            .story-content {
+                max-width: 760px;
+            }
         }
 
         @media (max-width: 550px) {
@@ -628,6 +684,24 @@
 
             .merch-box {
                 padding: 35px 25px;
+            }
+
+            .story-layout {
+                gap: 30px;
+            }
+
+            .story-content h3 {
+                margin-bottom: 22px;
+            }
+
+            .story-content p {
+                font-size: 13px;
+                line-height: 1.9;
+                margin-bottom: 20px;
+            }
+
+            .story-content .story-intro {
+                font-size: 14px;
             }
         }
     </style>
@@ -701,13 +775,8 @@
 
                     <h3>1st Chapter</h3>
 
-                    <p class="lang-en">
-                        The first chapter of FORTY-FOUR, released in 2023.
-                    </p>
-
-                    <p class="lang-fr">
-                        Le premier chapitre de FORTY-FOUR, sorti en 2023.
-                    </p>
+                    <p class="lang-en">The first chapter of FORTY-FOUR, released in 2023.</p>
+                    <p class="lang-fr">Le premier chapitre de FORTY-FOUR, sorti en 2023.</p>
                 </div>
 
                 <div class="release-status">
@@ -724,15 +793,8 @@
 
                     <h3>2nd Communion</h3>
 
-                    <p class="lang-en">
-                        The second chapter of FORTY-FOUR. The five tracks
-                        have been sent for final mastering.
-                    </p>
-
-                    <p class="lang-fr">
-                        Le deuxième chapitre de FORTY-FOUR. Les cinq titres
-                        ont été envoyés pour le mastering final.
-                    </p>
+                    <p class="lang-en">The second chapter of FORTY-FOUR. The five tracks have been sent for final mastering.</p>
+                    <p class="lang-fr">Le deuxième chapitre de FORTY-FOUR. Les cinq titres ont été envoyés pour le mastering final.</p>
                 </div>
 
                 <div class="release-status">
@@ -754,54 +816,21 @@
 
         <div class="news-list">
 
-            <!-- NEWS 01: 2ND COMMUNION -->
-
             <article class="news-item">
-                <div class="news-date">
-                    OCTOBER 2026
-                </div>
-
+                <div class="news-date">OCTOBER 2026</div>
                 <div class="news-content">
                     <h3>2nd Communion — Final Mastering</h3>
-
-                    <p class="lang-en">
-                        The five tracks of the second EP have been sent
-                        for final mastering. A new step towards completing
-                        the second chapter of FORTY-FOUR.
-                    </p>
-
-                    <p class="lang-fr">
-                        Les cinq titres du deuxième EP ont été envoyés
-                        pour le mastering final. Une nouvelle étape vers
-                        l'aboutissement du deuxième chapitre de FORTY-FOUR.
-                    </p>
+                    <p class="lang-en">The five tracks of the second EP have been sent for final mastering. A new step towards completing the second chapter of FORTY-FOUR.</p>
+                    <p class="lang-fr">Les cinq titres du deuxième EP ont été envoyés pour le mastering final. Une nouvelle étape vers l'aboutissement du deuxième chapitre de FORTY-FOUR.</p>
                 </div>
             </article>
 
-            <!-- NEWS 02: ARCHIVE 005 -->
-
             <article class="news-item">
-                <div class="news-date">
-                    ARCHIVE 005
-                </div>
-
+                <div class="news-date">ARCHIVE 005</div>
                 <div class="news-content">
                     <h3>Why 44? — Pourquoi 44 ?</h3>
-
-                    <p class="lang-en">
-                        Before the symbol, there was only the number.
-                        Two intertwined fours, a blurred image, and a
-                        meaning deliberately left open. Archive 005
-                        explores the origins of the name and the symbol.
-                    </p>
-
-                    <p class="lang-fr">
-                        Avant le symbole, il n'y avait que le nombre.
-                        Deux 4 entremêlés, une image trouble et une
-                        signification volontairement laissée ouverte.
-                        L'Archive 005 explore l'origine du nom et du symbole.
-                    </p>
-
+                    <p class="lang-en">Before the symbol, there was only the number. Two intertwined fours, a blurred image, and a meaning deliberately left open. Archive 005 explores the origins of the name and the symbol.</p>
+                    <p class="lang-fr">Avant le symbole, il n'y avait que le nombre. Deux 4 entremêlés, une image trouble et une signification volontairement laissée ouverte. L'Archive 005 explore l'origine du nom et du symbole.</p>
                     <a class="news-link" href="archives.html#archive005">
                         <span class="lang-en">READ ARCHIVE 005</span>
                         <span class="lang-fr">LIRE L'ARCHIVE 005</span>
@@ -809,28 +838,12 @@
                 </div>
             </article>
 
-            <!-- NEWS 03: ARCHIVES -->
-
             <article class="news-item">
-                <div class="news-date">
-                    OCTOBER 2026
-                </div>
-
+                <div class="news-date">OCTOBER 2026</div>
                 <div class="news-content">
                     <h3>Archives 44 — The Journal</h3>
-
-                    <p class="lang-en">
-                        Archives 001 to 005 are now online. The journal
-                        documents the story behind the project, from
-                        its origins to the evolution of FORTY-FOUR.
-                    </p>
-
-                    <p class="lang-fr">
-                        Les Archives 001 à 005 sont maintenant en ligne.
-                        Le journal raconte l'histoire du projet, de ses
-                        origines jusqu'à l'évolution de FORTY-FOUR.
-                    </p>
-
+                    <p class="lang-en">Archives 001 to 005 are now online. The journal documents the story behind the project, from its origins to the evolution of FORTY-FOUR.</p>
+                    <p class="lang-fr">Les Archives 001 à 005 sont maintenant en ligne. Le journal raconte l'histoire du projet, de ses origines jusqu'à l'évolution de FORTY-FOUR.</p>
                     <a class="news-link" href="archives.html">
                         <span class="lang-en">EXPLORE THE ARCHIVES</span>
                         <span class="lang-fr">DÉCOUVRIR LES ARCHIVES</span>
@@ -838,30 +851,12 @@
                 </div>
             </article>
 
-            <!-- NEWS 04: ARCHIVE 004 -->
-
             <article class="news-item">
-                <div class="news-date">
-                    ARCHIVE 004
-                </div>
-
+                <div class="news-date">ARCHIVE 004</div>
                 <div class="news-content">
                     <h3>The Voice — La voix</h3>
-
-                    <p class="lang-en">
-                        Singing was something completely new. An uncertain
-                        voice, first attempts, and the decision to keep
-                        the imperfections that may become part of the
-                        project's identity.
-                    </p>
-
-                    <p class="lang-fr">
-                        Chanter était quelque chose de totalement nouveau.
-                        Une voix incertaine, les premières prises et la
-                        décision de conserver les imperfections qui
-                        peuvent devenir une partie de l'identité du projet.
-                    </p>
-
+                    <p class="lang-en">Singing was something completely new. An uncertain voice, first attempts, and the decision to keep the imperfections that may become part of the project's identity.</p>
+                    <p class="lang-fr">Chanter était quelque chose de totalement nouveau. Une voix incertaine, les premières prises et la décision de conserver les imperfections qui peuvent devenir une partie de l'identité du projet.</p>
                     <a class="news-link" href="archives.html#archive004">
                         <span class="lang-en">READ ARCHIVE 004</span>
                         <span class="lang-fr">LIRE L'ARCHIVE 004</span>
@@ -879,17 +874,8 @@
 
         <div class="archive-access">
             <h3>THE STORY BEHIND THE SILENCE</h3>
-
-            <p class="lang-en">
-                Personal archives documenting the story behind the music,
-                from the first ideas to the evolution of FORTY-FOUR.
-            </p>
-
-            <p class="lang-fr">
-                Des archives personnelles qui racontent l'histoire derrière
-                la musique, des premières idées jusqu'à l'évolution de FORTY-FOUR.
-            </p>
-
+            <p class="lang-en">Personal archives documenting the story behind the music, from the first ideas to the evolution of FORTY-FOUR.</p>
+            <p class="lang-fr">Des archives personnelles qui racontent l'histoire derrière la musique, des premières idées jusqu'à l'évolution de FORTY-FOUR.</p>
             <a href="archives.html" class="archive-button">
                 <span class="lang-en">ENTER ARCHIVES</span>
                 <span class="lang-fr">ENTRER DANS LES ARCHIVES</span>
@@ -905,44 +891,84 @@
             <span class="lang-fr">HISTOIRE</span>
         </h2>
 
-        <div class="story-content">
-            <h3>The Story Behind The Silence</h3>
+        <div class="story-layout">
 
-            <p class="lang-en">
-                FORTY-FOUR (A BANNED PAGAN) is a solo music project
-                initiated by Coccs. The project explores darkness,
-                identity, isolation and transformation through music.
-            </p>
+            <figure class="story-portrait">
+                <img
+                    src="story-portrait.jpg"
+                    alt="Coccs, initiateur du projet musical FORTY-FOUR"
+                    loading="lazy"
+                >
+            </figure>
 
-            <p class="lang-fr">
-                FORTY-FOUR (A BANNED PAGAN) est un projet musical solo
-                initié par Coccs. Le projet explore la noirceur, l'identité,
-                l'isolement et la transformation à travers la musique.
-            </p>
+            <div class="story-content">
+                <h3>The Story Behind The Silence</h3>
 
-            <p class="lang-en">
-                The music moves between deathrock, goth rock, coldwave
-                and alternative rock, combining cold guitars, machines,
-                hypnotic rhythms and dark lyrics.
-            </p>
+                <p class="story-intro lang-en">
+                    FORTY-FOUR (A BANNED PAGAN) is a solo music project
+                    initiated by Coccs, born from a separation and the need
+                    to create beyond what came before.
+                </p>
 
-            <p class="lang-fr">
-                La musique évolue entre deathrock, goth rock, coldwave
-                et rock alternatif, mêlant guitares froides, machines,
-                rythmes hypnotiques et textes sombres.
-            </p>
+                <p class="story-intro lang-fr">
+                    FORTY-FOUR (A BANNED PAGAN) est un projet musical solo
+                    initié par Coccs, né d'une séparation et du besoin de
+                    créer au-delà de ce qui existait auparavant.
+                </p>
 
-            <p class="lang-en">
-                FORTY-FOUR is not a continuation and not a return.
-                It is a new space for writing, experimentation
-                and transformation.
-            </p>
+                <p class="lang-en">
+                    Once a keyboardist and bassist, Coccs stepped into
+                    unfamiliar territory, building a project of his own,
+                    where writing, experimentation and transformation
+                    could take a different shape. Finding a voice became
+                    part of that process.
+                </p>
 
-            <p class="lang-fr">
-                FORTY-FOUR n'est ni une continuation ni un retour.
-                C'est un nouvel espace d'écriture, d'expérimentation
-                et de transformation.
-            </p>
+                <p class="lang-fr">
+                    Ancien claviériste et bassiste, Coccs s'est aventuré
+                    sur un terrain nouveau en construisant son propre projet,
+                    un espace où l'écriture, l'expérimentation et la
+                    transformation pouvaient prendre une autre forme.
+                    Trouver sa voix est devenu une partie intégrante
+                    de ce processus.
+                </p>
+
+                <p class="lang-en">
+                    The music moves between deathrock, goth rock, coldwave
+                    and alternative rock, combining cold guitars, machines,
+                    hypnotic rhythms and dark lyrics. It explores darkness,
+                    identity, isolation, inner conflict and the uncertain
+                    boundary between endings and beginnings.
+                </p>
+
+                <p class="lang-fr">
+                    La musique oscille entre deathrock, goth rock, coldwave
+                    et rock alternatif, mêlant guitares froides, machines,
+                    rythmes hypnotiques et textes sombres. Elle explore
+                    l'obscurité, l'identité, l'isolement, les conflits
+                    intérieurs et cette frontière incertaine entre les fins
+                    et les commencements.
+                </p>
+
+                <p class="lang-en">
+                    FORTY-FOUR is neither a continuation nor a return.
+                    It does not seek to restore what was lost or repeat
+                    what came before. It exists as a new space, shaped by
+                    distance, silence and the freedom to move forward.
+                </p>
+
+                <p class="lang-fr">
+                    FORTY-FOUR n'est ni une continuation ni un retour.
+                    Le projet ne cherche pas à restaurer ce qui a été perdu,
+                    ni à répéter ce qui existait auparavant. Il constitue
+                    un nouvel espace, façonné par la distance, le silence
+                    et la liberté d'avancer.
+                </p>
+
+                <p class="story-ending lang-en">The story is still unfolding.</p>
+                <p class="story-ending lang-fr">L'histoire continue de s'écrire.</p>
+            </div>
+
         </div>
     </section>
 
@@ -958,11 +984,9 @@
             <div class="visual">
                 <img src="VISUAL1.jpg.jpg" alt="FORTY-FOUR Visual 01" loading="lazy">
             </div>
-
             <div class="visual">
                 <img src="VISUAL2.jpg" alt="FORTY-FOUR Visual 02" loading="lazy">
             </div>
-
             <div class="visual">
                 <img src="visual3.1.jpg" alt="FORTY-FOUR Visual 03" loading="lazy">
             </div>
@@ -979,16 +1003,8 @@
 
         <div class="merch-box">
             <h3>FORTY-FOUR</h3>
-
-            <p class="lang-en">
-                Official FORTY-FOUR items and editions.
-                More information coming soon.
-            </p>
-
-            <p class="lang-fr">
-                Articles et éditions officiels FORTY-FOUR.
-                Plus d'informations prochainement.
-            </p>
+            <p class="lang-en">Official FORTY-FOUR items and editions. More information coming soon.</p>
+            <p class="lang-fr">Articles et éditions officiels FORTY-FOUR. Plus d'informations prochainement.</p>
         </div>
     </section>
 
@@ -1003,35 +1019,15 @@
         <div class="contact-grid">
             <div class="contact-box">
                 <h3>FORTY-FOUR</h3>
-
-                <p class="lang-en">
-                    FORTY-FOUR<br>
-                    (A BANNED PAGAN)<br>
-                    Official Website
-                </p>
-
-                <p class="lang-fr">
-                    FORTY-FOUR<br>
-                    (A BANNED PAGAN)<br>
-                    Site officiel
-                </p>
-
-                <a href="mailto:contact@fortyfour-44.com" class="contact-email">
-                    contact@fortyfour-44.com
-                </a>
+                <p class="lang-en">FORTY-FOUR<br>(A BANNED PAGAN)<br>Official Website</p>
+                <p class="lang-fr">FORTY-FOUR<br>(A BANNED PAGAN)<br>Site officiel</p>
+                <a href="mailto:contact@fortyfour-44.com" class="contact-email">contact@fortyfour-44.com</a>
             </div>
 
             <div class="contact-box">
                 <h3>PRESS / EPK</h3>
-
-                <p class="lang-en">
-                    Press information, biography, music and project materials.
-                </p>
-
-                <p class="lang-fr">
-                    Informations presse, biographie, musique et éléments du projet.
-                </p>
-
+                <p class="lang-en">Press information, biography, music and project materials.</p>
+                <p class="lang-fr">Informations presse, biographie, musique et éléments du projet.</p>
                 <a href="press.html" class="contact-link">PRESS / EPK</a>
             </div>
         </div>
@@ -1052,9 +1048,7 @@
         <a href="press.html">PRESS / EPK</a>
     </div>
 
-    <div class="copyright">
-        © 2026 FORTY-FOUR (A BANNED PAGAN)
-    </div>
+    <div class="copyright">© 2026 FORTY-FOUR (A BANNED PAGAN)</div>
 </footer>
 
 <!-- LANGUAGE SCRIPT -->
@@ -1082,4 +1076,3 @@
 
 </body>
 </html>
-```
